@@ -10,40 +10,196 @@
    <title>RhiaFH Portfolio | Junior Software Developer</title>
 </head>
 <body>
-   <nav><div class="nav__content">
-      <div class="logo"><a href="#">RFH</a></div>
-      <label for="check" class="checkbox">
-         <i class="ri-menu-line"></i>
-      </label>
-   <input type="checkbox" name="check" id="check">
-   <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">CV</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Contact</a></li>
-   </ul>
+   <style>
+      @keyframes blink {
+         10%, 100% {
+            opacity: 0;
+         }
+         50% {
+            opacity: 1;
+         }
+         100% {
+            opacity: 1;
+         }
+      }
+
+      .logo a span {
+         animation: blink 5s infinite;
+      }
+</style>
+  
+  <nav>
+   <div class="nav__content">
+     <div class="logo"><a href="/">RFH<span>_</span></a></div>
+     <ul>
+       <li><a href="#">Home</a></li>
+       <li><a href="#about">About</a></li>
+       <li><a href="#projects">Portfolio</a></li>
+       <li><a href="#contact">Contact</a></li>
+     </ul>
    </div>
-   </nav>
-   <section class="section">
-      <div class="section__container">
-            <div class="content">
-            <p class="subtitle">HELLO</p>
-               <h1 class="title">
-                  I'm <span>Rhia</span><br>a <span> Junior Developer</span>
-               </h1>
+ </nav>
+
+   <section id="profile"> 
+   <section class="profile">
+      <div class="profile__container">
+            <div class="profile__content">
+            <p class="profile__subtitle">HELLO</p>
+
+            <h1 class="profile__title">
+               I'm <span>Rhia</span><br>
+               a <span id="typed" class="typing"></span>
+            </h1>
+            
+            <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+            <script>
+               var options = {
+                  strings: ["Front-End Developer", "Creative thinker", "Tech enthusiast"],
+                  typeSpeed: 50,
+                  backSpeed: 50,
+                  backDelay: 2000,
+                  startDelay: 400,
+                  loop: true
+               };
+               var typed = new Typed("#typed", options);
+            </script>
+            
                <p class="description">
-                  Welcome to my Portfolio. I'm Rhia, a self-taught creative web Developer with a passion for building engaging, responsive and user-friendly websites. I've worked on a variety of personal projects, ranging from blogs to e-commerce platforms.
+                  A self-taught creative Web Developer. <br>Based in London, UK.
                </p>
                <div class="action__btns">
-                  <button class="hire__me">Hire Me</button>
-                  <button class="portfolio">Portfolio</button>
+                  <button class="contact__me">Contact Me</button>
+                  <button class="portfolio" onclick="location.href='./#projects'">Portfolio</button>
                </div>
+               
              </div>
-             <div class="image">
+             <div class="profile-image">
                <img src="assets/IMG_2231.jpg" alt="profile pic">
                </div>
              </div>
          </section>
+      </section>
+
+      <section id="about">
+         <div class="about__containers">
+         <div class="about__details__container">
+           <h1 class="title">About Me</h1>
+           <p>
+            I am a Web Developer with strong passion for building engaging, responsive and user-friendly websites. I've worked on a variety of personal projects, ranging from blogs pages to e-commerce platforms. Committed to refining my abilities.</p>
+         </div>
+       
+         <div class="details__container">
+            <div class="tech__stack">
+           <h1 class="title">Tech Stack</h1>
+            <div class="each_tech">HTML 5</div>
+            <div class="each_tech">CSS 3</div>           
+            <div class="each_tech">JavaScript</div>
+            <div class="each_tech">Visual Studio</div>   
+            <div class="each_tech">Github</div>     
+            <div class="each_tech">Responsive</div>    
+
+         </section>
+         </div>
+       </div>
+      </div>
+      <br>
+      <br>
+      <br>
+      <section id="projects"> 
+         <section class="projects">
+            <h1 class="title">Projects</h1>
+            <div class="projects__container">
+               <div class="single_project_container">
+                  <div class="single__project__container">
+                     <div class="text-container">
+                        <img src="Assets/ecomsite-square.png" alt="" class="src">
+                        <h2>e-Commerce Site</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra nam libero justo laoreet sit amet cursus.</p>
+                        <div class="button-container">
+                           <button class="project_button">View Project</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="single_project_container">
+                  <div class="single__project__container">
+                     <div class="text-container">
+                     <img src="Assets/rh-weather-app-square.png" class="src">
+                        <h2>Weather App</h2>
+                        <p>Used a live API to extract and display real-time weather data, including temperature, description, humidity, and wind speed with a 5-day forecast feature. Coded a dynamic manipulation of icons and gradient backgrounds based on weather conditions to user interaction. Additionally, crafted a user-friendly Fahrenheit to Celsius conversion program for convenience.
+                        </p>
+                        <div class="button-container">
+                           <button class="project_button">View Project</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="single_project_container">
+                  <div class="single__project__container">
+                     <div class="text-container">
+                     <img src="Assets/Projectplaceholder.png" class="src">
+                        <h2>Dashboard</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra nam libero justo laoreet sit amet cursus.</p>
+                        </p>
+                        <div class="button-container">
+                           <button class="project_button">View Project</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </section>
+      </section>
+      
+
+
+<!--          <div class="single_project_container">
+            <div class="single__project__container">
+               <h2>Project Three</h2>
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra nam libero justo laoreet sit amet cursus. Faucibus vitae aliquet nec ullamcorper sit amet. Etiam tempor orci eu lobortis elementum.</p>
+            </div>
+         </div>
+      </div>
+   </section>
+</section>
+ -->
+
+            <h2></h2>
+            <p></p>
+         </div>
+      </div>
+   </section>
+</section>
+</section>
+
+
+<section id="certification"> 
+   <section class="certification">
+    <h1 class="title">Certificates</h1>
+      <div class="certification__container">
+         <div class="certificate">
+            <a href="https://www.codecademy.com/profiles/Rhiafhunte/certificates/705dcb15de0da4dd9d9fc4f3274b430e" target="_blank" title="View Rhia's Codecademy certificate">
+               <img src="/Assets/Codecademy_JS_Certificate.png" alt="Codecademy JS Certificate">
+            </a>
+         </div>
+         <div class="certificate">
+            <a href="https://www.codecademy.com/profiles/Rhiafhunte/certificates/705dcb15de0da4dd9d9fc4f3274b430e" target="_blank" title="View Rhia's SheCodes Basics certificate">
+               <img src="/Assets/RH_SheCodes_Basics_Certificate.png" alt="Pending SheCodes Basics Certificate">
+            </a>
+         </div>
+
+
+         </div>
+      </div>
+   </section>
+</section>
+</body>
+</html>
+<br>
+<br>
+<br>
+<br>
       </body>
 </html>
