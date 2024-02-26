@@ -8,6 +8,7 @@
    />
    <link rel="stylesheet" href="styles.css" />
    <title>RhiaFH Portfolio | Junior Software Developer</title>
+
 </head>
 <body>
    <style>
@@ -27,18 +28,33 @@
          animation: blink 5s infinite;
       }
 </style>
-  
-  <nav>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+   const hamburgerIcon = document.querySelector('.hamburger-menu-icon');
+   const menuItems = document.querySelector('.menu-items');
+
+   hamburgerIcon.addEventListener('click', function () {
+      menuItems.classList.toggle('show');
+   });
+});
+
+
+</script>
+
+<nav>
    <div class="nav__content">
-     <div class="logo"><a href="/">RFH<span>_</span></a></div>
-     <ul>
-       <li><a href="#">Home</a></li>
-       <li><a href="#about">About</a></li>
-       <li><a href="#projects">Portfolio</a></li>
-       <li><a href="#contact">Contact</a></li>
-     </ul>
+      <div class="logo"><a href="/">RFH<span>_</span></a></div>
+      <div class="hamburger-menu-icon" onclick="toggleMenu()">☰</div> 
+      <ul class="menu-items" id="menuItems">
+         <li><a href="/">Home</a></li>
+         <li><a href="#about">About</a></li>
+         <li><a href="#projects">Portfolio</a></li>
+         <li><a href="#contact">Contact</a></li>
+      </ul>
    </div>
- </nav>
+</nav>
+
 
    <section id="profile"> 
    <section class="profile">
@@ -75,12 +91,23 @@
                
              </div>
              <div class="profile-image">
-               <img src="assets/IMG_2231.jpg" alt="profile pic">
+               <img src="assets/IMG_1.png" alt="profile pic">
                </div>
              </div>
          </section>
       </section>
 
+   <script>
+      function showAboutContainer() {
+         const aboutContainer = document.querySelector(".about__containers");
+         aboutContainer.classList.add("show"); // Add show class to trigger animation
+      }
+
+      document.addEventListener("DOMContentLoaded", showAboutContainer);
+      window.onload = showAboutContainer;
+
+
+   </script>
       <section id="about">
          <div class="about__containers">
          <div class="about__details__container">
@@ -97,7 +124,9 @@
             <div class="each_tech">JavaScript</div>
             <div class="each_tech">Visual Studio</div>   
             <div class="each_tech">Github</div>     
-            <div class="each_tech">Responsive</div>    
+            <div class="each_tech">Responsive</div>  
+            <div class="each_tech">UI</div> 
+            <div class="each_tech">UX</div>   
 
          </section>
          </div>
@@ -106,7 +135,7 @@
       <br>
       <br>
       <br>
-      <section id="projects"> 
+         <section id="projects"> 
          <section class="projects">
             <h1 class="title">Projects</h1>
             <div class="projects__container">
@@ -114,10 +143,10 @@
                   <div class="single__project__container">
                      <div class="text-container">
                         <img src="Assets/ecomsite-square.png" alt="" class="src">
-                        <h2>e-Commerce Site</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra nam libero justo laoreet sit amet cursus.</p>
+                        <h2>E-Commerce <br>Landing Page 1.0</h2>
+                        <p>Built as part of SheCodes coursework submission, this project combines a passion for interior design with online retail expertise. The website showcases a modern, minimalist design, featuring a section to display blog posts and an interactive 'Sign up' JavaScript function. Intended to be a space where design meets functionality. Built using JavaScript, HTML5 & CSS3. </p>
                         <div class="button-container">
-                           <button class="project_button">View Project</button>
+                           <a href="https://www.shecodes.io/cohorts/shecodes-basics-744f8d6a-c685-409b-862d-9b56a2366dc4/projects/2037888" target="_blank" class="project_button">View Project</a> <!-- Add your link here -->
                         </div>
                      </div>
                   </div>
@@ -152,32 +181,12 @@
             </div>
          </section>
       </section>
-      
 
-
-<!--          <div class="single_project_container">
-            <div class="single__project__container">
-               <h2>Project Three</h2>
-               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra nam libero justo laoreet sit amet cursus. Faucibus vitae aliquet nec ullamcorper sit amet. Etiam tempor orci eu lobortis elementum.</p>
-            </div>
-         </div>
-      </div>
-   </section>
-</section>
- -->
-
-            <h2></h2>
-            <p></p>
-         </div>
-      </div>
-   </section>
-</section>
-</section>
 
 
 <section id="certification"> 
    <section class="certification">
-    <h1 class="title">Certificates</h1>
+      <h1 class="title">Certifications</h1>
       <div class="certification__container">
          <div class="certificate">
             <a href="https://www.codecademy.com/profiles/Rhiafhunte/certificates/705dcb15de0da4dd9d9fc4f3274b430e" target="_blank" title="View Rhia's Codecademy certificate">
@@ -189,17 +198,39 @@
                <img src="/Assets/RH_SheCodes_Basics_Certificate.png" alt="Pending SheCodes Basics Certificate">
             </a>
          </div>
+         <div class="certificate">
+            <a href="https://www.codecademy.com/profiles/Rhiafhunte/certificates/705dcb15de0da4dd9d9fc4f3274b430e" target="_blank" title="View Rhia's SheCodes Basics certificate">
+               <img src="/Assets/RH_SheCodes_Basics_Certificate.png" alt="Pending SheCodes Basics Certificate">
+            </a>
+         </div>
+      </div>
+      </section>
+   </section>
+<br>
+ <hr>
+ <section id="contact">
+   <div class="contact__containers">
+      <div class="contact__details__container">
+         <h1 class="title">Get in touch!</h1>
+         <p>Lets connect.</p>
+      </div>
+      
+      <div class="about__container">
+         <h1 class="contact-email"><a href="mailto:rhiafhunte@gmail.com" target="_blank">rhiafhunte@gmail.com</a></h1>
+         <div class="social-icons">
+            <a href="https://www.linkedin.com/in/rhiahunte/" target="_blank"><i class="ri ri-linkedin-box-fill"></i></a>
+            <a href="https://github.com/rhiafhunte" target="_blank"><i class="ri ri-github-fill"></i></a>
+         </div>
+      </div>
+   </div>
+<br>
+<p class="copyright-text">Copyright © 2024. Built by Rhia Hamilton.</p>
 
-
+            </section>
          </div>
       </div>
    </section>
 </section>
 </body>
-</html>
-<br>
-<br>
-<br>
-<br>
       </body>
 </html>
