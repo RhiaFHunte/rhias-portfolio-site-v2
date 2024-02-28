@@ -39,6 +39,23 @@ document.addEventListener('DOMContentLoaded', function () {
    });
 });
 
+// Smooth scrolling function
+function smoothScroll(target) {
+   document.querySelector(target).scrollIntoView({
+      behavior: 'smooth'
+   });
+}
+
+// Event listener for navigation links
+document.querySelectorAll('nav a').forEach(anchor => {
+   anchor.addEventListener('click', function(e) {
+      e.preventDefault(); // Prevent default behavior (jumping to target)
+      const target = this.getAttribute('href');
+      smoothScroll(target);
+   });
+});
+
+
 
 </script>
 
@@ -47,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function () {
       <div class="logo"><a href="/">RFH<span>_</span></a></div>
       <div class="hamburger-menu-icon" onclick="toggleMenu()">☰</div> 
       <ul class="menu-items" id="menuItems">
-         <li><a href="/">Home</a></li>
+         <li><a href="#home">Home</a></li>
          <li><a href="#about">About</a></li>
          <li><a href="#projects">Portfolio</a></li>
          <li><a href="#contact">Contact</a></li>
@@ -55,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function () {
    </div>
 </nav>
 
-
+<section id="home"> 
    <section id="profile"> 
    <section class="profile">
       <div class="profile__container">

@@ -9,13 +9,13 @@
    --max-width: 1200px;
 }
 
-
 html {
    scroll-behavior: smooth;
+
    margin: 0;
    padding: 0;
    height: 100%;
- }
+}
 
 nav {
    padding: 0%;
