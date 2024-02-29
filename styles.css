@@ -354,88 +354,81 @@ ul li a {
    cursor: default;
 }
 
-
-/*PROJECT SECTION*/
+/* PROJECTS SECTION*/
 
 /* Apply styles to the projects section title */
-.projects h1 {
+#projects .title {
    text-align: left;
    margin-left: 10%;
 }
 
-.single_project_container p {
-   overflow: hidden; /* Ensure text overflow is hidden */
-   margin: 0 18px 20px; /* Add bottom margin of 20px */
-   font-size: 12.5px;
-}
-
-
-
 /* Apply styles to the projects container */
-.projects__container {
-   display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust the minmax values as needed */
+#projects .projects__container {
+   display: flex; /* Use flexbox layout */
+   flex-wrap: nowrap; /* Prevent wrapping to new lines */
+   overflow-x: auto; /* Enable horizontal scrolling */
    gap: 20px;
-   width: 100%;
-   padding: 0 10%;
-   box-sizing: border-box;
-
+   padding: 0 10% 20px 8%; /* Adjusted padding */
 }
 
-.single_project_container {
-  /* background-color: #FAFAFA; */
+.single_project_container h2 {
+   padding: 0%;
+   margin: 2%;
+}
+
+.single_project_container p {
+   padding: 0 5%; /* Adjusted padding */
+   margin: 0 0 5%; /* Adjusted margin with 5% bottom margin */
+}
+
+
+/* Apply styles to each individual project container */
+#projects .single_project_container {
+   width: 28%; /* Set a minimum width for each project */
+   flex: 0 0 auto; /* Ensure each project container retains its size */
    background-color: #FAFAFA;
    border-radius: 30px;
    color: #464747;
    padding: 20px;
    text-align: center;
-   margin-bottom: 10%;
 }
 
-
-
-/* Apply styles to the text container inside .single_project_container */
-.single__project__container {
-   display: flex; /* Use flexbox layout */
-   flex-wrap: wrap; /* Allow containers to wrap onto new rows if necessary */
-   gap: 10px; /* Spacing between containers */
-   justify-content: center; /* Center containers horizontally */
+.single_project_container {
+   width: 250px; /* Adjust the width as needed */
+   background-color: #FAFAFA;
+   border-radius: 20px;
+   color: #464747;
+   padding: 10px;
+   margin: 0 10px; /* Add margin between project containers */
+   flex: 0 0 auto; /* Ensure each project container retains its size */
+   width: 30%; /* Display three projects at a time */
 }
 
-
-/* Apply styles to headings inside .single__project__container */
-.single__project__container h2 {
+.single_project_container p {
    text-align: center;
-   margin: 0;
-   margin-top: 15px; /* Reset margin */
+   font-size: 12px;
 }
 
 
-/* Apply styles to the image inside .single_project_container */
 .single_project_container img {
    border-radius: 10px; /* Rounded corners for the image */
-   max-width: 80%; /* Set maximum width */
+   max-width: 70%; /* Set maximum width */
    height: auto; /* Maintain aspect ratio */
-
-}
-.single_project_container h2{
-   margin-bottom: 10px;
 }
 
-
-/* Apply styles to the .text-container */
-.text-container {
+/* Apply styles to the text container inside .single_project_container */
+#projects .text-container {
    display: flex;
    flex-direction: column;
    align-items: center;
 }
 
 /* Apply styles to the project buttons */
-.project_button {
+#projects .project_button {
    background-color: white;
    color: black;
    padding: 10px 16px;
-   margin: 20px; /* Adjusted margin */
+   margin: 0px; /* Adjusted margin */
    font-size: 12px;
    font-weight: 500;
    letter-spacing: 2px;
@@ -445,32 +438,54 @@ ul li a {
    cursor: pointer;
 }
 
-
-.project_button:hover {
+#projects .project_button:hover {
    color: white;
    background-color: black;
-  /* box-shadow: 5px 5px 8px #DADBEF;*/ 
-
 }
 
+/* CAROUSEL CONTAINER */
 
-/* CAROUSEL SECTION */
 
-/* Hide overflow for carousel container */
 .carousel-container {
-   overflow: hidden;
+   position: relative;
 }
 
-/* Adjust width of project containers */
-.projects__container {
-   display: flex;
-   transition: transform 0.5s ease;
+.projects__container::-webkit-scrollbar {
+   display: none;
+}
+/* Style the navigation buttons */
+.prev,
+.next {
+    position: absolute; /* Position relative to the parent carousel container */
+    top: 50%; /* Position vertically at the center */
+    transform: translateY(-50%); /* Adjust for center alignment */
+    background-color: #ffffff; /* Background color */
+    color: #393838; /* Text color */
+    border: 2px solid #393838; /* Border color */
+    border-radius: 50%; /* Border radius for circular shape */
+    padding: 10px; /* Padding */
+    font-size: 16px; /* Font size */
+    font-weight: bold; /* Font weight */
+    cursor: pointer; /* Cursor style */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Transition effect */
 }
 
-.single_project_container {
-   flex: 0 0 auto;
-   width: calc(100% / 3); /* Display 3 project containers at a time */
-   margin: 0;
+/* Style the previous button */
+.prev {
+    left: 40px; /* Position to the left */
+}
+
+/* Style the next button */
+.next {
+    right: 40px; /* Position to the right */
+}
+
+/* Hover effect for navigation buttons */
+.prev:hover,
+.next:hover {
+    background-color: #393838; /* Background color on hover */
+    color: #ffffff; /* Text color on hover */
+    border-color: #393838; /* Border color on hover */
 }
 
 

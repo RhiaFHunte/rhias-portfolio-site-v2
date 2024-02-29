@@ -1,67 +1,67 @@
+// SCROLL BEHAVIOUR
 function toggleMenu() {
    var menuItems = document.querySelector('.menu-items');
    menuItems.classList.toggle('show');
 }
 
-function toggleMenu() {
-   var menuItems = document.querySelector('.menu-items');
-   menuItems.classList.toggle('show');
-}
-
-// Get the carousel container and project container
-const carousel = document.querySelector('.carousel-container');
-const projectsContainer = document.querySelector('.projects__container');
-
-// Get navigation buttons
-const prevBtn = document.querySelector('.prev');
-const nextBtn = document.querySelector('.next');
-
-// Set initial variables
-let isDragging = false;
-let startPos = 0;
-let scrollLeft = 0;
-
-// Add event listeners for navigation buttons
-prevBtn.addEventListener('click', () => {
-   slideIndex -= 1;
-   if (slideIndex < 0) {
-      slideIndex = 0;
-   }
-   updateCarousel();
+// CAROUSEL NEXT + PREV BUTTONBEHAVIOUR
+document.addEventListener("DOMContentLoaded", function() {
+   const prevBtn = document.querySelector(".prev");
+   const nextBtn = document.querySelector(".next");
+   const projectsContainer = document.querySelector(".projects__container");
+   
+   let scrollAmount = 0;
+   const scrollStep = projectsContainer.offsetWidth; // Width of each project container
+   
+   nextBtn.addEventListener("click", function() {
+      if (scrollAmount < projectsContainer.scrollWidth - projectsContainer.clientWidth) {
+         scrollAmount += scrollStep;
+         projectsContainer.scrollTo({
+            left: scrollAmount,
+            behavior: "smooth"
+         });
+      }
+   });
+   
+   prevBtn.addEventListener("click", function() {
+      if (scrollAmount > 0) {
+         scrollAmount -= scrollStep;
+         projectsContainer.scrollTo({
+            left: scrollAmount,
+            behavior: "smooth"
+         });
+      }
+   });
 });
 
-nextBtn.addEventListener('click', () => {
-   slideIndex += 1;
-   if (slideIndex > projectsContainer.children.length / 3 - 1) {
-      slideIndex = projectsContainer.children.length / 3 - 1;
-   }
-   updateCarousel();
-});
+// CAROUSEL GRAB BEHAVIOUR
+let isDown = false;
+  let startX;
+  let scrollLeft;
 
-// Add event listeners for mouse events
-carousel.addEventListener('mousedown', (e) => {
-   isDragging = true;
-   startPos = e.clientX - carousel.offsetLeft;
-   scrollLeft = carousel.scrollLeft;
-});
+  const projects = document.querySelector('#projects');
 
-carousel.addEventListener('mouseleave', () => {
-   isDragging = false;
-});
+  projects.addEventListener('mousedown', (e) => {
+    isDown = true;
+    projects.classList.add('active');
+    startX = e.pageX - projects.offsetLeft;
+    scrollLeft = projects.scrollLeft;
+  });
 
-carousel.addEventListener('mouseup', () => {
-   isDragging = false;
-});
+  projects.addEventListener('mouseleave', () => {
+    isDown = false;
+    projects.classList.remove('active');
+  });
 
-carousel.addEventListener('mousemove', (e) => {
-   if (!isDragging) return;
-   const x = e.clientX - carousel.offsetLeft;
-   const walk = (x - startPos) * 2; // Adjust scrolling speed
-   carousel.scrollLeft = scrollLeft - walk;
-});
+  projects.addEventListener('mouseup', () => {
+    isDown = false;
+    projects.classList.remove('active');
+  });
 
-// Function to update carousel position
-function updateCarousel() {
-   const offset = -slideIndex * slideWidth;
-   carousel.style.transform = `translateX(${offset}px)`;
-}
+  projects.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - projects.offsetLeft;
+    const walk = (x - startX) * 3; // Adjust scrolling speed
+    projects.scrollLeft = scrollLeft - walk;
+  });

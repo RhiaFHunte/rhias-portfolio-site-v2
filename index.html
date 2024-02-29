@@ -114,6 +114,7 @@ document.querySelectorAll('nav a').forEach(anchor => {
          </section>
       </section>
 
+<!-- ABOUT ME ANIMATION SCRIPT -->
    <script>
       function showAboutContainer() {
          const aboutContainer = document.querySelector(".about__containers");
@@ -144,87 +145,83 @@ document.querySelectorAll('nav a').forEach(anchor => {
             <div class="each_tech">Responsive</div>  
             <div class="each_tech">UI</div> 
             <div class="each_tech">UX</div>   
-
-         </section>
+   
          </div>
+         </div>   
        </div>
-      </div>
-      <br>
-      <br>
-      <br>
-      <section id="projects">
-         <section class="projects">
-            <h1 class="title">Projects</h1>
-            <!-- Carousel container for project containers -->
-            <div class="carousel-container">
-               <div class="projects__container">
-
-                <!-- Project 1 Content -->
-
-               <div class="single_project_container">
-                  <div class="single__project__container">
-                     <div class="text-container">
-                        <img src="Assets/ecomsite-square.png" alt="" class="src">
-                        <h2>E-Commerce <br>Landing Page 1.0</h2>
-                        <p>Built as part of SheCodes coursework submission, this project combines a passion for interior design with online retail expertise. The website showcases a modern, minimalist design, featuring a section to display blog posts and an interactive 'Sign up' JavaScript function. Intended to be a space where design meets functionality. Built using JavaScript, HTML5 & CSS3. </p>
-                        <div class="button-container">
-                           <a href="https://www.shecodes.io/cohorts/shecodes-basics-744f8d6a-c685-409b-862d-9b56a2366dc4/projects/2037888" target="_blank" class="project_button">View Project</a> <!-- Add your link here -->
-                        </div>
-                     </div>
-                  </div>
-               </div>
-
-                <!-- Project 2 Content -->
-               <div class="single_project_container">
-                  <div class="single__project__container">
-                     <div class="text-container">
-                     <img src="Assets/rh-weather-app-square.png" class="src">
-                        <h2>API Weather App</h2>
-                        <p>Used a live API to extract and display real-time weather data, including temperature, description, humidity, and wind speed with a 5-day forecast feature. Coded a dynamic manipulation of icons and gradient backgrounds based on weather conditions to user interaction. Additionally, crafted a user-friendly Fahrenheit to Celsius conversion program for convenience.
-                        </p>
-                        <div class="button-container">
-                           <button class="project_button">View Project</button>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-                <!-- Project 3 Content -->
-               <div class="single_project_container">
-                  <div class="single__project__container">
-                     <div class="text-container">
-                     <img src="Assets/rh-character-counter.png" class="src">
-                        <h2>Dynamic Character Counter</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra nam libero justo laoreet sit amet cursus.</p>
-                        </p>
-                        <div class="button-container">
-                           <button class="project_button">View Project</button>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-
-               <!-- Project 4 Content -->
-               <div class="single_project_container">
-                  <div class="single__project__container">
-                     <div class="text-container">
-                     <img src="Assets/rh-character-counter.png" class="src">
-                        <h2>Dynamic Character Counter</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra nam libero justo laoreet sit amet cursus.</p>
-                        </p>
-                        <div class="button-container">
-                           <button class="project_button">View Project</button>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <button class="prev">Previous</button>
-               <button class="next">Next</button>
-               
-            </div>
-         </section>
       </section>
+ 
+      <br>
+      <br>
+      <br>
 
+      <section id="projects">
+         <h1 class="title">Projects</h1>
+         <div class="carousel-container">
+         <button class="prev">&#9664;</button>
 
+          <button class="next">&#9654;</button> 
+
+         <div class="projects__container">
+            <div class="single_project_container">
+               <div class="text-container">
+                  <img src="Assets/ecomsite-square.png" alt="" class="src">
+                  <h2>E-Commerce <br>Landing Page 1.0</h2>
+                  <p>Built as part of SheCodes coursework submission, this project combines a passion for interior design with online retail expertise. The website showcases a modern, minimalist design, featuring a section to display blog posts and an interactive 'Sign up' JavaScript function. Intended to be a space where design meets functionality. Built using JavaScript, HTML5 & CSS3. </p>
+                  <div class="button-container">
+                     <a href="https://www.shecodes.io/cohorts/shecodes-basics-744f8d6a-c685-409b-862d-9b56a2366dc4/projects/2037888" target="_blank">
+                         <button class="project_button">View Project</button>
+                     </a>
+                 </div>
+                 
+               </div>
+            </div>
+      
+            <!-- Project 2 Content -->
+            <div class="single_project_container">
+               <div class="text-container">
+                  <img src="Assets/rh-weather-app-square.png" class="src">
+                  <h2>API Weather App</h2>
+                  <p>Used a live API to extract and display real-time weather data, including temperature, description, humidity, and wind speed with a 5-day forecast feature. Coded a dynamic manipulation of icons and gradient backgrounds based on weather conditions to user interaction. Additionally, crafted a user-friendly Fahrenheit to Celsius conversion program for convenience.
+                  </p>
+                  <div class="button-container">
+                     <button class="project_button">View Project</button>
+                  </div>
+               </div>
+            </div>
+ 
+
+                    <!-- Project 3 Content -->
+                    <div class="single_project_container">
+                     <div class="text-container">
+                        <img src="Assets/rh-character-counter.png" class="src">
+                        <h2>Dynamic Character Counter</h2>
+                        <p>The Dynamic Character Counter is a web application showcasing modern styling through the use of HTML, CSS, and JavaScript. It offers real-time character counting functionality for text input fields, with a visually appealing design featuring gradient backgrounds and box shadow effects. Notably, it includes a reset button which triggers a JavaScript function that sets the value of the input field to an empty string, effectively clearing any text entered by the user.
+                        </p>
+                        <div class="button-container">
+                           <button class="project_button">View Project</button>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="single_project_container">
+                     <div class="text-container">
+                        <img src="Assets/Projectplaceholder.png" class="src">
+                        <h2>Dynamic Character Counter</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra nam libero justo laoreet sit amet cursus.</p>
+                        </p>
+                        <div class="button-container">
+                           <button class="project_button">View Project</button>
+                        </div>
+                     </div>
+               </div>
+            </div>
+         </div>
+      </section>
+         
+     <!-- Navigation buttons -->
+
+     
 <section id="certification"> 
    <section class="certification">
       <h1 class="title">Certifications</h1>
@@ -245,6 +242,7 @@ document.querySelectorAll('nav a').forEach(anchor => {
             </a>
          </div>
       </div>
+   </div>
       </section>
    </section>
 <br>
