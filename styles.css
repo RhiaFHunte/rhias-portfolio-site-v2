@@ -454,6 +454,25 @@ ul li a {
 }
 
 
+/* CAROUSEL SECTION */
+
+/* Hide overflow for carousel container */
+.carousel-container {
+   overflow: hidden;
+}
+
+/* Adjust width of project containers */
+.projects__container {
+   display: flex;
+   transition: transform 0.5s ease;
+}
+
+.single_project_container {
+   flex: 0 0 auto;
+   width: calc(100% / 3); /* Display 3 project containers at a time */
+   margin: 0;
+}
+
 
 /*CERTIFIATE SECTION*/
 
