@@ -69,7 +69,7 @@ nav .logo a {
    color:#393838;
    transition: .3s;
    position: absolute; /* Set position to absolute */
-   left: 10%; /* Set the left position */
+   padding-left: 2%; /* Set the left position */
    top: 15px; /* Set the top position */
 }
 
@@ -177,7 +177,6 @@ body {
    letter-spacing: 2px;
    color:#393838;
    font-weight: 600;
-
 }
 .profile__title {
    margin-top: 0;
@@ -186,12 +185,10 @@ body {
    line-height: 3rem;
    color: var(--text-dark);
    margin-bottom: 0;
-
 }
 .profile__title span{
    font-weight: 600;
    white-space: nowrap; /* Prevent title from wrapping */
-
 }
 .profile__description p {
    line-height: 1.5rem;
@@ -202,13 +199,11 @@ body {
    display: grid;
    place-items: center;
 }
-
 .profile-image img {
    width: 70%; /* 100% for a circle, not 100% */ 
    overflow: hidden; /* Correct value is 'hidden', not 'clip' */
    margin: 1rem; /* Add some spacing between image and text */
  }
-
  /* Mobile-specific styles */
  @media screen and (max-width: 750px)
    {
@@ -216,7 +211,6 @@ body {
          width: 80%; /* 100% for a circle, not 100% */ 
          overflow: hidden; /* Correct value is 'hidden', not 'clip' */
          place-items: center;
-
        }
       
       .profile__container {
@@ -235,7 +229,6 @@ body {
    }
 
 /*PROFILE BUTTONS*/
-
 .action__btns {
    letter-spacing: 2px;
    display: flex;
@@ -244,9 +237,6 @@ body {
    font-weight: 600;
 
 }
-
-
-
 .action__btns button {
    margin-top: 20px;
    font-size: 1rem;
@@ -277,12 +267,9 @@ body {
    background-color: var(--text-light);
    box-shadow: 5px 5px 8px #DADBEF;
 }
-
-
 ul li a {
    font-size: 1.2rem;
 }
-
 .profile-section-container {
    padding: 10rem 1rem 5rem 1rem;
    text-align: center;
@@ -369,11 +356,13 @@ ul li a {
    overflow-x: auto; /* Enable horizontal scrolling */
    gap: 20px;
    padding: 0 10% 20px 8%; /* Adjusted padding */
+   cursor:default;
 }
 
 .single_project_container h2 {
    padding: 0%;
    margin: 2%;
+   
 }
 
 .single_project_container p {
@@ -444,15 +433,31 @@ ul li a {
 }
 
 /* CAROUSEL CONTAINER */
-
-
 .carousel-container {
    position: relative;
 }
 
 .projects__container::-webkit-scrollbar {
-   display: none;
+   height: 8px;
+ }
+
+.projects__container::-webkit-scrollbar-thumb {
+   background-color: #c1c1c1; /* Color of the scrollbar thumb */
+   border-radius: 10px;
 }
+
+/* Optionally, style the scrollbar thumb on hover */
+.projects__container::-webkit-scrollbar-thumb:hover {
+   background: #545454; /* Change the color on hover */
+ }
+
+.projects__containersx::-webkit-scrollbar-track {
+   background-color: transparent; /* Color of the scrollbar track */
+   width: 5px; /* Adjust the width as needed */
+
+}
+
+
 /* Style the navigation buttons */
 .prev,
 .next {
@@ -474,12 +479,10 @@ ul li a {
 .prev {
     left: 40px; /* Position to the left */
 }
-
 /* Style the next button */
 .next {
     right: 40px; /* Position to the right */
 }
-
 /* Hover effect for navigation buttons */
 .prev:hover,
 .next:hover {
@@ -490,12 +493,10 @@ ul li a {
 
 
 /*CERTIFIATE SECTION*/
-
 .certification h1{
    text-align: left;
    margin-left: 10%;
 }
-
 .certification__container {
    display: grid;
    grid-template-columns: repeat(3, 1fr);
@@ -503,14 +504,12 @@ ul li a {
    padding: 0 180px;
    margin-bottom: 5%;
 }
-
 .certificate img {
    border-radius: 10px;
    max-width: 100%;
    height: auto;
    border: solid #393838;
 }
-
 .certificate img:hover {
   /* border: solid #ffdbbfab; */
    border: solid rgba(255, 255, 255, 0);
@@ -519,8 +518,6 @@ ul li a {
       20px 0 30px -10px #E7B6F4, /* Right side shadow */
       0 0 30px 10px rgba(223, 240, 255, 0.8); /* Silvery glow effect */
 }
-
-
 /* Media Query for Mobile */
 
 @media (max-width: 768px) {

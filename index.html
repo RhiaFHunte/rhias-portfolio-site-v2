@@ -8,10 +8,10 @@
    />
    <link rel="stylesheet" href="styles.css" />
    <title>RhiaFH Portfolio | Junior Software Developer</title>
-
 </head>
 <body>
-   <style>
+<!-- LOGO ANIMATION -->
+<style>
       @keyframes blink {
          10%, 100% {
             opacity: 0;
@@ -28,7 +28,7 @@
          animation: blink 5s infinite;
       }
 </style>
-
+<!-- HAMBURGER MENU NAV-->
 <script>
 document.addEventListener('DOMContentLoaded', function () {
    const hamburgerIcon = document.querySelector('.hamburger-menu-icon');
@@ -54,11 +54,9 @@ document.querySelectorAll('nav a').forEach(anchor => {
       smoothScroll(target);
    });
 });
-
-
-
 </script>
 
+<!-- MAIN NAV -->
 <nav>
    <div class="nav__content">
       <div class="logo"><a href="/">RFH<span>_</span></a></div>
@@ -120,12 +118,11 @@ document.querySelectorAll('nav a').forEach(anchor => {
          const aboutContainer = document.querySelector(".about__containers");
          aboutContainer.classList.add("show"); // Add show class to trigger animation
       }
-
       document.addEventListener("DOMContentLoaded", showAboutContainer);
       window.onload = showAboutContainer;
-
-
    </script>
+
+<!-- ABOUT ME INTRODUCTION -->
       <section id="about">
          <div class="about__containers">
          <div class="about__details__container">
@@ -150,18 +147,48 @@ document.querySelectorAll('nav a').forEach(anchor => {
          </div>   
        </div>
       </section>
- 
       <br>
       <br>
       <br>
-
       <section id="projects">
          <h1 class="title">Projects</h1>
          <div class="carousel-container">
-         <button class="prev">&#9664;</button>
+<!--   <button class="prev">&#9664;</button>
+       <button class="next">&#9654;</button> 
+-->
 
-          <button class="next">&#9654;</button> 
+<!-- PROJECTS SECTION -->
 
+<!-- <script>
+       document.addEventListener("DOMContentLoaded", function() {
+            const prevButton = document.querySelector(".prev");
+            const nextButton = document.querySelector(".next");
+            const carouselContainer = document.querySelector(".carousel-container");
+
+            const scrollAmount = 10; // Adjust as needed
+
+            prevButton.addEventListener("click", function() {
+                // Check if carouselContainer is scrollable
+                if (carouselContainer.scrollLeft !== 0) {
+                    carouselContainer.scrollBy({
+                        left: -scrollAmount,
+                        behavior: "smooth"
+                    });
+                }
+            });
+        
+            nextButton.addEventListener("click", function() {
+                // Check if carouselContainer is scrollable
+                if (carouselContainer.scrollLeft !== carouselContainer.scrollWidth - carouselContainer.clientWidth) {
+                    carouselContainer.scrollBy({
+                        left: scrollAmount,
+                        behavior: "smooth"
+                    });
+                }
+            });
+        });
+</script>
+-->
          <div class="projects__container">
             <div class="single_project_container">
                <div class="text-container">
@@ -176,12 +203,11 @@ document.querySelectorAll('nav a').forEach(anchor => {
                  
                </div>
             </div>
-      
-            <!-- Project 2 Content -->
+<!-- Project 2 Content -->
             <div class="single_project_container">
                <div class="text-container">
                   <img src="Assets/rh-weather-app-square.png" class="src">
-                  <h2>API Weather App</h2>
+                  <h2>API <br>Weather App</h2>
                   <p>Used a live API to extract and display real-time weather data, including temperature, description, humidity, and wind speed with a 5-day forecast feature. Coded a dynamic manipulation of icons and gradient backgrounds based on weather conditions to user interaction. Additionally, crafted a user-friendly Fahrenheit to Celsius conversion program for convenience.
                   </p>
                   <div class="button-container">
@@ -189,9 +215,7 @@ document.querySelectorAll('nav a').forEach(anchor => {
                   </div>
                </div>
             </div>
- 
-
-                    <!-- Project 3 Content -->
+<!-- Project 3 Content -->
                     <div class="single_project_container">
                      <div class="text-container">
                         <img src="Assets/rh-character-counter.png" class="src">
@@ -203,25 +227,47 @@ document.querySelectorAll('nav a').forEach(anchor => {
                         </div>
                      </div>
                   </div>
-
+<!-- Project 4 Content -->
                   <div class="single_project_container">
                      <div class="text-container">
                         <img src="Assets/Projectplaceholder.png" class="src">
-                        <h2>Dynamic Character Counter</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra nam libero justo laoreet sit amet cursus.</p>
+                        <h2>Project placeholder</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra nam libero justo laoreet sit amet cursus.
                         </p>
                         <div class="button-container">
                            <button class="project_button">View Project</button>
                         </div>
                      </div>
                </div>
+<!-- Project 5 Content -->
+               <div class="single_project_container">
+                  <div class="text-container">
+                     <img src="Assets/Projectplaceholder.png" class="src">
+                     <h2>Project placeholder</h2>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra nam libero justo laoreet sit amet cursus.
+                     </p>
+                        <div class="button-container">
+                           <button class="project_button">View Project</button>
+                        </div>
+                     </div>
+                  </div>
+<!-- Project 6 Content -->
+                   <div class="single_project_container">
+                     <div class="text-container">
+                        <img src="Assets/Projectplaceholder.png" class="src">
+                        <h2>Project placeholder</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra nam libero justo laoreet sit amet cursus.
+                        </p>
+                           <div class="button-container">
+                              <button class="project_button">View Project</button>
+                           </div>
+                        </div>
+                </div>               
             </div>
          </div>
       </section>
-         
-     <!-- Navigation buttons -->
-
-     
+   
+<!-- CETRIIFCATES SETCION-->
 <section id="certification"> 
    <section class="certification">
       <h1 class="title">Certifications</h1>
@@ -244,9 +290,11 @@ document.querySelectorAll('nav a').forEach(anchor => {
       </div>
    </div>
       </section>
-   </section>
+</section>
 <br>
  <hr>
+
+<!-- CONTACT ME FOOTER -->
  <section id="contact">
    <div class="contact__containers">
       <div class="contact__details__container">
@@ -271,5 +319,5 @@ document.querySelectorAll('nav a').forEach(anchor => {
    </section>
 </section>
 </body>
-      </body>
+</body>
 </html>
