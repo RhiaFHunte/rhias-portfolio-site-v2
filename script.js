@@ -1,38 +1,33 @@
-// SCROLL BEHAVIOUR
+
+// hamburger nav
+
 function toggleMenu() {
-   var menuItems = document.querySelector('.menu-items');
-   menuItems.classList.toggle('show');
+   var menuItems = document.getElementById("menuItems");
+   menuItems.classList.toggle("active"); /* Toggle the "active" class on the menu items */
+ }
+
+// carousel section
+
+
+
+
+const carousel = document.querySelector('.carousel');
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
+
+function scrollCarousel(direction) {
+   const scrollStep = carousel.offsetWidth * direction;
+   carousel.scrollBy({
+      left: scrollStep,
+      top: 0,
+      behavior: 'smooth'
+   });
 }
 
-// CAROUSEL BEHAVIOUR
-document.addEventListener("DOMContentLoaded", function() {
-   const prevBtn = document.querySelector(".prev");
-   const nextBtn = document.querySelector(".next");
-   const projectsContainer = document.querySelector(".projects__container");
-   
-   let scrollAmount = 0;
-   const scrollStep = projectsContainer.offsetWidth; // Width of each project container
-   
- //  nextBtn.addEventListener("click", function() {
-      if (scrollAmount < projectsContainer.scrollWidth - projectsContainer.clientWidth) {
-         scrollAmount += scrollStep;
-         projectsContainer.scrollTo({
-            left: scrollAmount,
-            behavior: "smooth"
-         });
-      }
-   });
-   
- //  prevBtn.addEventListener("click", function() {
-      if (scrollAmount > 0) {
-         scrollAmount -= scrollStep;
-         projectsContainer.scrollTo({
-            left: scrollAmount,
-            behavior: "smooth"
-         });
-      }
-;
+prevBtn.addEventListener('click', () => {
+   scrollCarousel(-1); // Scroll left when previous button is clicked
+});
 
-
-
-
+nextBtn.addEventListener('click', () => {
+   scrollCarousel(1); // Scroll right when next button is clicked
+});

@@ -9,9 +9,41 @@
    --max-width: 1200px;
 }
 
+body {
+   font-family: 'poppins', sans-serif;
+   margin: 0;
+   padding: 0;
+   width: 100%;
+   overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Remove default margins and paddings from body */
+body {
+   margin: 0;
+   padding: 0;
+}
+
+/* Mobile-specific styles */
+@media screen and (max-width: 767px) {
+   body {
+     width: 100vh; /* Set width to fill the entire viewport */
+     height: 100vh; /* Set height to fill the entire viewport height */
+     overflow-x: hidden; /* Prevent horizontal scrolling */
+   }
+ 
+   /* Add any other mobile-specific styles here */
+ }
+ 
+
+/* Reset default margin and padding for all elements */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
 html {
    scroll-behavior: smooth;
-
    margin: 0;
    padding: 0;
    height: 100%;
@@ -36,58 +68,55 @@ a{
    text-decoration: none;
 }
 
-body{
-   font-family: 'poppins', sans-serif;
-}
 
-/*DESKTOP NAV*/
 
+/* DESKTOP NAV */
 nav {
    width: 100%;
+   height: 15%;
    position: fixed;
    top: 0;
    left: 0;
-  background-color: #ffffff28; 
+   background-color: #ffffff28;
    backdrop-filter: blur(10px); /* Blur effect */
    -webkit-backdrop-filter: blur(10px); /* Blur effect for Safari */
    z-index: 99;
 }
-
+ 
 .nav__content {
    max-width: var(--max-width);
    margin: auto;
-   padding: 1.5rem 1rem;
+   padding: 2.5rem 1rem;
    display: flex;
    align-items: center;
    justify-content: space-between;
+   position:relative;
 }
-
-nav .logo a {
+ 
+.nav__content .logo a {
    margin: 0px;
    font-size: 2.5rem;
    font-weight: 600;
-   color:#393838;
+   color: #393838;
    transition: .3s;
    position: absolute; /* Set position to absolute */
    padding-left: 2%; /* Set the left position */
    top: 15px; /* Set the top position */
-}
+   z-index: 999; /* Set z-index to ensure it's on top of other elements */
 
-nav .logo a:hover {
+}
+ 
+.nav__content .logo a:hover {
    color: var(--primary-color-light);
 }
-
-.nav__content {
-   position: relative; /* Position relative for absolute positioning */
-}
-
+ 
 .nav__content ul {
    display: flex;
    align-items: center;
    gap: 1rem;
    list-style: none;
 }
-
+ 
 .nav__content ul li a {
    padding: 0.5rem 1rem;
    text-decoration: none;
@@ -95,51 +124,76 @@ nav .logo a:hover {
    color: var(--text-dark);
    transition: 0.3s;
 }
-
+ 
 .nav__content ul li a:hover {
    color: #5C83A8;
    text-decoration: underline;
    text-underline-offset: 15px;
 }
-
-/* Hamburger icon */
-.hamburger-menu-icon {
-   cursor: pointer;
-   font-size: 2rem;
-   display: none; /* Hide hamburger menu icon by default */
-   position: absolute;
-   top: 20px; /* Adjust top position */
-   right: 20px; /* Adjust right position */
-}
-
+ 
+/*MOBILE MENU*/
 /* Hide menu items by default */
-.menu-items {
-   display: none;
-}
 
-/* Media query for smaller screens */
-@media (max-width: 768px) {
-   /* Hide menu items on smaller screens */
-   .menu-items {
-      display: none;
+.hamburger-menu-icon {
+   display: none; /* Hide the hamburger menu icon by default */
+   position: absolute;
+   top: 10%;
+   right: 10%;
+   z-index: 1000; /* Ensure the hamburger icon is above the menu items */
+   font-size: 60px; /* Adjust the font size as needed */
+
+}
+ 
+@media only screen and (max-width: 767px) {
+
+   nav {
+      width: 100%;
+      height: 10%;
+
    }
 
-   /* Show hamburger menu icon on smaller screens */
+    
+
+   /* Display the hamburger menu icon for screens smaller than 767px */
    .hamburger-menu-icon {
       display: block;
    }
 
-   /* Show menu items when the hamburger menu is clicked */
-   .menu-items.show {
-      display: block;
+   /* Hide the menu items on responsive screens */
+   .menu-items {
+      display: none;
    }
-}
 
-/* Show menu items by default on larger screens */
-@media (min-width: 769px) {
-   .menu-items.hide {
-      display: block;
+   /* Show the menu items when the menu is active */
+   .menu-items.active {
+      display: flex; /* Change display to flex */
+      flex-direction: column; /* Arrange items vertically */
+      align-items: center; /* Center items horizontally */
+      justify-content: center; /* Center items vertically */
+      position: fixed; /* Position the menu items fixed to the viewport */
+      top: 0; /* Set top position to 0 */
+      left: 0; /* Set left position to 0 */
+      width: 100%; /* Set width to 100% */
+      height: 150vh; /* Set height to 100vh to cover the entire viewport */
+      background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+      z-index: 999; /* Set z-index to ensure it's on top of other elements */
    }
+   .nav__content ul {
+      display: none; /* Hide the menu items */
+   }
+
+   .nav__content .logo a {
+      margin: 0px;
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: #393838;
+      transition: .3s;
+      position: absolute; /* Set position to absolute */
+      padding-top: 3%; /* Set the left position */
+      padding-left: 10%; /* Set the left position */
+      z-index: 1000; /* Set z-index to ensure it's on top of other elements */
+
+}
 }
 
 /*PROFILE SECTION*/
@@ -177,6 +231,8 @@ body {
    letter-spacing: 2px;
    color:#393838;
    font-weight: 600;
+   margin: 10px 10px 30px 0px;
+
 }
 .profile__title {
    margin-top: 0;
@@ -184,13 +240,14 @@ body {
    font-weight: 400;
    line-height: 3rem;
    color: var(--text-dark);
-   margin-bottom: 0;
+
 }
 .profile__title span{
    font-weight: 600;
    white-space: nowrap; /* Prevent title from wrapping */
 }
 .profile__description p {
+   padding-top: 10%;
    line-height: 1.5rem;
    color: var(--text-dark);
 
@@ -204,32 +261,58 @@ body {
    overflow: hidden; /* Correct value is 'hidden', not 'clip' */
    margin: 1rem; /* Add some spacing between image and text */
  }
- /* Mobile-specific styles */
- @media screen and (max-width: 750px)
-   {
-      .profile-image img {
-         width: 80%; /* 100% for a circle, not 100% */ 
-         overflow: hidden; /* Correct value is 'hidden', not 'clip' */
-         place-items: center;
-       }
-      
-      .profile__container {
-      grid-template-columns: 1fr; /* Change to a single column for mobile */
-      padding-top: 5rem;
-      }
-      .profile__container .profile-image {
-      order: -1; /* Move the image above the text for mobile */
-      width: 25rem;
-      }
-
-      .profile {
-         min-height: 600px; /* Adjust this value as needed */
-      }
-
+/* Mobile-specific styles */
+@media screen and (max-width: 767px) {
+   .profile {
+     width: 100vh; /* Set width to fill the entire viewport */
+     height: 120vh;
+     padding: 0; /* Remove any padding */
+     background: linear-gradient(106.5deg, rgba(255, 215, 185, 0.91) 23%, rgba(223, 159, 247, 0.8) 93%);
    }
 
+   .profile-image img {
+      width: 100%; /* 100% for a circle, not 100% */ 
+      overflow: hidden; /* Correct value is 'hidden', not 'clip' */
+      margin: 0; /* Add some spacing between image and text */
+      padding-top: 20%; /* Remove any margin */
+
+    }
+ 
+   .profile__container {
+      width: 100vh; /* Set width to fill the entire viewport */
+     grid-template-columns: 1fr; /* Change to a single column for mobile */
+     padding-top: 5rem;
+     margin: 0; /* Remove any margin */
+   }
+ 
+   .profile__container .profile-image {
+     order: -1; /* Move the image above the text for mobile */
+     width: 100%; /* Set the width to 100% to fill the container */
+     max-width: 300px; /* Optionally, set a maximum width */
+     margin: 0 auto; /* Center the image horizontally */
+   }
+ 
+   .profile {
+     min-height: auto; /* Reset the minimum height */
+   }
+   
+   .profile__title {
+      margin-top: 0;
+      font-size: 2rem;
+      font-weight: 400;
+      line-height: 3rem;
+      color: var(--text-dark);
+      margin-bottom: 0;
+   }
+   .profile__content {
+     margin: 0%;
+   }
+ }
+ 
 /*PROFILE BUTTONS*/
 .action__btns {
+   margin: 10% 10% 0 0;
+
    letter-spacing: 2px;
    display: flex;
    gap: 1rem;
@@ -310,10 +393,8 @@ ul li a {
 .about__containers {
    display: flex;
    flex-wrap: wrap; /* Allow items to wrap to the next row */
-   margin-top: 2rem;
    margin-bottom: auto;
-   padding-left: 10%;
-   padding-right: 10%;
+   padding: 6.5%;
    gap: 6rem;
 }
 
@@ -323,6 +404,45 @@ ul li a {
    width: calc(50% - 1rem); }
 
 
+   @media screen and (max-width: 767px) {
+      #about {
+         margin: 0 auto;
+         width: 100%; /* Set width to fill the entire viewport */
+         padding: 10% 0 0 0; /* Remove any padding */
+         height: 600px;
+       }
+     
+       .about__details__container,
+       .details__container {
+         margin-bottom: 2rem; /* Add spacing between stacked containers */
+       }
+     
+       .about__details__container {
+         width: 100%; /* Set width to 100% to occupy full width */
+         order: -1; /* Set the order to -1 to move it above */
+         display: flex;
+         flex-direction: column; /* Ensure stacked layout */
+       }
+     
+       .about__containers {
+         display: flex;
+         flex-direction: column; /* Ensure stacked layout */
+         gap: 2rem; /* Add gap between stacked containers */
+       }
+     
+       .details__container {
+         display: flex;
+         flex-direction: column; /* Ensure stacked layout */
+         margin-bottom: 2rem; /* Add spacing between stacked containers */
+       }
+
+       .tech__stack {
+         width: 200%; /* Set width to 100% to occupy full width */
+          
+       }
+     }
+    
+   
 /*TECH STACK SECTION*/
 .each_tech {
    font-size: 1rem;
@@ -343,153 +463,117 @@ ul li a {
 
 /* PROJECTS SECTION*/
 
-/* Apply styles to the projects section title */
 #projects .title {
    text-align: left;
    margin-left: 10%;
-}
-
-/* Apply styles to the projects container */
-#projects .projects__container {
-   display: flex; /* Use flexbox layout */
-   flex-wrap: nowrap; /* Prevent wrapping to new lines */
-   overflow-x: auto; /* Enable horizontal scrolling */
-   gap: 20px;
-   padding: 0 10% 20px 8%; /* Adjusted padding */
-   cursor:default;
-}
-
-.single_project_container h2 {
-   padding: 0%;
-   margin: 2%;
-   
-}
-
-.single_project_container p {
-   padding: 0 5%; /* Adjusted padding */
-   margin: 0 0 5%; /* Adjusted margin with 5% bottom margin */
+   padding: auto;
 }
 
 
-/* Apply styles to each individual project container */
-#projects .single_project_container {
-   width: 28%; /* Set a minimum width for each project */
-   flex: 0 0 auto; /* Ensure each project container retains its size */
-   background-color: #FAFAFA;
-   border-radius: 30px;
-   color: #464747;
-   padding: 20px;
-   text-align: center;
-}
-
-.single_project_container {
-   width: 250px; /* Adjust the width as needed */
-   background-color: #FAFAFA;
-   border-radius: 20px;
-   color: #464747;
-   padding: 10px;
-   margin: 0 10px; /* Add margin between project containers */
-   flex: 0 0 auto; /* Ensure each project container retains its size */
-   width: 30%; /* Display three projects at a time */
-}
-
-.single_project_container p {
-   text-align: center;
-   font-size: 12px;
-}
-
-
-.single_project_container img {
-   border-radius: 10px; /* Rounded corners for the image */
-   max-width: 70%; /* Set maximum width */
-   height: auto; /* Maintain aspect ratio */
-}
-
-/* Apply styles to the text container inside .single_project_container */
-#projects .text-container {
+.carousel {
    display: flex;
-   flex-direction: column;
-   align-items: center;
+   overflow-x: hidden; /* Hide the horizontal scrollbar */
+   scroll-snap-type: x mandatory; /* Enable snap scrolling horizontally */
+   width: calc(100% - 100px); /* Adjust the width to fill the container minus the margin */
+   margin: 0 50px; /* Add 20px margin to the left and right */
+   background-color: rgba(255, 255, 255, 0.397); /* Set transparent background color */
+
 }
 
-/* Apply styles to the project buttons */
-#projects .project_button {
-   background-color: white;
-   color: black;
-   padding: 10px 16px;
-   margin: 0px; /* Adjusted margin */
-   font-size: 12px;
-   font-weight: 500;
-   letter-spacing: 2px;
-   border: 1px solid #393838;
-   border-radius: 35px;
-   transition: 0.3s;
+.project-container {
+   flex: 0 0 32.3%; /* Display 3 items at a time on desktop */
+   padding: 10px;
+   text-align: center;
+   scroll-snap-align: start; /* Ensure snapping behavior */
+   width: 10%;
+   background-color: #f5f5f5; /* Light grey background color */
+   border-radius: 30px; /* Add border radius */
+   padding: 20px; /* Add padding */
+   margin: 10px; /* Add margin */
+}
+
+.project-container h3 {
+   font-size: 20px;
+   color: #333;
+   margin: 10px 10px 10px 0;
+}
+
+
+@media (max-width: 767px) {
+   .project-container {
+      flex: 0 0 calc(100% - 60px); /* Display 1 item at a time on mobile */
+      margin: 0 30px; /* Adjust margin for spacing */
+   }
+}
+
+/* Style for buttons */
+.button {
+   background-color: #333; /* Dark grey background */
+   color: #f1f1f1; /* Light text color */
+   border: none;
+   display: inline-block;
+   padding: 10px 18px;
    cursor: pointer;
+   margin: 25px;
+   border-radius: 30px; /* Rounded corners */
+   font-size: 1rem;
+   color: var(--extra-light);
 }
 
-#projects .project_button:hover {
-   color: white;
-   background-color: black;
+.button:hover {
+   background-color: #5a5a5a; /* Light grey background on hover */
+   color: #f1f1f1; /* Light text color */
 }
 
-/* CAROUSEL CONTAINER */
-.carousel-container {
-   position: relative;
+/* PREV AND NEXT BUTTONS */
+.button-container {
+   display: flex;
+   justify-content: space-between; /* Align buttons to both ends of the container */
+   margin-top: -00px; /* Adjust margin as needed */
 }
 
-.projects__container::-webkit-scrollbar {
-   height: 8px;
+button {
+   background-color: #f1f1f1;
+   color: #333;
+   border: none;
+   display: inline-block;
+   padding: 10px 40px;
+   cursor: pointer;
+   margin: 10px;
+   border-radius: 40px;
+   font-size: 1rem;
+}
+
+.next {
+   float: right; /* Float the next button to the right */
+}
+
+
+button:hover {
+   background-color: #E6B5F6;
+}
+ 
+.content-below-buttons {
+   margin-top: 40px; /* Add space between buttons and other content */
+}
+
+/* PROJECT CONTAINERS */
+
+
+.project-container p {
+   margin: auto; /* Center the paragraph horizontally */
+   font-size: 12px;
+   max-width: 350px; /* Set the maximum width to 400px */
+ }
+ 
+
+ .project-container img {
+   width: 300px;
+   max-width: 100%;
+   height: auto;
+   border-radius: 30px;
  }
 
-.projects__container::-webkit-scrollbar-thumb {
-   background-color: #c1c1c1; /* Color of the scrollbar thumb */
-   border-radius: 10px;
-}
-
-/* Optionally, style the scrollbar thumb on hover */
-.projects__container::-webkit-scrollbar-thumb:hover {
-   background: #545454; /* Change the color on hover */
- }
-
-.projects__containersx::-webkit-scrollbar-track {
-   background-color: transparent; /* Color of the scrollbar track */
-   width: 5px; /* Adjust the width as needed */
-
-}
-
-
-/* Style the navigation buttons */
-.prev,
-.next {
-    position: absolute; /* Position relative to the parent carousel container */
-    top: 50%; /* Position vertically at the center */
-    transform: translateY(-50%); /* Adjust for center alignment */
-    background-color: #ffffff; /* Background color */
-    color: #393838; /* Text color */
-    border: 2px solid #393838; /* Border color */
-    border-radius: 50%; /* Border radius for circular shape */
-    padding: 10px; /* Padding */
-    font-size: 16px; /* Font size */
-    font-weight: bold; /* Font weight */
-    cursor: pointer; /* Cursor style */
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Transition effect */
-}
-
-/* Style the previous button */
-.prev {
-    left: 40px; /* Position to the left */
-}
-/* Style the next button */
-.next {
-    right: 40px; /* Position to the right */
-}
-/* Hover effect for navigation buttons */
-.prev:hover,
-.next:hover {
-    background-color: #393838; /* Background color on hover */
-    color: #ffffff; /* Text color on hover */
-    border-color: #393838; /* Border color on hover */
-}
 
 
 /*CERTIFIATE SECTION*/
@@ -501,7 +585,7 @@ ul li a {
    display: grid;
    grid-template-columns: repeat(3, 1fr);
    gap: 30px;
-   padding: 0 180px;
+   padding: 0 150px;
    margin-bottom: 5%;
 }
 .certificate img {
@@ -525,9 +609,8 @@ ul li a {
       grid-template-columns: repeat(1, 1fr);
       padding: 0 30px; /* Adjust padding as needed */
    }
+   
 }
-
-
 
 /*CONTACT SECTION*/
 hr {
@@ -544,7 +627,6 @@ hr {
    height: 150%;
 }
 
-
 .contact-section-container {
    display: grid;
    gap: 4rem;
@@ -553,6 +635,23 @@ hr {
    column-gap: 4rem;
 }
 
+.contact__details__container .title {
+   /* Add your styling here */
+   margin-left: -7.5%;
+   font-size: 2.5rem; /* Example: Adjust font size */
+   color: #333; /* Example: Set text color */
+   margin-bottom: 10px; /* Example: Add bottom margin */
+   /* Add more styles as needed */
+ }
+
+ .contact__details__container p {
+   /* Add your styling here */
+   margin-left: -7.5%;
+   font-size: 2.5rem; /* Example: Adjust font size */
+   color: #333; /* Example: Set text color */
+   margin-bottom: 10px; /* Example: Add bottom margin */
+   /* Add more styles as needed */
+ }
 
 h1.contact-email a {
    text-align: justify;
@@ -571,7 +670,6 @@ h1.contact-email a:hover{
    max-width: 75%; /* Set a maximum width if needed */
 }
 
-
 .contact__containers {
    display: flex;
    flex-wrap: wrap; /* Allow items to wrap to the next row */
@@ -587,9 +685,6 @@ h1.contact-email a:hover{
    flex: 1;
    width: calc(50% - 1rem);
 }
-
-
-
 
 .social-icons {
    display: flex; /* Use flexbox to line up icons horizontally */
