@@ -101,7 +101,7 @@ document.querySelectorAll('nav a').forEach(anchor => {
                   A self-taught creative Web Developer. <br>Based in London, UK.
                </p>
                <div class="action__btns">
-                  <button class="contact__me">Contact Me</button>
+                  <button class="contact__me" onclick="location.href='./#contact'">Contact Me</button>
                   <button class="portfolio" onclick="location.href='./#projects'">Portfolio</button>
                </div>
                
@@ -143,15 +143,12 @@ document.querySelectorAll('nav a').forEach(anchor => {
             <div class="each_tech">Responsive</div>  
             <div class="each_tech">UI</div> 
             <div class="each_tech">UX</div>   
-
-         </div>
-          
+         </div> 
        </div>
       </section>
       <br>
       <br>
       <br>
-
 <!-- PROJECTS SECTION 
          <div class="projects__container">
             <div class="single_project_container">
@@ -200,7 +197,6 @@ document.querySelectorAll('nav a').forEach(anchor => {
                         </div>
                      </div>
    -->
-
 <section id="projects">
    <h1 class="title">Projects</h1>
    <div class="carousel">
@@ -211,9 +207,9 @@ document.querySelectorAll('nav a').forEach(anchor => {
         <a href="https://rhiafh-character-counter.netlify.app/" target="_blank" class="button">View Project </a>
       </div>
       <div class="project-container">
-        <img src="Assets/resized/rh-weather-app-square.jpg" alt="Project 2">
+         <video class="project-video" video src="Assets/Screen Recording 2024-04-01 at 00.14.59.mp4" alt="Project 2" autoplay controls></video>
         <h3>API Weather App</h3>
-        <p>Used a live API to extract and display real-time weather data, including temperature, description, humidity, and wind speed with a 5-day forecast feature. <br>Coded a dynamic manipulation of icons and gradient backgrounds based on weather conditions to user interaction. Additionally, crafted a user-friendly Fahrenheit to Celsius conversion program for convenience.</p>
+        <p>Used a live API to extract and display real-time weather data, including temperature, description, humidity, and wind speed with a 5-day forecast feature. <br>Coded a dynamic manipulation of icons and gradient backgrounds based on weather conditions to user interaction.</p>
         <a href="#" class="button">View Project</a>
 
       </div>
@@ -289,7 +285,7 @@ document.querySelectorAll('nav a').forEach(anchor => {
    <div class="contact__containers">
       <div class="contact__details__container">
          <h1 class="title">Get in touch!</h1>
-         <p>Lets connect.</p>
+         <p class="contact_p">Lets connect.</p>
       </div>
       
       <div class="about__container">

@@ -44,6 +44,7 @@ body {
 
 html {
    scroll-behavior: smooth;
+   scroll-padding-top: 100px; /* Adjust the spacing as needed */
    margin: 0;
    padding: 0;
    height: 100%;
@@ -152,8 +153,6 @@ nav {
 
    }
 
-    
-
    /* Display the hamburger menu icon for screens smaller than 767px */
    .hamburger-menu-icon {
       display: block;
@@ -164,23 +163,37 @@ nav {
       display: none;
    }
 
-   /* Show the menu items when the menu is active */
-   .menu-items.active {
-      display: flex; /* Change display to flex */
-      flex-direction: column; /* Arrange items vertically */
-      align-items: center; /* Center items horizontally */
-      justify-content: center; /* Center items vertically */
-      position: fixed; /* Position the menu items fixed to the viewport */
-      top: 0; /* Set top position to 0 */
-      left: 0; /* Set left position to 0 */
-      width: 100%; /* Set width to 100% */
-      height: 150vh; /* Set height to 100vh to cover the entire viewport */
-      background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
-      z-index: 999; /* Set z-index to ensure it's on top of other elements */
-   }
    .nav__content ul {
       display: none; /* Hide the menu items */
+
    }
+
+
+   /* Show the menu items when the menu is active */
+   .menu-items.active {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: fixed;
+      font-size: 40px;
+      top: 0;
+      left: 0; 
+      width: 100%;
+      height: 200vh; /* Set height to cover the entire viewport */
+      color: whitesmoke;
+      background-color: rgba(0, 0, 0, 0.54); /* Semi-transparent background */
+      backdrop-filter: blur(100px); /* Blur effect */
+      z-index: 999;
+    }
+
+    .nav__content .active .menuItems  ul li a {
+      color: white; /* Change font color when menu is active */
+      padding: 10px; /* Add padding to the menu items for spacing */
+      transition: color 0.3s; /* Add transition effect */
+      z-index: 1000; /* Set z-index to ensure it's on top of other elements */
+
+    }
 
    .nav__content .logo a {
       margin: 0px;
@@ -265,8 +278,8 @@ body {
 @media screen and (max-width: 767px) {
    .profile {
      width: 100vh; /* Set width to fill the entire viewport */
-     height: 120vh;
-     padding: 0; /* Remove any padding */
+     height: 130vh;
+     padding: 0 0 10px 10px; /* Remove any padding */
      background: linear-gradient(106.5deg, rgba(255, 215, 185, 0.91) 23%, rgba(223, 159, 247, 0.8) 93%);
    }
 
@@ -498,12 +511,24 @@ ul li a {
    margin: 10px 10px 10px 0;
 }
 
-
 @media (max-width: 767px) {
    .project-container {
-      flex: 0 0 calc(100% - 60px); /* Display 1 item at a time on mobile */
-      margin: 0 30px; /* Adjust margin for spacing */
+      flex: 0 0 calc(100% - 20px); /* Display 1 item at a time on mobile */
+      margin: 0 20px; /* Adjust margin for spacing */
+      width: 200%; /* Adjust the width of the carousel */
+      background-color: #f5f5f5; /* Light grey background color */
+      padding-left: 60px; /* Add padding to the left */
    }
+
+   .carousel {
+      display: flex;
+      overflow-x: hidden; /* Hide the horizontal scrollbar */
+      scroll-snap-type: x mandatory; /* Enable snap scrolling horizontally */
+      width: calc(100% - 100px); /* Adjust the width to fill the container minus the margin */
+      margin: 0 auto; /* Center the carousel horizontally */
+      background-color: rgba(255, 255, 255, 0.397); /* Set transparent background color */
+   }
+
 }
 
 /* Style for buttons */
@@ -542,6 +567,7 @@ button {
    margin: 10px;
    border-radius: 40px;
    font-size: 1rem;
+   font-style: italic;
 }
 
 .next {
@@ -550,12 +576,10 @@ button {
 
 
 button:hover {
-   background-color: #E6B5F6;
+   background-color: #e6b5f69f;
 }
  
-.content-below-buttons {
-   margin-top: 40px; /* Add space between buttons and other content */
-}
+
 
 /* PROJECT CONTAINERS */
 
@@ -568,13 +592,20 @@ button:hover {
  
 
  .project-container img {
+   margin-top: 20px;
+   width: 300px;
+   max-width: 100%;
+   height: 0 auto;
+   border-radius: 30px;
+ }
+
+ .project-video {
+   margin-top: 20px;
    width: 300px;
    max-width: 100%;
    height: auto;
    border-radius: 30px;
  }
-
-
 
 /*CERTIFIATE SECTION*/
 .certification h1{
@@ -624,7 +655,8 @@ hr {
 #contact {
    background-color: #FAFAFA; /* Choose your desired background color */
    padding: 60px; /* Add padding to provide some space around the content */
-   height: 150%;
+   height: auto;
+   margin: 0 auto;
 }
 
 .contact-section-container {
@@ -710,4 +742,24 @@ h1.contact-email a:hover{
 .copyright-text{
    margin-bottom: 2px;
    text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+   #contact {
+      margin: 0 auto; /* Further reduce padding for smaller screens */
+      text-align: center;
+   }
+
+   #contact .title p{
+      margin: 0 auto; /* Further reduce padding for smaller screens */
+      text-align: center;
+
+   }
+
+
+   .contact__details__container p {
+      margin: 0 auto; /* Further reduce padding for smaller screens */
+      text-align: center;
+
+   }
 }
