@@ -11,755 +11,190 @@
 
 body {
    font-family: 'poppins', sans-serif;
-   margin: 0;
-   padding: 0;
-   width: 100%;
-   overflow-x: hidden; /* Prevent horizontal scrolling */
+
 }
 
-/* Remove default margins and paddings from body */
-body {
-   margin: 0;
-   padding: 0;
-}
+/* PROFILE SECTION */
 
-/* Mobile-specific styles */
-@media screen and (max-width: 767px) {
-   body {
-     width: 100vh; /* Set width to fill the entire viewport */
-     height: 100vh; /* Set height to fill the entire viewport height */
-     overflow-x: hidden; /* Prevent horizontal scrolling */
-   }
- 
-   /* Add any other mobile-specific styles here */
- }
- 
-
-/* Reset default margin and padding for all elements */
-* {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
-}
-
-html {
-   scroll-behavior: smooth;
-   scroll-padding-top: 100px; /* Adjust the spacing as needed */
-   margin: 0;
-   padding: 0;
-   height: 100%;
+#profile {
+   background: linear-gradient(106.5deg, rgba(255, 215, 185, 0.91) 23%, rgba(223, 159, 247, 0.8) 93%);
+   padding: 40px;
+   margin-bottom: 0; /* Ensure no margin at the bottom */
+   z-index: 1; /* Ensure profile section is above the nav section */
 }
 
 nav {
-   padding: 0%;
-   padding-top: 0%;
-   margin: auto;
-   box-sizing: border-box;
-}
-
-h1 {
-   font-size: 2rem;
-   font-weight: bold;
-   line-height: 3rem;
-   color: var(--text-dark);
-   margin-bottom: 1rem;
-}
-
-a{
-   text-decoration: none;
-}
-
-
-
-/* DESKTOP NAV */
-nav {
-   width: 100%;
-   height: 15%;
    position: fixed;
    top: 0;
-   left: 0;
-   background-color: #ffffff28;
-   backdrop-filter: blur(10px); /* Blur effect */
-   -webkit-backdrop-filter: blur(10px); /* Blur effect for Safari */
-   z-index: 99;
-}
- 
-.nav__content {
-   max-width: var(--max-width);
-   margin: auto;
-   padding: 2.5rem 1rem;
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
-   position:relative;
-}
- 
-.nav__content .logo a {
-   margin: 0px;
-   font-size: 2.5rem;
-   font-weight: 600;
-   color: #393838;
-   transition: .3s;
-   position: absolute; /* Set position to absolute */
-   padding-left: 2%; /* Set the left position */
-   top: 15px; /* Set the top position */
-   z-index: 999; /* Set z-index to ensure it's on top of other elements */
-
-}
- 
-.nav__content .logo a:hover {
-   color: var(--primary-color-light);
-}
- 
-.nav__content ul {
-   display: flex;
-   align-items: center;
-   gap: 1rem;
-   list-style: none;
-}
- 
-.nav__content ul li a {
-   padding: 0.5rem 1rem;
-   text-decoration: none;
-   font-weight: 600;
-   color: var(--text-dark);
-   transition: 0.3s;
-}
- 
-.nav__content ul li a:hover {
-   color: #5C83A8;
-   text-decoration: underline;
-   text-underline-offset: 15px;
-}
- 
-/*MOBILE MENU*/
-/* Hide menu items by default */
-
-.hamburger-menu-icon {
-   display: none; /* Hide the hamburger menu icon by default */
-   position: absolute;
-   top: 10%;
-   right: 10%;
-   z-index: 1000; /* Ensure the hamburger icon is above the menu items */
-   font-size: 60px; /* Adjust the font size as needed */
-
-}
- 
-@media only screen and (max-width: 767px) {
-
-   nav {
-      width: 100%;
-      height: 10%;
-
-   }
-
-   /* Display the hamburger menu icon for screens smaller than 767px */
-   .hamburger-menu-icon {
-      display: block;
-   }
-
-   /* Hide the menu items on responsive screens */
-   .menu-items {
-      display: none;
-   }
-
-   .nav__content ul {
-      display: none; /* Hide the menu items */
-
-   }
-
-
-   /* Show the menu items when the menu is active */
-   .menu-items.active {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      position: fixed;
-      font-size: 40px;
-      top: 0;
-      left: 0; 
-      width: 100%;
-      height: 200vh; /* Set height to cover the entire viewport */
-      color: whitesmoke;
-      background-color: rgba(0, 0, 0, 0.54); /* Semi-transparent background */
-      backdrop-filter: blur(100px); /* Blur effect */
-      z-index: 999;
-    }
-
-    .nav__content .active .menuItems  ul li a {
-      color: white; /* Change font color when menu is active */
-      padding: 10px; /* Add padding to the menu items for spacing */
-      transition: color 0.3s; /* Add transition effect */
-      z-index: 1000; /* Set z-index to ensure it's on top of other elements */
-
-    }
-
-   .nav__content .logo a {
-      margin: 0px;
-      font-size: 2.5rem;
-      font-weight: 600;
-      color: #393838;
-      transition: .3s;
-      position: absolute; /* Set position to absolute */
-      padding-top: 3%; /* Set the left position */
-      padding-left: 10%; /* Set the left position */
-      z-index: 1000; /* Set z-index to ensure it's on top of other elements */
-
-}
-}
-
-/*PROFILE SECTION*/
-body {
-   margin: 0; /* Remove default margins */
-   padding: 0; /* Remove default paddings */
-}
-.profile {
    width: 100%;
-   margin: 0;
-   padding: 0;
-  /* background: linear-gradient(109.6deg, rgb(245, 239, 249) 30.1%, rgb(207, 211, 236) 100.2%); */
-   background: linear-gradient(106.5deg, rgba(255, 215, 185, 0.91) 23%, rgba(223, 159, 247, 0.8) 93%);
-   min-height: 400px;
-   height: 100vh;
+   z-index: 2; /* Ensure nav section is above the profile section */
 }
-.profile__container {
-   min-height: 110vh;
-   max-width: 100%;
-   min-width: 8%;
-   margin: auto;
-   margin-top: 1px;
-   padding-left: 18%;
-   padding-right: 15%;
-   display: grid;
-   grid-template-columns: repeat(2, 1fr);
-   gap:2%;
-}
-.profile__content {
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-}
-.profile__subtitle {
-   letter-spacing: 2px;
-   color:#393838;
-   font-weight: 600;
-   margin: 10px 10px 30px 0px;
 
-}
-.profile__title {
-   margin-top: 0;
-   font-size: 2.5rem;
-   font-weight: 400;
-   line-height: 3rem;
-   color: var(--text-dark);
-
-}
-.profile__title span{
-   font-weight: 600;
-   white-space: nowrap; /* Prevent title from wrapping */
-}
-.profile__description p {
-   padding-top: 10%;
-   line-height: 1.5rem;
-   color: var(--text-dark);
-
-}
-.profile-image { 
-   display: grid;
-   place-items: center;
-}
-.profile-image img {
-   width: 70%; /* 100% for a circle, not 100% */ 
-   overflow: hidden; /* Correct value is 'hidden', not 'clip' */
-   margin: 1rem; /* Add some spacing between image and text */
- }
-/* Mobile-specific styles */
-@media screen and (max-width: 767px) {
-   .profile {
-     width: 100vh; /* Set width to fill the entire viewport */
-     height: 130vh;
-     padding: 0 0 10px 10px; /* Remove any padding */
-     background: linear-gradient(106.5deg, rgba(255, 215, 185, 0.91) 23%, rgba(223, 159, 247, 0.8) 93%);
-   }
-
-   .profile-image img {
-      width: 100%; /* 100% for a circle, not 100% */ 
-      overflow: hidden; /* Correct value is 'hidden', not 'clip' */
-      margin: 0; /* Add some spacing between image and text */
-      padding-top: 20%; /* Remove any margin */
-
-    }
- 
-   .profile__container {
-      width: 100vh; /* Set width to fill the entire viewport */
-     grid-template-columns: 1fr; /* Change to a single column for mobile */
-     padding-top: 5rem;
-     margin: 0; /* Remove any margin */
-   }
- 
-   .profile__container .profile-image {
-     order: -1; /* Move the image above the text for mobile */
-     width: 100%; /* Set the width to 100% to fill the container */
-     max-width: 300px; /* Optionally, set a maximum width */
-     margin: 0 auto; /* Center the image horizontally */
-   }
- 
-   .profile {
-     min-height: auto; /* Reset the minimum height */
-   }
-   
-   .profile__title {
-      margin-top: 0;
-      font-size: 2rem;
-      font-weight: 400;
-      line-height: 3rem;
-      color: var(--text-dark);
-      margin-bottom: 0;
-   }
-   .profile__content {
-     margin: 0%;
-   }
- }
- 
-/*PROFILE BUTTONS*/
-.action__btns {
-   margin: 10% 10% 0 0;
-
-   letter-spacing: 2px;
-   display: flex;
-   gap: 1rem;
-   font-size: 8px;
-   font-weight: 600;
-
-}
-.action__btns button {
-   margin-top: 20px;
-   font-size: 1rem;
-   font-weight: 600;
-   letter-spacing: 2px;
-   padding: 1rem 2rem;
-   outline: none;
-   border: 2px solid var(--primary-color);
-   border-radius: 35px;
-   transition: 0.3s;
-   cursor: pointer;
-}
-.contact__me {
-   background-color: var(--primary-color);
-   color: #ffffff;
-}
-.contact__me:hover {
-   background-color: #5C83A8;
-   box-shadow: 5px 5px 8px #DADBEF;
-}
-.portfolio{
-   background-color: whitesmoke;
-   color: var(--primary-color)
-
-}
-.portfolio:hover {
-   color: var(--extra-light);
-   background-color: var(--text-light);
-   box-shadow: 5px 5px 8px #DADBEF;
-}
-ul li a {
-   font-size: 1.2rem;
-}
-.profile-section-container {
-   padding: 10rem 1rem 5rem 1rem;
-   text-align: center;
-   grid-template-columns: repeat(1, 1fr);
-}
-.profile-section-action__btns { 
-   margin: auto;
+.navbar {
+   position: fixed;
+   background-color: rgba(255, 255, 255, 0.199); /* Transparent white background */
+   -webkit-backdrop-filter: blur(10px); /* For Safari */
+   backdrop-filter: blur(10px); /* Standard syntax */
 }
 
 
-/*ABOUT SECTION*/
-
-.about__containers {
-   opacity: 0; /* Initially hide the section */
-   transition: opacity 3s ease-in; /* Apply transition effect */
-}
-
-.about__containers.show {
-   opacity: 1; /* Show the section with fade-in effect */
+#home {
+   padding-top: 70px; /* Adjust as needed to make space for the navbar */
 }
 
 
-#about {
-   background-color: #FAFAFA; /* Choose your desired background color */
-   padding: 60px; /* Add padding to provide some space around the content */
- }
- 
-
-.about-section-container {
-   display: grid;
-   gap: 4rem;
-   grid-template-columns: repeat(2, 1fr);
-   row-gap: 4rem;
-   column-gap: 4rem;
+/* ABOUT SECTION */
+body #about {
+   background-color: #FAFAFA; /* Light grey background color */
+   padding: 20px; /* Add padding for spacing */
 }
 
 
-.about__containers {
-   display: flex;
-   flex-wrap: wrap; /* Allow items to wrap to the next row */
-   margin-bottom: auto;
-   padding: 6.5%;
-   gap: 6rem;
-}
-
-.about__details__container,
-.details__container {
-   flex: 1;
-   width: calc(50% - 1rem); }
-
-
-   @media screen and (max-width: 767px) {
-      #about {
-         margin: 0 auto;
-         width: 100%; /* Set width to fill the entire viewport */
-         padding: 10% 0 0 0; /* Remove any padding */
-         height: 600px;
-       }
-     
-       .about__details__container,
-       .details__container {
-         margin-bottom: 2rem; /* Add spacing between stacked containers */
-       }
-     
-       .about__details__container {
-         width: 100%; /* Set width to 100% to occupy full width */
-         order: -1; /* Set the order to -1 to move it above */
-         display: flex;
-         flex-direction: column; /* Ensure stacked layout */
-       }
-     
-       .about__containers {
-         display: flex;
-         flex-direction: column; /* Ensure stacked layout */
-         gap: 2rem; /* Add gap between stacked containers */
-       }
-     
-       .details__container {
-         display: flex;
-         flex-direction: column; /* Ensure stacked layout */
-         margin-bottom: 2rem; /* Add spacing between stacked containers */
-       }
-
-       .tech__stack {
-         width: 200%; /* Set width to 100% to occupy full width */
-          
-       }
-     }
-    
-   
-/*TECH STACK SECTION*/
+/* TECH STACK SECTION */
 .each_tech {
-   font-size: 1rem;
-   color: var(--extra-light);
-   margin-bottom: 8px;
+   background-color: #333;
+   color: #fff;
+   padding: 5px 10px;
+   border-radius: 100px;
+   margin-bottom: 5px;
+}
+
+.tech__stack .each_tech {
+   display: inline-block;
+   background-color: #333;
+   color: #fff;
+   padding: 5px 10px;
    margin: 5px;
-   margin-left: 0%;
-   background-color: #393838;
-   padding: 8px 16px;
-   border-radius: 35px; 
-   display: inline-block; 
-}
-
-.each_tech:hover {
-   background-color:  #5a5a5a;
-   cursor: default;
-}
-
-/* PROJECTS SECTION*/
-
-#projects .title {
-   text-align: left;
-   margin-left: 10%;
-   padding: auto;
+   border-radius: 100px;
+   word-wrap: break-word; /* Wrap long words */
 }
 
 
-.carousel {
-   display: flex;
-   overflow-x: hidden; /* Hide the horizontal scrollbar */
-   scroll-snap-type: x mandatory; /* Enable snap scrolling horizontally */
-   width: calc(100% - 100px); /* Adjust the width to fill the container minus the margin */
-   margin: 0 50px; /* Add 20px margin to the left and right */
-   background-color: rgba(255, 255, 255, 0.397); /* Set transparent background color */
-
+/* PROJECTS SECTION */
+#projects {
+   padding-left: 40px; /* Add left padding */
+   padding-right: 40px; /* Add right padding */
 }
 
 .project-container {
-   flex: 0 0 32.3%; /* Display 3 items at a time on desktop */
-   padding: 10px;
-   text-align: center;
-   scroll-snap-align: start; /* Ensure snapping behavior */
-   width: 10%;
-   background-color: #f5f5f5; /* Light grey background color */
-   border-radius: 30px; /* Add border radius */
-   padding: 20px; /* Add padding */
-   margin: 10px; /* Add margin */
-}
-
-.project-container h3 {
-   font-size: 20px;
-   color: #333;
-   margin: 10px 10px 10px 0;
-}
-
-@media (max-width: 767px) {
-   .project-container {
-      flex: 0 0 calc(100% - 20px); /* Display 1 item at a time on mobile */
-      margin: 0 20px; /* Adjust margin for spacing */
-      width: 200%; /* Adjust the width of the carousel */
-      background-color: #f5f5f5; /* Light grey background color */
-      padding-left: 60px; /* Add padding to the left */
-   }
-
-   .carousel {
-      display: flex;
-      overflow-x: hidden; /* Hide the horizontal scrollbar */
-      scroll-snap-type: x mandatory; /* Enable snap scrolling horizontally */
-      width: calc(100% - 100px); /* Adjust the width to fill the container minus the margin */
-      margin: 0 auto; /* Center the carousel horizontally */
-      background-color: rgba(255, 255, 255, 0.397); /* Set transparent background color */
-   }
-
-}
-
-/* Style for buttons */
-.button {
-   background-color: #333; /* Dark grey background */
-   color: #f1f1f1; /* Light text color */
-   border: none;
-   display: inline-block;
-   padding: 10px 18px;
-   cursor: pointer;
-   margin: 25px;
-   border-radius: 30px; /* Rounded corners */
-   font-size: 1rem;
-   color: var(--extra-light);
-}
-
-.button:hover {
-   background-color: #5a5a5a; /* Light grey background on hover */
-   color: #f1f1f1; /* Light text color */
-}
-
-/* PREV AND NEXT BUTTONS */
-.button-container {
    display: flex;
-   justify-content: space-between; /* Align buttons to both ends of the container */
-   margin-top: -00px; /* Adjust margin as needed */
+   flex-wrap: nowrap; /* Ensure project cards stay in a single row */
+   overflow-x: auto; /* Enable horizontal scrolling */
+   scroll-snap-type: x mandatory; /* Enable snapping to each project card */
 }
 
-button {
-   background-color: #f1f1f1;
-   color: #333;
-   border: none;
-   display: inline-block;
-   padding: 10px 40px;
-   cursor: pointer;
-   margin: 10px;
-   border-radius: 40px;
-   font-size: 1rem;
-   font-style: italic;
+.project-card {
+   flex: 0 0 auto; /* Ensure project cards don't shrink or grow */
+   background-color: #f5f5f5; /* Light grey background */
+   border-radius: 10px; /* Rounded corners */
+   padding: 20px; /* Add some padding for spacing */
+   margin-right: 15px; /* Add margin between project cards */
+   margin-bottom: 20px; /* Add margin between project cards */
 }
 
-.next {
-   float: right; /* Float the next button to the right */
+.card-img-top {
+   width: 50%; /* Set a fixed width */
+   height: auto; /* Maintain aspect ratio */
+   border-radius: 10px; /* Add rounded edges */
+}
+
+.project-button {
+   background-color: #333;
+   color: #fff;
+   border-radius: 100px;
+   padding: 10px 20px; /* Adjust padding as needed */
+   border: none; /* Remove border */
+   cursor: pointer; /* Change cursor to pointer on hover */
+   transition: background-color 0.3s ease; /* Add smooth transition effect */
+}
+
+.project-button:hover {
+   background-color: #555; /* Change background color on hover */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    padding: 5px; /* Reduce padding for smaller size */
+    margin-left: 5px; /* Add margin to the left for spacing */
+    margin-right: 5px; /* Add margin to the right for spacing */
+    background-color: #333; /* Set background color */
+    border-radius: 50%; /* Round the buttons */
+    opacity: 0.7; /* Set initial opacity */
+    height: 40px; /* Adjust height */
+    width: 40px; /* Adjust width */
+    transform: translateY(+200%); /* Center the buttons vertically */
+
 }
 
 
-button:hover {
-   background-color: #e6b5f69f;
+/* Style the carousel control icons */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-size: cover; /* Ensure the icon fills the space */
+    width: 20px; /* Set width of the icon */
+    height: 20px; /* Set height of the icon */
+    display: inline-block; /* Ensure the icon is displayed inline */
 }
- 
 
-
-/* PROJECT CONTAINERS */
-
-
-.project-container p {
-   margin: auto; /* Center the paragraph horizontally */
-   font-size: 12px;
-   max-width: 350px; /* Set the maximum width to 400px */
- }
- 
-
- .project-container img {
-   margin-top: 20px;
-   width: 300px;
-   max-width: 100%;
-   height: 0 auto;
-   border-radius: 30px;
- }
-
- .project-video {
-   margin-top: 20px;
-   width: 300px;
-   max-width: 100%;
-   height: auto;
-   border-radius: 30px;
- }
-
-/*CERTIFIATE SECTION*/
-.certification h1{
-   text-align: left;
-   margin-left: 10%;
+/* Style the hover effect */
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1; /* Set opacity to 1 on hover */
 }
-.certification__container {
-   display: grid;
-   grid-template-columns: repeat(3, 1fr);
-   gap: 30px;
-   padding: 0 150px;
-   margin-bottom: 5%;
+
+/* For RTL languages */
+.carousel-control-next {
+    left: unset;
+    right: 0;
 }
+
+
+
+/* CERTI SECTION */
 .certificate img {
-   border-radius: 10px;
    max-width: 100%;
    height: auto;
-   border: solid #393838;
-}
-.certificate img:hover {
-  /* border: solid #ffdbbfab; */
-   border: solid rgba(255, 255, 255, 0);
-   box-shadow: 
-      -20px 0 30px -10px #FFDBBF, /* Left side shadow */
-      20px 0 30px -10px #E7B6F4, /* Right side shadow */
-      0 0 30px 10px rgba(223, 240, 255, 0.8); /* Silvery glow effect */
-}
-/* Media Query for Mobile */
-
-@media (max-width: 768px) {
-   .certification__container {
-      grid-template-columns: repeat(1, 1fr);
-      padding: 0 30px; /* Adjust padding as needed */
-   }
-   
 }
 
-/*CONTACT SECTION*/
-hr {
-   margin: 0;
-   padding: 0;
-   border: none;
-   height: 1px; /* Set the height of the horizontal rule */
-   background-image: linear-gradient(to right, rgb(255, 255, 255), #e3e2e2); 
+/* FOOTER SECTION */
+
+footer {
+   background-color: #f5f5f5; /* Light grey background */
+   padding: 20px 0; /* Add padding top and bottom */
 }
 
-#contact {
-   background-color: #FAFAFA; /* Choose your desired background color */
-   padding: 60px; /* Add padding to provide some space around the content */
-   height: auto;
-   margin: 0 auto;
+.container {
+   max-width: 1200px; /* Adjust as needed */
+   margin: 0 auto; /* Center the content */
 }
 
-.contact-section-container {
-   display: grid;
-   gap: 4rem;
-   grid-template-columns: repeat(2, 1fr);
-   row-gap: 4rem;
-   column-gap: 4rem;
-}
-
-.contact__details__container .title {
-   /* Add your styling here */
-   margin-left: -7.5%;
-   font-size: 2.5rem; /* Example: Adjust font size */
-   color: #333; /* Example: Set text color */
-   margin-bottom: 10px; /* Example: Add bottom margin */
-   /* Add more styles as needed */
- }
-
- .contact__details__container p {
-   /* Add your styling here */
-   margin-left: -7.5%;
-   font-size: 2.5rem; /* Example: Adjust font size */
-   color: #333; /* Example: Set text color */
-   margin-bottom: 10px; /* Example: Add bottom margin */
-   /* Add more styles as needed */
- }
-
-h1.contact-email a {
-   text-align: justify;
-   color: #393838;
-}
-
-h1.contact-email a:hover{
-   text-decoration: underline;
-   text-underline-offset: 10px;
-
-}
-
-.contact__details__container p {
-   text-align: justify;
-   width: 100%; /* Set the width to 100% */
-   max-width: 75%; /* Set a maximum width if needed */
-}
-
-.contact__containers {
+.row {
    display: flex;
-   flex-wrap: wrap; /* Allow items to wrap to the next row */
-   margin-top: 0.5rem;
-   margin-bottom: 2rem;
-   padding-left: 10%;
-   padding-right: 10%;
-   gap: 6rem;
+   flex-wrap: wrap;
 }
 
-.contact__details__container,
-.details__container {
-   flex: 1;
-   width: calc(50% - 1rem);
+.col-md-6 {
+   flex: 0 0 50%; /* Each column takes up 50% width */
+   max-width: 50%;
 }
 
 .social-icons {
-   display: flex; /* Use flexbox to line up icons horizontally */
+   list-style: none;
+   padding: 0;
+   margin: 0;
+   text-align: right; /* Align social icons to the right */
+}
+
+.social-icons li {
+   display: inline-block;
+   margin-left: 10px; /* Add spacing between social icons */
+}
+
+.social-icons li:first-child {
+   margin-left: 0; /* Remove margin for the first social icon */
 }
 
 .social-icons a {
-   margin-right: 10px; /* Add spacing between icons */
-}
-
-.social-icons a:last-child {
-   margin-right: 0; /* Remove margin from the last icon */
-}
-
-.social-icons i {
-   font-size: 50px; /* Adjust the size of the icons */
-   color: #393838;
-}
-
-.social-icons i:hover {
-   color: #7AA1C6;;
-}
-
-.copyright-text{
-   margin-bottom: 2px;
-   text-align: center;
-}
-
-@media screen and (max-width: 767px) {
-   #contact {
-      margin: 0 auto; /* Further reduce padding for smaller screens */
-      text-align: center;
-   }
-
-   #contact .title p{
-      margin: 0 auto; /* Further reduce padding for smaller screens */
-      text-align: center;
-
-   }
-
-
-   .contact__details__container p {
-      margin: 0 auto; /* Further reduce padding for smaller screens */
-      text-align: center;
-
-   }
+   color: #333; /* Icon color */
+   font-size: 20px; /* Adjust icon size as needed */
 }

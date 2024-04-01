@@ -3,15 +3,12 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" 
-   rel="stylesheet"
-   />
-   <link rel="stylesheet" href="styles.css" />
-   <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-   <link href="css/fontawesome.min.css" rel="stylesheet" type="text/css" />
-   <link href="css/owl.carousel.min.css" rel="stylesheet" type="text/css" />
-   <link href="css/styles.css" rel="stylesheet" type="text/css" />
-
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+   <link href="css/fontawesome.min.css" rel="stylesheet" type="text/css">
+   <link href="css/owl.carousel.min.css" rel="stylesheet" type="text/css">
+   <link href="styles.css" rel="stylesheet" type="text/css">
+   
    <title>RhiaFH Portfolio | Junior Software Developer</title>
 
 </head>
@@ -37,268 +34,252 @@
 </style>
 <!-- HAMBURGER MENU NAV-->
 
-<script>
-// Smooth scrolling function
-function smoothScroll(target) {
-   document.querySelector(target).scrollIntoView({
-      behavior: 'smooth'
-   });
-}
 
-// Event listener for navigation links
-document.querySelectorAll('nav a').forEach(anchor => {
-   anchor.addEventListener('click', function(e) {
-      e.preventDefault(); // Prevent default behavior (jumping to target)
-      const target = this.getAttribute('href');
-      smoothScroll(target);
-   });
-});
-</script>
 
 <!-- MAIN NAV -->
-<nav>
-<div class="nav__content">
-   <div class="logo"><a href="/">RFH<span>_</span></a></div>
-   <!-- Hamburger menu icon -->
-   <div class="hamburger-menu-icon" onclick="toggleMenu()">☰</div> 
-   <!-- Menu items -->
-   <ul class="menu-items" id="menuItems">
-     <li><a href="#home">Home</a></li>
-     <li><a href="#about">About</a></li>
-     <li><a href="#projects">Portfolio</a></li>
-     <li><a href="#contact">Contact</a></li>
-   </ul>
- </div>
+<nav class="navbar navbar-expand-lg">
+   <div class="container">
+       <a class="navbar-brand" href="/">RFH<span>_</span></a>
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon"></span>
+       </button>
+       <div class="collapse navbar-collapse" id="navbarNav">
+           <ul class="navbar-nav ml-auto">
+               <li class="nav-item">
+                   <a class="nav-link" href="#home">Home</a>
+               </li>
+               <li class="nav-item">
+                   <a class="nav-link" href="#about">About</a>
+               </li>
+               <li class="nav-item">
+                   <a class="nav-link" href="#projects">Portfolio</a>
+               </li>
+               <li class="nav-item">
+                   <a class="nav-link" href="#contact">Contact</a>
+               </li>
+           </ul>
+       </div>
+   </div>
 </nav>
+ 
 <!-- HERO -->
-<section id="home"> 
-   <section id="profile"> 
-   <section class="profile">
-      <div class="profile__container">
-            <div class="profile__content">
-            <p class="profile__subtitle">HELLO</p>
-
-            <h1 class="profile__title">
-               I'm <span>Rhia</span><br>
-               a <span id="typed" class="typing"></span>
-            </h1>
-            
-            <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-
-            <script>
-               var options = {
-                  strings: ["Front-End Developer", "Creative thinker", "Tech enthusiast"],
-                  typeSpeed: 50,
-                  backSpeed: 50,
-                  backDelay: 2000,
-                  startDelay: 400,
-                  loop: true
-               };
-               var typed = new Typed("#typed", options);
-            </script>
-            
-               <p class="description">
-                  A self-taught creative Web Developer. <br>Based in London, UK.
-               </p>
-               <div class="action__btns">
-                  <button class="contact__me" onclick="location.href='./#contact'">Contact Me</button>
-                  <button class="portfolio" onclick="location.href='./#projects'">Portfolio</button>
+<section id="home">
+   <section id="profile">
+       <div class="profile__container">
+           <div class="container">
+               <div class="row justify-content-end">
+                   <div class="col-md-6">
+                       <div class="profile__content">
+                           <p class="profile__subtitle">HELLO</p>
+                           <h1 class="profile__title">
+                               I'm <span>Rhia</span><br>
+                               a <span id="typed" class="typing"></span>
+                           </h1>
+                           <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+                           <script>
+                               var options = {
+                                   strings: ["Front-End Developer", "Creative thinker", "Tech enthusiast"],
+                                   typeSpeed: 50,
+                                   backSpeed: 50,
+                                   backDelay: 2000,
+                                   startDelay: 400,
+                                   loop: true
+                               };
+                               var typed = new Typed("#typed", options);
+                           </script>
+                           <p class="description">
+                               A self-taught creative Web Developer. <br>Based in London, UK.
+                           </p>
+                           <div class="action__btns">
+                               <button class="contact__me" onclick="location.href='./#contact'">Contact Me</button>
+                               <button class="portfolio" onclick="location.href='./#projects'">Portfolio</button>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-md-4">
+                       <div class="profile-image">
+                           <img src="assets/IMG_1.png" alt="profile pic">
+                       </div>
+                   </div>
                </div>
-               
-             </div>
-             <div class="profile-image">
-               <img src="assets/IMG_1.png" alt="profile pic">
-               </div>
-             </div>
-         </section>
-      </section>
+           </div>
+       </div>
    </section>
+</section>
+
+
+
+
+
+
 <!-- ABOUT ME ANIMATION SCRIPT -->
-   <script>
-      function showAboutContainer() {
-         const aboutContainer = document.querySelector(".about__containers");
-         aboutContainer.classList.add("show"); // Add show class to trigger animation
-      }
-      document.addEventListener("DOMContentLoaded", showAboutContainer);
-      window.onload = showAboutContainer;
-   </script>
 
 <!-- ABOUT ME INTRODUCTION -->
-      <section id="about">
-         <div class="about__containers">
-         <div class="about__details__container">
-           <h1 class="title">About Me</h1>
-           <p>
-            I am a Web Developer with strong passion for building engaging, responsive and user-friendly websites. I've worked on a variety of personal projects, ranging from blogs pages to e-commerce platforms. Committed to refining my abilities.</p>
+
+<section id="about">
+   <br>
+   <div class="container">
+      <div class="row">
+         <div class="col-md-6">
+            <div class="about__details__container">
+               <h1 class="title">About Me</h1>
+               <p>
+                  I am a Web Developer with a strong passion for building engaging, responsive, and user-friendly websites. I've worked on a variety of personal projects, ranging from blog pages to e-commerce platforms. Committed to refining my abilities.
+               </p>
+            </div>
          </div>
-       
-         <div class="details__container">
-            <div class="tech__stack">
-           <h1 class="title">Tech Stack</h1>
-            <div class="each_tech">HTML 5</div>
-            <div class="each_tech">CSS 3</div>           
-            <div class="each_tech">JavaScript</div>
-            <div class="each_tech">Visual Studio</div>   
-            <div class="each_tech">Github</div>     
-            <div class="each_tech">Responsive</div>  
-            <div class="each_tech">UI</div> 
-            <div class="each_tech">UX</div>   
-         </div> 
-       </div>
-      </section>
-      <br>
-      <br>
-      <br>
-<!-- PROJECTS SECTION 
-         <div class="projects__container">
-            <div class="single_project_container">
-               <div class="text-container">
-                  <img src="Assets/ecomsite-square.png" alt="" class="src">
-                  <h2>E-Commerce <br>Landing Page 1.0</h2>
-                  <p>Built as part of SheCodes coursework submission, this project combines a passion for interior design with online retail expertise. The website showcases a modern, minimalist design, featuring a section to display blog posts and an interactive 'Sign up' JavaScript function. Intended to be a space where design meets functionality. Built using JavaScript, HTML5 & CSS3. </p>
-                  <div class="button-container">
-                     <a href="https://www.shecodes.io/cohorts/shecodes-basics-744f8d6a-c685-409b-862d-9b56a2366dc4/projects/2037888" target="_blank">
-                         <button class="project_button">View Project</button>
-                     </a>
-                 </div>
-                 
-               </div>
+         <div class="col-md-6">
+            <div class="details__container">
+               <div class="tech__stack">
+                  <div class="each_tech" style="width: fit-content;">HTML 5</div>
+                  <div class="each_tech" style="width: fit-content;">CSS 3</div>           
+                  <div class="each_tech" style="width: fit-content;">JavaScript</div>
+                  <div class="each_tech" style="width: fit-content;">Visual Studio</div>   
+                  <div class="each_tech" style="width: fit-content;">Github</div>     
+                  <div class="each_tech" style="width: fit-content;">Responsive</div>  
+                  <div class="each_tech" style="width: fit-content;">UI</div> 
+                  <div class="each_tech" style="width: fit-content;">UX</div>  
+               </div> 
             </div>
-            <div class="single_project_container">
-               <div class="text-container">
-                  <img src="Assets/rh-weather-app-square.png" class="src">
-                  <h2>API <br>Weather App</h2>
-                  <p>Used a live API to extract and display real-time weather data, including temperature, description, humidity, and wind speed with a 5-day forecast feature. Coded a dynamic manipulation of icons and gradient backgrounds based on weather conditions to user interaction. Additionally, crafted a user-friendly Fahrenheit to Celsius conversion program for convenience.
-                  </p>
-                  <div class="button-container">
-                     <button class="project_button">View Project</button>
-                  </div>
-               </div>
-            </div>
-                    <div class="single_project_container">
-                     <div class="text-container">
-                        <img src="Assets/rh-character-counter.png" class="src">
-                        <h2>Dynamic Character Counter</h2>
-                        <p>The Dynamic Character Counter is a web application showcasing modern styling through the use of HTML, CSS, and JavaScript. It offers real-time character counting functionality for text input fields, with a visually appealing design featuring gradient backgrounds and box shadow effects. Notably, it includes a reset button which triggers a JavaScript function that sets the value of the input field to an empty string, effectively clearing any text entered by the user.
-                        </p>
-                        <div class="button-container">
-                           <button class="project_button">View Project</button>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="single_project_container">
-                     <div class="text-container">
-                        <img src="Assets/Projectplaceholder.png" class="src">
-                        <h2>Project placeholder</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra nam libero justo laoreet sit amet cursus.
-                        </p>
-                        <div class="button-container">
-                           <button class="project_button">View Project</button>
-                        </div>
-                     </div>
-   -->
+         </div>
+      </div>
+   </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+<!-- PROJECTS SECTION -->
+
 <section id="projects">
-   <h1 class="title">Projects</h1>
-   <div class="carousel">
-      <div class="project-container">
-        <img src="Assets/resized/rh-character-counter.jpg" target="_blank" alt="Project 1">
-        <h3>Real-Time Character Counter</h3>
-        <p>The Dynamic Character Counter is a web application showcasing modern styling through the use of HTML, CSS, and JavaScript. It offers real-time character counting functionality for text input fields, with a visually appealing design featuring gradient backgrounds and box shadow effects. Notably, it includes a reset button which triggers a JavaScript function that sets the value of the input field to an empty string, effectively clearing any text entered by the user.</p>
-        <a href="https://rhiafh-character-counter.netlify.app/" target="_blank" class="button">View Project </a>
-      </div>
-      <div class="project-container">
-         <video class="project-video" video src="Assets/Screen Recording 2024-04-01 at 00.14.59.mp4" alt="Project 2" autoplay controls></video>
-        <h3>API Weather App</h3>
-        <p>Used a live API to extract and display real-time weather data, including temperature, description, humidity, and wind speed with a 5-day forecast feature. <br>Coded a dynamic manipulation of icons and gradient backgrounds based on weather conditions to user interaction.</p>
-        <a href="#" class="button">View Project</a>
+   <h1>Projects</h1>
+   <div id="projectCarousel" class="carousel slide" data-ride="carousel">
+       <div class="carousel-inner">
+           <div class="carousel-item active">
+               <div class="row">
+                   <!-- Project Card 1 -->
+                   <div class="col-md-4">
+                       <div class="project-card">
+                           <div class="card-body d-flex justify-content-center"> <!-- Center image horizontally -->
+                               <img src="Assets/rh-character-counter.png" class="card-img-top" alt="Project 1">
+                           </div>
+                           <div class="card-body">
+                               <h5 class="card-title"><strong>Real-Time Character Counter</strong></h5>
+                               <p class="card-text">The Dynamic Character Counter is a web application offers real-time character counting functionality for text input fields, with a visually appealing design featuring gradient backgrounds and box shadow effects. Notably, it includes a reset button which triggers a JavaScript function that sets the value of the input field to an empty string, effectively clearing any text entered by the user.</p>
+                               <a href="#" class="project-button">View Project</a>
+                           </div>
+                       </div>
+                   </div>
+                   <!-- Project Card 2 -->
+                   <div class="col-md-4">
+                       <div class="project-card">
+                           <div class="card-body d-flex justify-content-center"> <!-- Center image horizontally -->
+                               <img src="Assets/rh-weather-app-square.png" class="card-img-top" alt="Project 2">
+                           </div>
+                           <div class="card-body">
+                               <h5 class="card-title"><strong>API Weather App</strong>
+                              </h5>
+                               <p class="card-text">Used a live API to extract and display real-time weather data, including temperature, description, humidity, and wind speed with a 5-day forecast feature. <br>Coded a dynamic manipulation of icons and gradient backgrounds based on weather conditions to user interaction.</p>
+                               <a href="#" class="project-button">View Project</a>
+                           </div>
+                       </div>
+                   </div>
+                   <!-- Project Card 3 -->
+                   <div class="col-md-4">
+                       <div class="project-card">
+                           <div class="card-body d-flex justify-content-center"> <!-- Center image horizontally -->
+                               <img src="Assets/ecomsite-square.png" class="card-img-top" alt="Project 3">
+                           </div>
+                           <div class="card-body">
+                               <h5 class="card-title"><strong>E-Commerce Landing Page 1.0</strong>
+                              </h5>
+                               <p class="card-text">Built as part of SheCodes coursework submission, this project combines a passion for interior design with online retail expertise. The website showcases a modern, minimalist design, featuring a section to display blog posts and an interactive 'Sign up' JavaScript function. Intended to be a space where design meets functionality. Built using JavaScript, HTML5 & CSS3. </p>
+                               <a href="#" class="project-button">View Project</a>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+        
+           
 
-      </div>
-      <div class="project-container">
-        <img src="Assets/resized/ecomsite-square.jpg" alt="Project 3">
-        <h3>E-Commerce Landing Page 1.0</h3>
-        <p>Built as part of SheCodes coursework submission, this project combines a passion for interior design with online retail expertise. The website showcases a modern, minimalist design, featuring a section to display blog posts and an interactive 'Sign up' JavaScript function. Intended to be a space where design meets functionality. Built using JavaScript, HTML5 & CSS3. </p>
-        <a href="https://www.shecodes.io/cohorts/shecodes-basics-744f8d6a-c685-409b-862d-9b56a2366dc4/projects/2037888"  target="_blank" class="button">View Project</a>
-
-      </div>
-      <!-- Repeat the above project containers unlimited times -->
-      <div class="project-container">
-         <img src="Assets/resized/Projectplaceholder.jpg" alt="Project 3">
-         <h3>Project in Progress</h3>
-         <p>Comming soon!</p>
-         <a href="#" class="button">View Project</a>
-
+           <!-- Add more carousel items for additional projects -->
        </div>
-       <div class="project-container">
-         <img src="Assets/resized/Projectplaceholder.jpg" alt="Project 3">
-         <h3>Project in Progress</h3>
-         <p>Comming soon!</p>
-         <a href="#" class="button">View Project</a>
-
-       </div>
-       <div class="project-container">
-         <img src="Assets/Projectplaceholder.png" alt="Project 3">
-         <h3>Project in Progress</h3>
-         <p>Comming soon!</p>
-         <a href="#" class="button">View Project</a>
-
-       </div>
-    </div>
-  
-    <div class="button-container">
-      <button onclick="scrollCarousel(-1)" class="prev">Previous</button>
-      <button onclick="scrollCarousel(1)" class="next">Next</button>
+       <a class="carousel-control-prev" href="#projectCarousel" role="button" data-slide="prev">
+           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+           <span class="sr-only">Previous</span>
+       </a>
+       <a class="carousel-control-next" href="#projectCarousel" role="button" data-slide="next">
+           <span class="carousel-control-next-icon" aria-hidden="true"></span>
+           <span class="sr-only">Next</span>
+       </a>
    </div>
-</div>
-</div>
 </section>
-<br>
+
+
+
+
+
+
+
+
 <!-- CETRIIFCATES SETCION-->
-<section id="certification"> 
-   <section class="certification">
-      <h1 class="title">Certifications</h1>
-      <div class="certification__container">
-         <div class="certificate">
-            <a href="https://www.codecademy.com/profiles/Rhiafhunte/certificates/705dcb15de0da4dd9d9fc4f3274b430e" target="_blank" title="View Rhia's Codecademy certificate">
-               <img src="/Assets/Codecademy_JS_Certificate.png" alt="Codecademy JS Certificate">
-            </a>
+<section id="certificates">
+   <h1>Certificates</h1>
+   <div class="container">
+      <div class="row">
+         <div class="col-md-4">
+            <div class="certificate">
+               <img src="Assets/Codecademy_JS_Certificate.png" alt="Certificate 1">
+            </div>
          </div>
-         <div class="certificate">
-            <a href="https://www.codecademy.com/profiles/Rhiafhunte/certificates/705dcb15de0da4dd9d9fc4f3274b430e" target="_blank" title="View Rhia's SheCodes Basics certificate">
-               <img src="/Assets/RH_SheCodes_Basics_Certificate.png" alt="Pending SheCodes Basics Certificate">
-            </a>
+         <div class="col-md-4">
+            <div class="certificate">
+               <img src="Assets/Codecademy_JS_Certificate.png" alt="Certificate 2">
+            </div>
          </div>
-         <div class="certificate">
-            <a href="https://www.codecademy.com/profiles/Rhiafhunte/certificates/705dcb15de0da4dd9d9fc4f3274b430e" target="_blank" title="View Rhia's SheCodes Basics certificate">
-               <img src="/Assets/RH_SheCodes_Basics_Certificate.png" alt="Pending SheCodes Basics Certificate">
-            </a>
+         <div class="col-md-4">
+            <div class="certificate">
+               <img src="Assets/Codecademy_JS_Certificate.png" alt="Certificate 3">
+            </div>
          </div>
       </div>
    </div>
-      </section>
 </section>
-<br>
- <hr>
 
+<br>
 <!-- CONTACT ME SECTION -->
 
- <section id="contact">
-   <div class="contact__containers">
-      <div class="contact__details__container">
-         <h1 class="title">Get in touch!</h1>
-         <p class="contact_p">Lets connect.</p>
-      </div>
-      
-      <div class="about__container">
-         <h1 class="contact-email"><a href="mailto:rhiafhunte@gmail.com" target="_blank">rhiafhunte@gmail.com</a></h1>
-         <div class="social-icons">
-            <a href="https://www.linkedin.com/in/rhiahunte/" target="_blank"><i class="ri ri-linkedin-box-fill"></i></a>
-            <a href="https://github.com/rhiafhunte" target="_blank"><i class="ri ri-github-fill"></i></a>
-         </div>
-      </div>
+<footer>
+   <div class="container">
+       <div class="row">
+           <div class="col-md-6">
+               <p>Get in touch</p>
+           </div>
+           <div class="col-md-6">
+               <ul class="social-icons">
+                   <li><a href="#"><i class="ri-facebook-fill"></i></a></li>
+                   <li><a href="#"><i class="ri-twitter-fill"></i></a></li>
+                   <li><a href="#"><i class="ri-instagram-fill"></i></a></li>
+                   <!-- Add more social icons from Remix Icon library -->
+               </ul>
+           </div>
+       </div>
    </div>
-   <p class="copyright-text">Copyright © 2024. Built by Rhia Hamilton.</p>
-</section>
+</footer>
 
+
+<!-- SCRIPTS -->
 <script src="script.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>
 </html>
