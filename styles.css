@@ -21,6 +21,15 @@ body {
    margin: 0 auto; /* Center the content */
 }
 
+#projects #certificates h1.title {
+   position: fixed;
+   right: 50%; /* Adjust the percentage as needed */
+
+ }
+ 
+ 
+
+
 /* RESPONSIVE */
 
 /* Adjust h1 width for mobile view */
@@ -28,6 +37,25 @@ body {
    .social-icons h1 {
        max-width: 100%; /* Set maximum width */
    }
+
+   #certificates img{
+      margin-bottom:10%; /* Add right padding */
+   }
+   
+   .email-address {
+      margin-top: 50px; /* Adjust margin-top as needed */
+  }
+
+  .email-address h1 {
+      font-size: 1rem; /* Adjust font-size as needed */
+      margin-bottom: 0; /* Remove bottom margin to reduce space */
+  }
+
+
+
+
+
+
 }
 
 
@@ -183,6 +211,7 @@ body #about {
 }
 
 .project-button {
+
    background-color: #333;
    color: #fff;
    border-radius: 100px;
@@ -190,8 +219,6 @@ body #about {
    border: none; /* Remove border */
    cursor: pointer; /* Change cursor to pointer on hover */
    transition: background-color 0.3s ease; /* Add smooth transition effect */
-   margin-top: 20px; /* Add margin to create space between text and button */    
-
 }
 
 .project-button:hover {
@@ -201,17 +228,19 @@ body #about {
 
 .carousel-control-prev,
 .carousel-control-next {
-    padding: 5px; /* Reduce padding for smaller size */
-    margin-left: 5px; /* Add margin to the left for spacing */
-    margin-right: 5px; /* Add margin to the right for spacing */
+
     background-color: #333; /* Set background color */
     border-radius: 50%; /* Round the buttons */
     opacity: 0.7; /* Set initial opacity */
     height: 40px; /* Adjust height */
     width: 40px; /* Adjust width */
-    transform: translateY(+700%); /* Center the buttons vertically */
+    transform: translateY(+900%); /* Center the buttons vertically */
+    margin-right: 2px; /* Add more horizontal space */
 
 }
+
+
+
 
 
 /* Style the carousel control icons */
