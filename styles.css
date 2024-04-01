@@ -11,13 +11,31 @@
 
 body {
    font-family: 'poppins', sans-serif;
+   color: #393838;
 
 }
+
+
+
 
 /* PROFILE SECTION */
 
 #nav-menu, #home {
    background: linear-gradient(106.5deg, rgba(255, 215, 185, 0.91) 23%, rgba(223, 159, 247, 0.8) 93%);
+}
+
+.navbar-nav .nav-link {
+   color: #333; /* Set the font color */
+   font-size: 20px; /* Set the font size */
+   margin-right: 20px; /* Adjust the margin as needed */
+
+}
+
+/* Optional: Style the font color and font size of the navbar brand */
+.navbar-brand {
+   color: #333; /* Set the font color */
+   font-size: 50px; /* Set the font size */
+   font-weight: 600;
 }
 
 #profile{
@@ -76,7 +94,7 @@ nav {
 /* ABOUT SECTION */
 body #about {
    background-color: #FAFAFA; /* Light grey background color */
-   padding: 70px 50px; /* Add padding horizontally to increase width */
+   padding: 150px 0px; /* Add padding horizontally to increase width */
 }
 
 
@@ -106,12 +124,24 @@ body #about {
    padding-right: 40px; /* Add right padding */
 }
 
+
+.project-carousel-wrapper {
+   padding-left: 10px; /* Add padding on the left side */
+   padding-right: 10px; /* Add padding on the right side */
+   border-radius: 20px; /* Rounded corners */
+   margin-bottom: 20px; /* Add margin to the bottom */
+}
+
+
 .project-container {
    display: flex;
    flex-wrap: nowrap; /* Ensure project cards stay in a single row */
    overflow-x: auto; /* Enable horizontal scrolling */
    scroll-snap-type: x mandatory; /* Enable snapping to each project card */
 }
+
+
+
 
 .project-card {
    flex: 0 0 auto; /* Ensure project cards don't shrink or grow */
@@ -132,7 +162,7 @@ body #about {
 
 
 .card-img-top {
-   width: 70%; /* Set a fixed width */
+   width: 100%; /* Set a fixed width */
    height: auto; /* Maintain aspect ratio */
    border-radius: 30px; /* Add rounded edges */
 }
@@ -196,6 +226,7 @@ body #about {
 #certificates {
    padding-left: 40px; /* Add left padding */
    padding-right: 40px; /* Add right padding */
+   padding-bottom: 10px; /* Add right padding */
 }
 .certificate img {
    max-width: 100%;
