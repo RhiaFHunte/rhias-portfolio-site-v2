@@ -16,6 +16,19 @@ body {
 }
 
 
+.container {
+   max-width: 1200px; /* Adjusts full page layout */
+   margin: 0 auto; /* Center the content */
+}
+
+/* RESPONSIVE */
+
+/* Adjust h1 width for mobile view */
+@media (max-width: 767px) {
+   .social-icons h1 {
+       max-width: 100%; /* Set maximum width */
+   }
+}
 
 
 /* PROFILE SECTION */
@@ -39,7 +52,7 @@ body {
 }
 
 #profile{
-   padding: 40px;
+   padding: 20px;
    margin-bottom: 0; /* Ensure no margin at the bottom */
    z-index: 1; /* Ensure profile section is above the nav section */
 }
@@ -122,6 +135,8 @@ body #about {
 #projects {
    padding-left: 40px; /* Add left padding */
    padding-right: 40px; /* Add right padding */
+   padding-top: 6%;
+
 }
 
 
@@ -175,7 +190,8 @@ body #about {
    border: none; /* Remove border */
    cursor: pointer; /* Change cursor to pointer on hover */
    transition: background-color 0.3s ease; /* Add smooth transition effect */
-   margin-top: 20px; /* Add margin to create space between text and button */
+   margin-top: 20px; /* Add margin to create space between text and button */    
+
 }
 
 .project-button:hover {
@@ -240,10 +256,6 @@ footer {
    padding: 50px 0; /* Add padding top and bottom */
 }
 
-.container {
-   max-width: 1200px; /* Adjust as needed */
-   margin: 0 auto; /* Center the content */
-}
 
 .row {
    display: flex;
@@ -257,15 +269,19 @@ footer {
 
 
 .social-icons {
-   list-style: none;
+   list-style-type: none;
    padding: 0;
-   margin: 0;
-   text-align: right; /* Align social icons to the right */
+   text-align: right;
 }
 
 .social-icons li {
    display: inline-block;
-   margin-left: 10px; /* Add spacing between social icons */
+   margin: 0 10px;
+}
+
+.social-icons a:hover {
+   color: #007bff; /* Change this to your desired hover color */
+
 }
 
 .social-icons li:first-child {
@@ -275,4 +291,6 @@ footer {
 .social-icons a {
    color: #333; /* Icon color */
    font-size: 50px; /* Adjust icon size as needed */
+   text-decoration: none;
+
 }
