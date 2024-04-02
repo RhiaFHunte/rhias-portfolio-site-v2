@@ -33,25 +33,31 @@ body {
 /* RESPONSIVE */
 
 /* Adjust h1 width for mobile view */
-@media (max-width: 767px) {
-   .social-icons h1 {
-       max-width: 100%; /* Set maximum width */
+@media (max-width: 600px) {
+
+   .profile-image img {
+      margin-top: 10%;
    }
+   
+
 
    #certificates img{
       margin-bottom:10%; /* Add right padding */
    }
-   
+
    .email-address {
       margin-top: 50px; /* Adjust margin-top as needed */
+
+   
   }
 
   .email-address h1 {
       font-size: 1rem; /* Adjust font-size as needed */
       margin-bottom: 0; /* Remove bottom margin to reduce space */
   }
-
-
+  .social-icons h1 {
+   max-width: 100%; /* Set maximum width */
+}
 
 
 
@@ -63,6 +69,7 @@ body {
 
 #nav-menu, #home {
    background: linear-gradient(106.5deg, rgba(255, 215, 185, 0.91) 23%, rgba(223, 159, 247, 0.8) 93%);
+
 }
 
 .navbar-nav .nav-link {
@@ -276,6 +283,7 @@ body #about {
 .certificate img {
    max-width: 100%;
    height: auto;
+   border-radius: 10px;
    border: 2px solid #333; /* Add border style and specify width */
 }
 /* FOOTER SECTION */
@@ -284,6 +292,7 @@ footer {
    background-color: #f5f5f5; /* Light grey background */
    padding: 50px 0; /* Add padding top and bottom */
 }
+
 
 
 .row {
@@ -296,6 +305,12 @@ footer {
    max-width: 50%;
 }
 
+.custom-email-link {
+
+   color: #333; /* Example: Change the color to black */
+   text-decoration: none; /* Example: Remove underline */
+   /* Add any other custom styling you want */
+}
 
 .social-icons {
    list-style-type: none;
@@ -309,7 +324,7 @@ footer {
 }
 
 .social-icons a:hover {
-   color: #007bff; /* Change this to your desired hover color */
+   color: #3a2b76; /* Change this to your desired hover color */
 
 }
 
