@@ -6,7 +6,6 @@
    --text-dark: #393838; 
    --text-light: #7AA1C6;
    --extra-light: #fff8f9;
-   --max-width: 1200px;
 }
 
 body {
@@ -19,10 +18,7 @@ body {
 }
 
 
-.container {
-   max-width: 1200px; /* Adjusts full page layout */
-   margin: 0 auto; /* Center the content */
-}
+
 
 #projects #certificates h1.title {
    position: fixed;
@@ -38,11 +34,22 @@ body {
 /* Adjust h1 width for mobile view */
 @media (max-width: 600px) {
 
+   body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+   
+   }
+
+   #home {
+      padding: 120px 0;
+  }
+
+
    .profile-image img {
       margin-top: 10%;
    }
    
-
 
    #certificates img{
       margin-bottom:10%; /* Add right padding */
@@ -61,10 +68,6 @@ body {
   .social-icons h1 {
    max-width: 100%; /* Set maximum width */
 }
-
-
-
-
 }
 
 
@@ -129,7 +132,7 @@ nav {
 }
 
 .navbar {
-   height: 10%;
+   height: 12%;
    position: fixed;
    background-color: rgba(255, 255, 255, 0.199); /* Transparent white background */
    -webkit-backdrop-filter: blur(10px); /* For Safari */
@@ -138,7 +141,7 @@ nav {
 
 
 #home {
-   padding: 300px 0 ; /* Adjust as needed to make space for the navbar */
+   padding: 200px 0 ; /* Adjust as needed to make space for the navbar */
 }
 
 
@@ -294,8 +297,17 @@ body #about {
 footer {
    background-color: #f5f5f5; /* Light grey background */
    padding: 50px 0; /* Add padding top and bottom */
+   border-top: 2px solid #ccc; /* Add a border at the top */
+   overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
+
+footer .container {
+   max-width: 100%; /* Set maximum width to 100% of the viewport */
+   margin: 0 auto; /* Center the content horizontally */
+   padding: 0 20px; /* Add padding to the sides */
+   box-sizing: border-box; /* Include padding and border in element's total width */
+}
 
 
 .row {
