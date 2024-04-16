@@ -15,7 +15,7 @@
 <body>
     
 <!-- GITHUB TEST -->
-<!-- LOGO ANIMATION -->
+<!-- ANIMATIONS -->
 <style>
       @keyframes blink {
          10%, 100% {
@@ -32,6 +32,19 @@
       .logo a span {
          animation: blink 5s infinite;
       }
+
+      @keyframes bounce {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-20px);
+        }
+    }
+
+    .bounce {
+        animation: bounce 2s infinite;
+    }
 </style>
 <!-- HAMBURGER MENU NAV-->
 
@@ -157,12 +170,17 @@
 <br>
 <br>
 
-
+<div style="display: flex; justify-content: center;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-arrow-down bounce" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1"/>
+    </svg>
+</div>
+</div>
 
 
 <!-- PROJECTS SECTION -->
 
-<section id="projects" style="padding-top: 6%;">
+<section id="projects" style="padding-top: 4%;">
 
    <br>
    <div class="container project-carousel-wrapper">
@@ -181,8 +199,8 @@
                                <div class="card-body">
                                    <h5 class="card-title"><strong>Real-Time Character Counter</strong></h5>
                                    <p class="card-text">The Dynamic Character Counter is a web application offers real-time character counting functionality for text input fields, with a visually appealing design featuring gradient backgrounds and box shadow effects. Notably, it includes a reset button which triggers a JavaScript function that sets the value of the input field to an empty string, effectively clearing any text entered by the user.</p>
-                                   <br>
-                                   <a href="https://rhiafh-character-counter.netlify.app/" style="text-decoration: none;" class="project-button">View Project</a>
+                            
+                                   <a href="https://rhiafh-character-counter.netlify.app/" target="_blank"  style="text-decoration: none;" class="project-button">View Project</a>
                                </div>
                            </div>
                        </div>
@@ -195,8 +213,8 @@
                                <div class="card-body">
                                    <h5 class="card-title"><strong>API Weather App</strong></h5>
                                    <p class="card-text">Used a live API to extract and display real-time weather data, including temperature, description, humidity, and wind speed with a 5-day forecast feature. Coded a dynamic manipulation of icons and gradient backgrounds based on weather conditions to user interaction.</p>
-                                   <br>
-                                   <a href="https://rhiafh-weather-app.netlify.app/" style="text-decoration: none;"  class="project-button">View Project</a>
+                                 
+                                   <a href="https://rhiafh-weather-app.netlify.app/" target="_blank" style="text-decoration: none;"  class="project-button">View Project</a>
                                   
                                </div>
                            </div>
@@ -210,8 +228,8 @@
                                <div class="card-body">
                                    <h5 class="card-title"><strong>E-Commerce Landing Page 1.0</strong></h5>
                                    <p class="card-text">Built as part of SheCodes coursework submission, this project combines a passion for interior design with online retail expertise. The website showcases a modern, minimalist design, featuring a section to display blog posts and an interactive 'Sign up' JavaScript function. Intended to be a space where design meets functionality. Built using JavaScript, HTML5 & CSS3. </p>
-                                   <br>
-                                   <a href="https://www.shecodes.io/cohorts/shecodes-basics-744f8d6a-c685-409b-862d-9b56a2366dc4/projects/2037888" style="text-decoration: none;" class="project-button">View Project</a>
+        
+                                   <a href="https://www.shecodes.io/cohorts/1599/projects/2037888" target="_blank" style="text-decoration: none;" class="project-button">View Project</a>
                                    
                                </div>
                            </div>
@@ -219,13 +237,15 @@
                    </div>
                </div>
            </div>
-           <!-- Arrow Icons -->
+           
+           <!-- Arrow Icons 
            <a class="carousel-control-prev" href="#projectCarousel" role="button" data-slide="prev">
                <span class="carousel-control-prev-icon"></span>
            </a>
            <a class="carousel-control-next" href="#projectCarousel" role="button" data-slide="next">
                <span class="carousel-control-next-icon"></span>
            </a>
+            -->
        </div>
    </div>
 </section>
@@ -246,7 +266,7 @@
       <div class="row">
          <div class="col-md-4">
             <div class="certificate">
-               <a href="https://www.codecademy.com/profiles/Rhiafhunte/certificates/705dcb15de0da4dd9d9fc4f3274b430e">
+               <a href="https://www.codecademy.com/profiles/Rhiafhunte/certificates/705dcb15de0da4dd9d9fc4f3274b430e" target="_blank" >
                   <img src="Assets/Codecademy_JS_Certificate.png" alt="Certificate 1">
               </a>
             </div>
@@ -254,7 +274,7 @@
          <br>
          <div class="col-md-4">
             <div class="certificate">
-               <a href="https://www.shecodes.io/certificates/e9a4f7de6667703b89cfa4e117dd806f">
+               <a href="https://www.shecodes.io/certificates/e9a4f7de6667703b89cfa4e117dd806f" target="_blank" >
                   <img src="Assets/RH_SheCodes_Basics_Certificate.png" alt="Certificate 2">
               </a>
             </div>
@@ -262,7 +282,7 @@
          <br>
          <div class="col-md-4">
             <div class="certificate">
-               <a href="https://www.shecodes.io/certificates/384f6b2288be5c09e8b05656411b3e56">
+               <a href="https://www.shecodes.io/certificates/384f6b2288be5c09e8b05656411b3e56" target="_blank" >
                   <img src="Assets/RH_SheCodes_Pro_Certificate.png" alt="Certificate 3">
               </a>
 
@@ -287,8 +307,8 @@
           <div class="col-md-6 order-md-2 order-1">
               <ul class="social-icons text-center">
 
-                  <li><a href="https://github.com/RhiaFHunte"><i class="ri-github-fill"></i></a></li>
-                  <li><a href="https://www.linkedin.com/in/rhiahunte/"><i class="ri-linkedin-box-fill"></i></i></a></li>
+                  <li><a href="https://github.com/RhiaFHunte" target="_blank"><i class="ri-github-fill"></i></a></li>
+                  <li><a href="https://www.linkedin.com/in/rhiahunte/" target="_blank"><i class="ri-linkedin-box-fill"></i></i></a></li>
               </ul>
           </div>
       </div>
