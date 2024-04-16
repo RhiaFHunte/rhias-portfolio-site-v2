@@ -5,6 +5,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css">
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+   
    <link href="css/fontawesome.min.css" rel="stylesheet" type="text/css">
    <link href="css/owl.carousel.min.css" rel="stylesheet" type="text/css">
    <link href="styles.css" rel="stylesheet" type="text/css">
@@ -14,69 +15,55 @@
 </head>
 <body>
     
-<!-- GITHUB TEST -->
 <!-- ANIMATIONS -->
 <style>
-      @keyframes blink {
-         10%, 100% {
-            opacity: 0;
-         }
-         50% {
-            opacity: 1;
-         }
-         100% {
-            opacity: 1;
-         }
-      }
+           /* Custom CSS */
+           @media (max-width: 600px) {
+            /* Apply styles only for viewport width less than or equal to 600px (mobile) */
+            .profile__container {
+                display: flex;
+                flex-direction: column-reverse; /* Reverse the order of flex items for mobile */
+            }
 
-      .logo a span {
-         animation: blink 5s infinite;
-      }
+            .profile__content {
+                order: 2; /* Set the order of col-md-8 element to 2 for mobile */
+            }
 
-      @keyframes bounce {
-        0%, 100% {
-            transform: translateY(0);
+            .profile-image {
+                order: 1; /* Set the order of col-md-4 element to 1 for mobile */
+            }
         }
-        50% {
-            transform: translateY(-20px);
-        }
-    }
-
-    .bounce {
-        animation: bounce 2s infinite;
-    }
 </style>
 <!-- HAMBURGER MENU NAV-->
 
-
-
 <!-- MAIN NAV -->
 <section id="nav-menu">
-<nav class="navbar navbar-expand-lg">
-   <div class="container">
-       <a class="navbar-brand" href="/">RFH<span>_</span></a>
-       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-           <span class="navbar-toggler-icon"></span>
-       </button>
-       <div class="collapse navbar-collapse" id="navbarNav">
-           <ul class="navbar-nav ml-auto">
-               <li class="nav-item">
-                   <a class="nav-link" href="#home">Home</a>
-               </li>
-               <li class="nav-item">
-                   <a class="nav-link" href="#about">About</a>
-               </li>
-               <li class="nav-item">
-                   <a class="nav-link" href="#projects">Portfolio</a>
-               </li>
-               <li class="nav-item">
-                   <a class="nav-link" href="#contact">Contact</a>
-               </li>
-           </ul>
-       </div>
-   </div>
-</nav>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="/">RFH<span>_</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
+                    id="navbarToggleBtn">
+                <span class="navbar-toggler-icon" style="color: black;"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 </section>
 
 
@@ -170,6 +157,7 @@
 <br>
 <br>
 
+<!-- ARROW ICON -->
 <div style="display: flex; justify-content: center;">
     <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-arrow-down bounce" viewBox="0 0 16 16">
         <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1"/>
@@ -297,6 +285,7 @@
 <!-- CONTACT ME SECTION -->
 
 <footer>
+<section id="contact">
    <div class="container">
       <div class="row">
           <div class="col-md-6 order-md-1 order-2">
@@ -313,11 +302,10 @@
           </div>
       </div>
    </div>
-   
-   
+</section>
        <div class="row">
            <div class="col-12 text-center">
-               <p>Copyright © 2024. Built by Rhia Hamilton.</p>
+               <p>© 2024. Built by Rhia Hamilton.</p>
            </div>
        </div>
    </div>
@@ -330,6 +318,5 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
 </body>
 </html>

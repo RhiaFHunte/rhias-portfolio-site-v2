@@ -40,38 +40,95 @@ body {
       overflow-x: hidden;
    
    }
-
-   #home {
-      padding: 120px 0;
+   
+/* MOBILE NAVIGATION */
+   .navbar-toggler-icon span {
+      background-color:  #333;
+      color: #333;
+   }
+   .navbar-nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
   }
-
-
-   .profile-image img {
-      margin-top: 10%;
+  .navbar-nav .nav-item {
+      margin: 10px 0;
+  }
+   
+  .navbar-collapse.show ~ .overlay  {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.199);
+      display: none;
+   }
+   
+   .navbar-collapse.show ~ .overlay {
+      display: block;
    }
    
 
+   #home {
+      padding: 110px 0;
+  }
+  
+/* PROFILE SECTION */
+
+.profile__title {
+   font-size: 24px; /* Adjust the font size of the h1 element as needed */
+}
+
+.typing {
+   font-size: 24px; /* Adjust the font size of the typed text as needed */
+}
+
+.description {
+   font-size: 14px; /* Adjust the font size as needed */
+   line-height: 1.5; /* Adjust the line height as needed */
+   /* Add any other mobile-specific styles here */
+}
+
+.container {
+   display: grid;
+   grid-template-columns: 1fr; /* Single column layout */
+   grid-template-rows: auto auto; /* Auto sizing for rows */
+}
+
+.profile__content {
+   grid-row: 2; /* Place .profile__content in the second row */
+}
+
+.profile-image {
+   grid-row: 1; /* Place .profile-image in the first row */
+}
+
+   
+/* CERTFICATES */
    #certificates img{
-      margin-bottom:10%; /* Add right padding */
+      margin-bottom:10%; 
    }
 
+/* CONTACT ME */
    .email-address {
-      margin-top: 50px; /* Adjust margin-top as needed */
-
+      margin-top: 50px; 
    
   }
 
   .email-address h1 {
-      font-size: 1rem; /* Adjust font-size as needed */
-      margin-bottom: 0; /* Remove bottom margin to reduce space */
+      font-size: 1rem; 
+      margin-bottom: 0;
   }
   .social-icons h1 {
-   max-width: 100%; /* Set maximum width */
+   max-width: 100%;
 }
+
 }
 
 
-/* PROFILE SECTION */
+/* NAVIVATION SECTION */
 
 #nav-menu, #home {
    background: linear-gradient(106.5deg, rgba(255, 215, 185, 0.91) 23%, rgba(223, 159, 247, 0.8) 93%);
@@ -87,16 +144,20 @@ body {
 
 /* Optional: Style the font color and font size of the navbar brand */
 .navbar-brand {
-   color: #333; /* Set the font color */
+   color: #333; 
    font-size: 36px; /* Set the font size */
    font-weight: 600;
 }
+
+
+/* PROFILE SECTION */
 
 #profile{
    padding: 20px;
    margin-bottom: 0; /* Ensure no margin at the bottom */
    z-index: 1; /* Ensure profile section is above the nav section */
 }
+
 
 .profile-image {
    margin-top: -20px; /* Adjust the margin to move the image upwards */
@@ -191,8 +252,8 @@ body #about {
 
 .project-container {
    display: flex;
-   flex-wrap: nowrap; /* Ensure project cards stay in a single row */
-   overflow-x: auto; /* Enable horizontal scrolling */
+   flex-wrap: nowrap; 
+   overflow-x: auto; 
    scroll-snap-type: x mandatory; /* Enable snapping to each project card */
 }
 
@@ -200,16 +261,16 @@ body #about {
 
 
 .project-card {
-   flex: 0 0 auto; /* Ensure project cards don't shrink or grow */
-   background-color: #f5f5f5; /* Light grey background */
-   border-radius: 30px; /* Rounded corners */
-   padding: 15px; /* Add some padding for spacing */
-   margin-right: 15px; /* Add margin between project cards */
-   margin-bottom: 20px; /* Add margin between project cards */
-   display: flex; /* Set display to flex */
-   flex-direction: column; /* Arrange children in column */
-   justify-content: space-between; /* Align children with space between */
-   align-items: center; /* Center align items horizontally */
+   flex: 0 0 auto;
+   background-color: #f5f5f5; 
+   border-radius: 30px; 
+   padding: 15px; 
+   margin-right: 15px; 
+   margin-bottom: 20px; 
+   display: flex; 
+   flex-direction: column; 
+   justify-content: space-between;
+   align-items: center; 
 }
 
 .card-body {
