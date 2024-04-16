@@ -74,56 +74,64 @@ body {
    #home {
       padding: 110px 0;
   }
-  
+
 /* PROFILE SECTION */
 
-.profile__title {
-   font-size: 24px; /* Adjust the font size of the h1 element as needed */
-}
-
-.typing {
-   font-size: 24px; /* Adjust the font size of the typed text as needed */
-}
-
-.description {
-   font-size: 14px; /* Adjust the font size as needed */
-   line-height: 1.5; /* Adjust the line height as needed */
-   /* Add any other mobile-specific styles here */
-}
-
-.container {
-   display: grid;
-   grid-template-columns: 1fr; /* Single column layout */
-   grid-template-rows: auto auto; /* Auto sizing for rows */
-}
-
-.profile__content {
-   grid-row: 2; /* Place .profile__content in the second row */
-}
-
-.profile-image {
-   grid-row: 1; /* Place .profile-image in the first row */
-}
-
-   
-/* CERTFICATES */
-   #certificates img{
-      margin-bottom:10%; 
+   .profile__title {
+      font-size: 35px; /* Adjust the font size of the h1 element as needed */
    }
 
-/* CONTACT ME */
-   .email-address {
-      margin-top: 50px; 
-   
-  }
+   .typing {
+      font-size: 35px; /* Adjust the font size of the typed text as needed */
+   }
 
-  .email-address h1 {
-      font-size: 1rem; 
-      margin-bottom: 0;
-  }
-  .social-icons h1 {
-   max-width: 100%;
-}
+   .description {
+      font-size: 18px; /* Adjust the font size as needed */
+      line-height: 1.5; /* Adjust the line height as needed */
+      /* Add any other mobile-specific styles here */
+   }
+
+   .container {
+      display: grid;
+      grid-template-columns: 1fr; /* Single column layout */
+      grid-template-rows: auto auto; /* Auto sizing for rows */
+   }
+
+   .profile__content {
+      grid-row: 2; /* Place .profile__content in the second row */
+   }
+
+   .profile-image {
+      grid-row: 1; /* Place .profile-image in the first row */
+   }
+
+      
+   /* CERTFICATES */
+      #certificates img{
+         margin-bottom:10%; 
+      }
+
+   /* CONTACT ME */
+
+
+
+   .custom-email-link {
+      color: #333;
+      text-decoration: none !important;
+      font-size: 25px;
+      text-align: center; 
+   }
+
+
+   .email-address h1 {
+         font-size: 3rem; 
+         margin-bottom: 0;
+   }
+   .social-icons h1 {
+      margin-top: 10px;
+      max-width: 100%;
+   }
+
 
 }
 
@@ -391,9 +399,10 @@ footer .container {
 .custom-email-link {
 
    color: #333; /* Example: Change the color to black */
-   text-decoration: none; /* Example: Remove underline */
-   /* Add any other custom styling you want */
+   text-decoration: none !important;  /* Example: Remove underline */ 
+
 }
+
 
 .social-icons {
    list-style-type: none;
