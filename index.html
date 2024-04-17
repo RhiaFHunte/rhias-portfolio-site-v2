@@ -17,34 +17,45 @@
     
 <!-- ANIMATIONS -->
 <style>
-           /* Custom CSS */
-           @media (max-width: 600px) {
-            /* Apply styles only for viewport width less than or equal to 600px (mobile) */
-            .profile__container {
-                display: flex;
-                flex-direction: column-reverse; /* Reverse the order of flex items for mobile */
-            }
+    .order-1 {
+        -webkit-box-ordinal-group: 3;  /* Older webkit browsers */
+        -ms-flex-order: 2;
+        order: 2;
+    }
 
-            .profile__content {
-                order: 2; /* Set the order of col-md-8 element to 2 for mobile */
-            }
+    .order-2 {
+        -webkit-box-ordinal-group: 2;  /* Older webkit browsers */
+        -ms-flex-order: 1;
+        order: 1;
+    }
+    .navbar-toggler-icon {
+        /* Set the color of the lines */
+        color: #fff; /* Example color */
 
-            .profile-image {
-                order: 1; /* Set the order of col-md-4 element to 1 for mobile */
-            }
-        }
+        /* Adjust the thickness of the lines */
+        border-width: 2px; /* Example thickness */
+
+        /* Adjust the style of the lines (solid, dashed, dotted, etc.) */
+        border-style: solid; /* Example style */
+    }
+    
+    .navbar-light .navbar-toggler {
+    border-color: none;
+    }
+
 </style>
 <!-- HAMBURGER MENU NAV-->
 
 <!-- MAIN NAV -->
 <section id="nav-menu">
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
             <a class="navbar-brand" href="/">RFH<span>_</span></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
                     id="navbarToggleBtn">
-                <span class="navbar-toggler-icon" style="color: black;"></span>
+                <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
@@ -70,52 +81,52 @@
 
 <!-- HERO -->
 <section id="home">
-   <section id="profile">
-       <div class="profile__container">
-           <div class="container">
-               <div class="row justify-content-end">
-                   <div class="col-md-8">
-                       <div class="profile__content">
-                           <p class="profile__subtitle"><strong>HELLO</strong></p>
-                           <h1 class="profile__title">
-                               I'm <span>Rhia</span><br>
-                               a <span id="typed" class="typing"></span>
-                           </h1>
-                           <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-                           <script>
-                              var options = {
-                                 strings: ["<strong>Front-End Developer</strong>", "<strong>Creative thinker</strong>", "<strong>Tech enthusiast</strong>"],
-                                 typeSpeed: 50,
-                                 backSpeed: 50,
-                                 backDelay: 2000,
-                                 startDelay: 400,
-                                 loop: true,
-                                 contentType: 'html' // Specify content type as HTML
-                              };
-                              var typed = new Typed("#typed", options);
-                           </script>
-                           <br>
-                           <p class="description">
-                               A self-taught creative Web Developer. <br>Based in London, UK.
-                           </p>
-                           <br>
-                           <div class="action__btns">
-                               <button class="contact__me" onclick="location.href='./#contact'">Contact Me</button> 
-                               <button class="portfolio" onclick="location.href='./#projects'">Portfolio</button>
-                           </div>
-                       </div>
-                   </div>
-                   <div class="col-md-4">
-                       <div class="profile-image">
-                           <img src="assets/IMG_1.png" alt="profile pic">
-                       </div>
-                   </div>
-               </div>
-           </div>
-       </div>
-   </section>
-</section>
-
+    <section id="profile">
+        <div class="profile__container">
+            <div class="container">
+                <div class="row justify-content-end">
+                    <div class="col-md-8 order-md-1 order-2"> <!-- Keep original order for desktop -->
+                        <div class="profile__content">
+                            <p class="profile__subtitle"><strong>HELLO</strong></p>
+                            <h1 class="profile__title">
+                                I'm <span>Rhia</span><br>
+                                a <span id="typed" class="typing"></span>
+                            </h1>
+                            <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+                            <script>
+                               var options = {
+                                  strings: ["<strong>Front-End Developer</strong>", "<strong>Creative thinker</strong>", "<strong>Tech enthusiast</strong>"],
+                                  typeSpeed: 50,
+                                  backSpeed: 50,
+                                  backDelay: 2000,
+                                  startDelay: 400,
+                                  loop: true,
+                                  contentType: 'html' // Specify content type as HTML
+                               };
+                               var typed = new Typed("#typed", options);
+                            </script>
+                            <br>
+                            <p class="description">
+                                A self-taught creative Web Developer. <br>Based in London, UK.
+                            </p>
+                            <br>
+                            <div class="action__btns">
+                                <button class="contact__me" onclick="location.href='./#contact'">Contact Me</button> 
+                                <button class="portfolio" onclick="location.href='./#projects'">Portfolio</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 order-md-2 order-1"> <!-- Keep original order for desktop -->
+                        <div class="profile-image">
+                            <img src="assets/IMG_1.png" alt="profile pic">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ </section>
+ 
 
 
 <!-- ABOUT ME ANIMATION SCRIPT -->
@@ -284,19 +295,22 @@
 <br>
 <!-- CONTACT ME SECTION -->
 
+
+
+
 <footer>
     <section id="contact">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-xs-12"> <!-- Adjusted col classes -->
-                    <div class="email-address text-center">
+                <div class="col-12 text-center"> <!-- Full width on mobile -->
+                    <div class="email-address">
                         <h1><strong><a href="mailto:rhiafhunte@gmail.com" class="custom-email-link">rhiafhunte@gmail.com</a></strong></h1>
                     </div>
                 </div>
-                <div class="col-md-6 col-xs-12"> <!-- Adjusted col classes -->
-                    <ul class="social-icons text-center">
-                        <li><a href="https://github.com/RhiaFHunte" target="_blank"><i class="ri-github-fill"></i></a></li>
-                        <li><a href="https://www.linkedin.com/in/rhiahunte/" target="_blank"><i class="ri-linkedin-box-fill"></i></a></li>
+                <div class="col-12 text-center mt-3"> <!-- Full width on mobile and margin top -->
+                    <ul class="social-icons d-inline-block"> <!-- Centering the icons -->
+                        <li class="d-inline-block"><a href="https://github.com/RhiaFHunte" target="_blank"><i class="ri-github-fill"></i></a></li>
+                        <li class="d-inline-block"><a href="https://www.linkedin.com/in/rhiahunte/" target="_blank"><i class="ri-linkedin-box-fill"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -310,6 +324,7 @@
         </div>
     </div>
 </footer>
+
 
 
 
