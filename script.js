@@ -1,4 +1,26 @@
-// Define keyframes animation
+
+// NAVBAR SCROLL
+window.addEventListener('scroll', function() {
+    var navbar = document.querySelector('.dynamic-color-navbar');
+    var aboutSection = document.getElementById('about');
+    var aboutSectionOffset = aboutSection.offsetTop;
+    var scrollPosition = window.scrollY;
+
+    if (scrollPosition >= aboutSectionOffset) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+});
+
+
+// NAVBAR TOGGLE WHEN CLICKED
+document.getElementById('navbarToggleBtn').addEventListener('click', function() {
+    document.querySelector('.overlay').classList.toggle('show');
+ });
+ 
+
+// ARROW ANNIMATION
 const style = document.createElement('style');
 style.innerHTML = `
     @keyframes bounce {
@@ -11,16 +33,10 @@ style.innerHTML = `
     }
 `;
 
-// Append style to the document head
 document.head.appendChild(style);
 
-// Now you can apply the bounce animation to elements as needed.
-// For example, if you have an SVG element with the class 'bi-arrow-down':
 const logo = document.querySelector('.bi-arrow-down');
-logo.style.animation = 'bounce 1s infinite'; // Applying the animation to the SVG element
+logo.style.animation = 'bounce 1s infinite';
 
-// Toggle overlay when navbar toggler button is clicked
-document.getElementById('navbarToggleBtn').addEventListener('click', function() {
-   document.querySelector('.overlay').classList.toggle('show');
-});
+
 
