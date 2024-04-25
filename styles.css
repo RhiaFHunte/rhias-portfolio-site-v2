@@ -48,10 +48,6 @@ body {
 
 }
 
-.navbar-toggler-icon {
-   color: transparent;
-
-}
 
 .navbar-light .navbar-toggler {
    color: rgba(0, 0, 0, .5);
@@ -275,7 +271,6 @@ body #about {
 
 }
 
-
 .project-carousel-wrapper {
    padding-left: 10px; /* Add padding on the left side */
    padding-right: 10px; /* Add padding on the right side */
@@ -283,17 +278,13 @@ body #about {
    margin-bottom: 20px; /* Add margin to the bottom */
 }
 
-
 .project-container {
-   padding: 20px;
+
    display: flex;
    flex-wrap: nowrap; 
    overflow-x: auto; 
    scroll-snap-type: x mandatory; /* Enable snapping to each project card */
 }
-
-
-
 
 .project-card {
    flex: 0px 0px auto;
@@ -308,7 +299,6 @@ body #about {
    align-items: center; 
    border: #393838;
    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
-
 }
 
 .card-body {
@@ -348,43 +338,7 @@ body #about {
 
 }
 
-.carousel-control-prev,
-.carousel-control-next {
 
-    background-color: #333; /* Set background color */
-    border-radius: 50%; /* Round the buttons */
-    opacity: 0.7; /* Set initial opacity */
-    height: 40px; /* Adjust height */
-    width: 40px; /* Adjust width */
-    transform: translateY(+900%); /* Center the buttons vertically */
-    margin-right: 2px; /* Add more horizontal space */
-
-}
-
-
-
-
-
-/* Style the carousel control icons */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    background-size: cover; /* Ensure the icon fills the space */
-    width: 20px; /* Set width of the icon */
-    height: 20px; /* Set height of the icon */
-    display: inline-block; /* Ensure the icon is displayed inline */
-}
-
-/* Style the hover effect */
-.carousel-control-prev:hover,
-.carousel-control-next:hover {
-    opacity: 1; /* Set opacity to 1 on hover */
-}
-
-/* For RTL languages */
-.carousel-control-next {
-    left: unset;
-    right: 0;
-}
 
 
 
