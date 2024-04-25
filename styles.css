@@ -25,7 +25,7 @@ body {
 /* RESPONSIVE */
 
 /* Adjust h1 width for mobile view */
-@media (max-width: 600px) {
+@media (max-width: 580px) {
 
    body {
       margin: 0;
@@ -67,11 +67,26 @@ body {
 }
 
 
-#navbarNav.show .navbar-brand,
+
 #navbarNav.show .nav-link {
-   color: white !important; /* Ensures white color overrides other styles when navbar is shown */
+   color: white !important; 
+   text-shadow: 0px 0px 6px rgba(255,255,255,0.7);
    z-index: 1030;
 }
+
+/* COLLAPSED NAVBAR */
+.navbar-toggler .navbar-toggler-icon {
+   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+   z-index: 1030; /* z-index to ensure it's above other content, adjust as necessary */
+}
+
+/* EXPANDED NAVBAR */
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon {
+   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.916)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+
+
 
 #navbarNav {
    transition: background-color 0.3s ease; /* Add transition to background-color */
