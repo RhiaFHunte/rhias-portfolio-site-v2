@@ -14,21 +14,14 @@ body {
    overflow-x: hidden;
    font-family: 'poppins', sans-serif;
    color: #393838;
-
 }
-
-
-
 
 #projects #certificates h1.title {
    position: fixed;
    right: 50%; /* Adjust the percentage as needed */
-
  }
  
  
-
-
 /* RESPONSIVE */
 
 /* Adjust h1 width for mobile view */
@@ -38,19 +31,18 @@ body {
       margin: 0;
       padding: 0;
       overflow-x: hidden;
-   
    }
    
 /* MOBILE NAVIGATION */
 
 #nav-menu nav {
    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.046); /* Add subtle shadow */
-
 }
 
 
 .navbar-light .navbar-toggler {
    color: rgba(0, 0, 0, .5);
+   z-index: 1030; /* Bootstrap's default z-index for navbar is 1030 */
 }
 
 .dynamic-color-navbar {
@@ -60,7 +52,6 @@ body {
 .dynamic-color-navbar.scrolled {
    background-color: #3938381a;
   /*  background-color: rgba(223, 159, 247, 0.080); */
-
 }
 
 .navbar-nav {
@@ -68,26 +59,34 @@ body {
    flex-direction: column;
    align-items: center;
    text-align: center;
+   padding-top: 30%;
 }
 
 .navbar-nav .nav-item {
    margin: 10px 0;
 }
 
-.navbar-collapse.show ~ .overlay  {
-   position: fixed;
-   top: 0;
+
+#navbarNav.show .navbar-brand,
+#navbarNav.show .nav-link {
+   color: white !important; /* Ensures white color overrides other styles when navbar is shown */
+   z-index: 1030;
+}
+
+#navbarNav {
+   transition: background-color 0.3s ease; /* Add transition to background-color */
+}
+
+#navbarNav.show {
+   position: fixed; /* Fixed position to make it stay in place while scrolling */
+   background-color: rgba(0, 0, 0, 0.335); /* Changed for better visibility */
+   top: 0px;
    left: 0;
-   width: 100%;
-   height: 100%;
-   background-color: rgba(255, 255, 255, 0.199);
-   display: none;
-
+   height: 100vh; /* Full viewport height */
+   width: 100vw; /* Full viewport width */
 }
 
-.navbar-collapse.show ~ .overlay {
-   display: block;
-}
+
 
 /* PROFILE SECTION */
 .profile__title {
@@ -163,11 +162,12 @@ body {
 
 }
 
-/* Optional: Style the font color and font size of the navbar brand */
+
 .navbar-brand {
    color: #333; 
    font-size: 36px; /* Set the font size */
    font-weight: 600;
+   z-index: 1030;
 }
 
 
