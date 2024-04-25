@@ -25,9 +25,6 @@ body {
 
 #home {
    background: linear-gradient(106.5deg, rgba(255, 215, 185, 0.91) 23%, #df9ff7cc 93%);
-
-
-
 }
  
 /* RESPONSIVE */
@@ -112,23 +109,6 @@ body {
    width: 100vw; /* Full viewport width */
 }
 
-/* ABOUT SECTION */
-
-.about__details__container {
-    margin: 0 0 0 10%; 
-    margin-right: 0; 
-    margin-bottom: 24%; 
-}
-
-.details__container {
-   margin: 0 0 0 10%; 
-   margin-right: 0; 
-
-
-}
-
-
- 
 
 /* PROFILE SECTION */
 
@@ -149,6 +129,25 @@ body {
    font-size: 14px;
    margin: 0; 
    line-height: 1.5;
+}
+
+/* ABOUT SECTION */
+
+.about__details__container {
+   margin: 0 0 0 10%; 
+   margin-right: 0; 
+   margin-bottom: 24%; 
+}
+
+.details__container {
+  margin: 0 0 0 10%; 
+  margin-right: 0; 
+}
+
+
+/* PROJECT SECTION */
+.col-md-4 {
+   margin-bottom: 20px;
 }
 
 /* CERTIFICATES */
@@ -293,7 +292,7 @@ body #about {
 
 
 .about__details__container {
-   margin-right: 24%; 
+   margin-right: 20%; 
 }
 
 /* TECH STACK SECTION */
@@ -319,40 +318,38 @@ body #about {
    padding: 5px 10px;
    margin: 5px;
    border-radius: 100px;
-   word-wrap: break-word; /* Wrap long words */
+   word-wrap: break-word; 
 }
 
 
 
 /* PROJECTS SECTION */
 #projects {
-   padding-left: 40px; /* Add left padding */
-   padding-right: 40px; /* Add right padding */
+   padding-left: 40px; 
+   padding-right: 40px; 
    padding-top: 6%;
 
 }
 
 .project-carousel-wrapper {
-   padding-left: 10px; /* Add padding on the left side */
-   padding-right: 10px; /* Add padding on the right side */
-   border-radius: 20px; /* Rounded corners */
-   margin-bottom: 20px; /* Add margin to the bottom */
+   padding-left: 8px; 
+   padding-right: 8px; 
+   border-radius: 20px; 
+   margin-bottom: 20px;
 }
 
 .project-container {
-
    display: flex;
    flex-wrap: nowrap; 
    overflow-x: auto; 
-   scroll-snap-type: x mandatory; /* Enable snapping to each project card */
+   scroll-snap-type: x mandatory;
 }
 
 .project-card {
    flex: 0px 0px auto;
    background-color: #f5f5f5; 
    border-radius: 30px; 
-   padding: 15px; 
-   margin-right: 15px; 
+   padding: 10px; 
    margin-bottom: 20px; 
    display: flex; 
    flex-direction: column; 
@@ -398,7 +395,6 @@ body #about {
    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
 
 }
-
 
 
 
