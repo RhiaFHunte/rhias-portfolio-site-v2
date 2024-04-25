@@ -70,14 +70,20 @@
 </section>
 
 
-
 <!-- HERO -->
 <section id="home">
     <section id="profile">
         <div class="profile__container">
             <div class="container">
                 <div class="row justify-content-end">
-                    <div class="col-md-8 order-md-1 order-2"> <!-- Keep original order for desktop -->
+                    <!-- Image Section: First on small screens, second on md and larger screens -->
+                    <div class="col-md-4 order-sm-2 order-0">
+                        <div class="profile-image">
+                            <img src="assets/IMG_1.png" alt="Profile picture of Rhia">
+                        </div>
+                    </div>
+                    <!-- Text Content Section: Second on small screens, first on md and larger screens -->
+                    <div class="col-md-8 order-sm-1 order-2">
                         <div class="profile__content">
                             <p class="profile__subtitle"><strong>HELLO</strong></p>
                             <h1 class="profile__title">
@@ -85,32 +91,14 @@
                                 a <span id="typed" class="typing"></span>
                             </h1>
                             <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-                            <script>
-                               var options = {
-                                  strings: ["<strong>Front-End Developer</strong>", "<strong>Creative thinker</strong>", "<strong>Tech enthusiast</strong>"],
-                                  typeSpeed: 50,
-                                  backSpeed: 50,
-                                  backDelay: 2000,
-                                  startDelay: 400,
-                                  loop: true,
-                                  contentType: 'html' // Specify content type as HTML
-                               };
-                               var typed = new Typed("#typed", options);
-                            </script>
-                            <br>
+                      
                             <p class="description">
-                                A self-taught creative Web Developer. <br>Based in London, UK.
-                            </p>
-                            <br>
-                            <div class="action__btns">
-                                <button class="contact__me" onclick="location.href='./#contact'">Contact Me</button> 
-                                <button class="portfolio" onclick="location.href='./#projects'">Portfolio</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 order-md-2 order-1"> <!-- Keep original order for desktop -->
-                        <div class="profile-image">
-                            <img src="assets/IMG_1.png" alt="profile pic">
+                                A self-taught creative Web Developer based in London, UK.
+                                </p>
+                                <br>
+                                <div class="action__btns">
+                                <button class="contact__me" onclick="location.href='#contact'">Contact Me</button>
+                                <button class="portfolio" onclick="location.href='#projects'">Portfolio</button>
                         </div>
                     </div>
                 </div>
@@ -119,43 +107,60 @@
     </section>
  </section>
  
-
-
-<!-- ABOUT ME ANIMATION SCRIPT -->
+ <!-- TYPING ANIMATION -->
+ <script>
+    var options = {
+       strings: ["<strong>Front-End Developer</strong>", "<strong>Creative thinker</strong>", "<strong>Tech enthusiast</strong>"],
+       typeSpeed: 50,
+       backSpeed: 50,
+       backDelay: 2000,
+       startDelay: 400,
+       loop: true,
+       contentType: 'html' // Specify content type as HTML
+    };
+    var typed = new Typed("#typed", options);
+ </script>
+ 
 
 <!-- ABOUT ME INTRODUCTION -->
-
 <section id="about">
-   <br>
-   <div class="container">
-      <div class="row">
-         <div class="col-md-6">
-            <div class="about__details__container">
-               <h1 class="title"><strong>About Me</strong> </h1>
-               <br>
-               <p>
-                  I am a Web Developer with a strong passion for building engaging, responsive, and user-friendly websites. I've worked on a variety of personal projects, ranging from blog pages to e-commerce platforms. Committed to refining my abilities.
-               </p>
-            </div>
-         </div>
-         <div class="col-md-6">
-            <div class="details__container">
-               <div class="tech__stack">
-                  <div class="each_tech" style="width: fit-content;">HTML 5</div>
-                  <div class="each_tech" style="width: fit-content;">CSS 3</div>           
-                  <div class="each_tech" style="width: fit-content;">JavaScript</div>
-                  <div class="each_tech" style="width: fit-content;">Visual Studio</div>   
-                  <div class="each_tech" style="width: fit-content;">Github</div>     
-                  <div class="each_tech" style="width: fit-content;">Responsive</div> 
-                  <div class="each_tech" style="width: fit-content;">Bootstrap</div>   
-                  <div class="each_tech" style="width: fit-content;">UI</div> 
-                  <div class="each_tech" style="width: fit-content;">UX</div>  
-               </div> 
-            </div>
-         </div>
-      </div>
-   </div>
-</section>
+    <div class="container">
+       <div class="row">
+          <!-- First Column -->
+          <div class="col-12 col-md-6">
+             <div class="about__details__container">
+                <h1 class="title"><strong>About Me</strong></h1>
+                <p>
+                   I am a Web Developer with a strong passion for building engaging, 
+                   responsive, and user-friendly websites. I've worked on a variety of personal projects, 
+                   ranging from blog pages to e-commerce platforms. Committed to refining my abilities.
+                </p>
+             </div>
+          </div>
+          <!-- Second Column -->
+          <br>
+          <div class="col-12 col-md-6">
+             <div class="details__container">
+                <h1 class="title"><strong>Tech Stack</strong></h1>
+                <div class="tech__stack">
+                   <!-- Tech Items -->
+                   <div class="each_tech" style="width: fit-content;">HTML 5</div>
+                   <div class="each_tech" style="width: fit-content;">CSS 3</div>           
+                   <div class="each_tech" style="width: fit-content;">JavaScript</div>
+                   <div class="each_tech" style="width: fit-content;">Visual Studio</div>   
+                   <div class="each_tech" style="width: fit-content;">Github</div>     
+                   <div class="each_tech" style="width: fit-content;">Responsive</div> 
+                   <div class="each_tech" style="width: fit-content;">Bootstrap</div>   
+                   <div class="each_tech" style="width: fit-content;">UI</div> 
+                   <div class="each_tech" style="width: fit-content;">UX</div>  
+                </div> 
+             </div>
+          </div>
+       </div>
+    </div>
+ </section>
+ 
+ 
 <br>
 <br>
 <br>
@@ -314,8 +319,8 @@
 
 <!-- SCRIPTS -->
 <script src="script.js"></script>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
