@@ -20,7 +20,6 @@ body {
    position: fixed;
    right: 50%; /* Adjust the percentage as needed */
  }
- 
 
 
 #home {
@@ -30,7 +29,7 @@ body {
 /* RESPONSIVE */
 
 /* Adjust h1 width for mobile view */
-@media (max-width: 580px) {
+@media (max-width: 600px) {
 
    body {
       margin: 0;
@@ -41,19 +40,18 @@ body {
 /* MOBILE NAVIGATION */
 
 #home {
-   height: fit-content;
-   padding: auto;
-
+   background-size: 100%; 
+   height: 850px; 
+   
 }
 
 #nav-menu nav {
    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.046); /* Add subtle shadow */
 }
 
-
 .navbar-light .navbar-toggler {
    color: rgba(0, 0, 0, .5);
-   z-index: 1030; /* Bootstrap's default z-index for navbar is 1030 */
+   z-index: 1030;
 }
 
 .dynamic-color-navbar {
@@ -79,9 +77,9 @@ body {
 
 
 #navbarNav.show .nav-link {
-   color: white !important; 
+  /*  color: white !important; 
    text-shadow: 0px 0px 6px rgba(255,255,255,0.7);
-   z-index: 1030;
+   z-index: 1030;*/
 }
 
 /* COLLAPSED NAVBAR */
@@ -93,29 +91,45 @@ body {
 /* EXPANDED NAVBAR */
 .navbar-toggler:not(.collapsed) .navbar-toggler-icon {
    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.916)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-}
-
-
-#navbarNav {
    transition: background-color 0.3s ease; /* Add transition to background-color */
+
 }
 
-#navbarNav.show {
-   position: fixed; /* Fixed position to make it stay in place while scrolling */
-   background-color: rgba(0, 0, 0, 0.335); /* Changed for better visibility */
-   top: 0px;
-   left: 0;
-   height: 100vh; /* Full viewport height */
-   width: 100vw; /* Full viewport width */
-}
+
+
+
 
 
 /* PROFILE SECTION */
 
 .profile-image {
-   margin: 0;
+   max-width: 75%;
+   margin-left: 50px;
    text-align: center; 
 }
+
+
+
+/* PROFILE ICONS */
+
+.icon-container {
+   position: absolute;
+   top: -60px;
+   right: 50%;
+   transform: translateX(50%);
+}
+
+.js {
+   color: #F0DB4F;
+   font-size: 50px;
+   margin-right: 20px;
+}
+
+.github {
+   color: #333;
+   font-size: 60px;
+}
+/* ______________________________________________________________________________________ */
 
 .profile__title {
    height: auto;
@@ -130,6 +144,8 @@ body {
    margin: 0; 
    line-height: 1.5;
 }
+
+
 
 /* ABOUT SECTION */
 
@@ -178,7 +194,7 @@ body {
 /* NAVIVATION SECTION */
 
 #nav-menu nav {
-   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.046); /* Add subtle shadow */
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.046);
 
 }
 
@@ -187,7 +203,7 @@ body {
 }
 
 .dynamic-color-navbar {
-   transition: background-color 0.8s ease; /* Add transition for smooth color change */
+   transition: background-color 0.8s ease; 
 }
 
 .dynamic-color-navbar.scrolled {
@@ -197,22 +213,17 @@ body {
 }
 
 
-
-
-
-
-
 .navbar-nav .nav-link {
-   color: #333; /* Set the font color */
-   font-size: 18px; /* Set the font size */
-   margin-right: 20px; /* Adjust the margin as needed */
+   color: #333; 
+   font-size: 18px; 
+   margin-right: 20px; 
 
 }
 
 
 .navbar-brand {
    color: #333; 
-   font-size: 36px; /* Set the font size */
+   font-size: 36px; 
    font-weight: 600;
    z-index: 1030;
 }
@@ -259,34 +270,42 @@ cursor: pointer; /* Change cursor to pointer on hover */
 
 
 .contact__me {
-   margin-right: 10px; /* Add margin to create a gap */
+   margin-right: 10px; 
 }
 
 nav {
    position: fixed;
    top: 0;
    width: 100%;
-   z-index: 2; /* Ensure nav section is above the profile section */
+   z-index: 2;
 }
 
 .navbar {
-   height: 12%;
+
    position: fixed;
-   background-color: rgba(255, 255, 255, 0.199); /* Transparent white background */
-   -webkit-backdrop-filter: blur(10px); /* For Safari */
-   backdrop-filter: blur(10px); /* Standard syntax */
+   background-color: rgba(255, 255, 255, 0.199); 
+   -webkit-backdrop-filter: blur(10px); 
+   backdrop-filter: blur(10px);
 }
 
 
 #home {
-   padding: 180px 0 205px 0px
+   background-size: 100%; /* Width and height of the background size */
+   height: 700px; /* Specific height of the element */
+   background-repeat: no-repeat; /* Prevents repeating the background */
+   
 }
+
+#profile {
+   padding-top: 200px; /* Specific height of the element */   
+}
+
 
 
 /* ABOUT SECTION */
 body #about {
-   background-color: #FAFAFA; /* Light grey background color */
-   padding: 150px 0px; /* Add padding horizontally to increase width */
+   background-color: #FAFAFA;
+   padding: 150px 0px; 
    box-shadow: inset 0px 10px 30px -10px rgba(0,0,0,0.2);
 }
 

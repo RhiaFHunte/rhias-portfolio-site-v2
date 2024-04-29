@@ -5,9 +5,10 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css">
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-   
+   <script src="https://kit.fontawesome.com/2e4de11302.js" crossorigin="anonymous"></script>
    <link href="css/fontawesome.min.css" rel="stylesheet" type="text/css">
    <link href="css/owl.carousel.min.css" rel="stylesheet" type="text/css">
+   <link rel="stylesheet" href="bootstrap.css">
    <link href="styles.css" rel="stylesheet" type="text/css">
    
    <title>RhiaFH Portfolio | Junior Software Developer</title>
@@ -40,9 +41,9 @@
 
 <!-- MAIN NAV -->
 <section id="nav-menu">
-    <nav class="navbar navbar-expand-lg navbar-light dynamic-color-navbar">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top dynamic-color-navbar">
         <div class="container">
-            <a class="navbar-brand" href="/">RFH<span>_</span></a>
+            <a class="navbar-brand col-2" href="/">RFH<span>_</span></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
                     id="navbarToggleBtn">
@@ -75,14 +76,8 @@
     <section id="profile">
         <div class="profile__container">
             <div class="container">
-                <div class="row justify-content-end">
-                    <!-- Image Section: First on small screens, second on md and larger screens -->
-                    <div class="col-md-4 order-sm-2 order-0">
-                        <div class="profile-image">
-                            <img src="assets/IMG_1.png" alt="Profile picture of Rhia">
-                        </div>
-                    </div>
-                    <!-- Text Content Section: Second on small screens, first on md and larger screens -->
+                <div class="row">
+                    <!-- Text Content Section: First on md and larger screens -->
                     <div class="col-md-8 order-sm-1 order-2">
                         <div class="profile__content">
                             <p class="profile__subtitle"><strong>HELLO</strong></p>
@@ -91,21 +86,45 @@
                                 a <span id="typed" class="typing"></span>
                             </h1>
                             <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-                      
+
                             <p class="description">
-                                A self-taught creative Web Developer based in London, UK.
-                                </p>
-                                <br>
-                                <div class="action__btns">
+                                A self-taught creative Junior Web Developer. Based in London, UK.
+                            </p>
+                            <br>
+                            <div class="action__btns">
                                 <button class="contact__me" onclick="location.href='#contact'">Contact Me</button>
                                 <button class="portfolio" onclick="location.href='#projects'">Portfolio</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Profile Image Section with Icon Overlay Above and Below -->
+                    <div class="col-md-4 order-sm-2 order-0 position-relative">
+                        <!-- Icons Above the profile image -->
+                        <!-- Icons Above the profile image -->
+                        <div style="position: absolute; top: -60px; right: 0; transform: translateX(-50%); display: flex; justify-content: space-between; width: 100px;">
+                            <i class="fas fa-code code" style="color: #0ca5d0; font-size: 80px; position: relative; left: -250px; top: 20px;"></i>
+                            <i class="fab fa-bootstrap bootstrap" style="color: #743484; font-size: 60px; position: relative; right: 30px"></i>
+                        </div>
+            
+                        <div class="profile-image">
+                            <img src="assets/IMG_1.png" alt="Profile picture of Rhia" style="max-width: 100%; height: auto;">
+                        </div>
+                        <!-- Icons Below the profile image -->
+                        <div style="position: absolute; bottom: -60px; right: 0; transform: translateX(-50%);">
+                            <i class="fab fa-js-square js" style="color: #f6e4ad; font-size: 66px; position: relative; left: -180px; top: -50px;"></i>
+                            <i class="fab fa-github github" style="color: #ec729c; font-size: 66px; position: relative; left: 30px; bottom: 35px;"></i>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
- </section>
+</section>
+
+
+
+
+ 
  
  <!-- TYPING ANIMATION -->
  <script>
