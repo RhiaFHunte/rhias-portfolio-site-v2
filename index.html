@@ -102,17 +102,19 @@
                         <!-- Icons Above the profile image -->
                         <!-- Icons Above the profile image -->
                         <div style="position: absolute; top: -60px; right: 0; transform: translateX(-50%); display: flex; justify-content: space-between; width: 100px;">
-                            <i class="fas fa-code code" style="color: #0ca5d0; font-size: 80px; position: relative; left: -250px; top: 20px;"></i>
-                            <i class="fab fa-bootstrap bootstrap" style="color: #743484; font-size: 60px; position: relative; right: 30px"></i>
+                            <i class="fas fa-code code" style="color: #272635a7; font-size: 80px; position: relative; left: -250px; top: 20px;"></i>
+
+
+                            <i class="fab fa-bootstrap bootstrap" style="color: #272635d7; font-size: 60px; position: relative; right: 30px"></i>
                         </div>
             
-                        <div class="profile-image">
-                            <img src="assets/IMG_1.png" alt="Profile picture of Rhia" style="max-width: 100%; height: auto;">
+                        <div class="profile-image" class="shadow-image">
+                            <img src="assets/IMG_1.png" alt="Profile avatar of Rhia" style="max-width: 100%; height: auto;">
                         </div>
                         <!-- Icons Below the profile image -->
                         <div style="position: absolute; bottom: -60px; right: 0; transform: translateX(-50%);">
-                            <i class="fab fa-js-square js" style="color: #f6e4ad; font-size: 66px; position: relative; left: -180px; top: -50px;"></i>
-                            <i class="fab fa-github github" style="color: #ec729c; font-size: 66px; position: relative; left: 30px; bottom: 35px;"></i>
+                            <i class="fab fa-js-square js" style="color: #272635d7; font-size: 66px; position: relative; left: -180px; top: -50px;"></i>
+                            <i class="fab fa-github github" style="color: #272635a7; font-size: 66px; position: relative; left: 30px; bottom: 35px;"></i>
                         </div>
                     </div>
                 </div>
@@ -179,7 +181,7 @@
     </div>
  </section>
  
- 
+<br>
 <br>
 <br>
 <br>
@@ -196,18 +198,14 @@
 <!-- PROJECTS SECTION -->
 
 <section id="projects" style="padding-top: 80px;">
-
    <br>
    <div class="container project-carousel-wrapper">
       <h1 class="title"><strong>Projects</strong></h1>
       <br>
-       <div id="projectCarousel" class="carousel slide" data-ride="carousel">
-           <div class="carousel-inner">
-               <div class="carousel-item active">
                    <div class="row" style="margin: 10px">
                        <!-- Project Card 1 -->
                        <div class="col-md-4">
-                           <div class="project-card">
+                        <div class="project-card">
                                <div class="card-body d-flex justify-content-center"> <!-- Center image horizontally -->
                                    <img src="Assets/rh-character-counter.png" class="card-img-top" alt="Project 1">
                                </div>
@@ -221,7 +219,7 @@
                        </div>
                        <!-- Project Card 2 -->
                        <div class="col-md-4">
-                           <div class="project-card">
+                        <div class="project-card">
                                <div class="card-body d-flex justify-content-center"> <!-- Center image horizontally -->
                                    <img src="Assets/rh-weather-app-square.png" class="card-img-top" alt="Project 2">
                                </div>
@@ -242,7 +240,7 @@
                                </div>
                                <div class="card-body">
                                    <h5 class="card-title"><strong>E-Commerce Landing Page 1.0</strong></h5>
-                                   <p class="card-text">Built as part of SheCodes coursework submission, this project combines a passion for interior design with online retail expertise. The website showcases a modern, minimalist design, featuring a section to display blog posts and an interactive 'Sign up' JavaScript function. Intended to be a space where design meets functionality. Built using JavaScript, HTML5 & CSS3. </p>
+                                   <p class="card-text">Built as part of SheCodes coursework submission, this project combines a passion for interior design with online retail expertise. The website showcases a modern, minimalist design, featuring a section to display blog posts and an interactive 'Sign up' JavaScript function. Intended to be a space where design meets functionality. Desktop only. Built using JavaScript, HTML5 & CSS3. </p>
         
                                    <a href="https://www.shecodes.io/cohorts/1599/projects/2037888" target="_blank" style="text-decoration: none;" class="project-button">View Project</a>
                                    
@@ -250,16 +248,13 @@
                            </div>
                        </div>
                    </div>
-               </div>
-           </div>
+         
+
 
        </div>
    </div>
 </section>
 
-
-<br>
-<br>
 <br>
 
 
@@ -303,31 +298,32 @@
 <br>
 <!-- CONTACT ME SECTION -->
 
-
-
-
 <footer>
-    <section id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center"> <!-- Full width on mobile -->
-                    <div class="email-address">
-                        <h1><strong><a href="mailto:rhiafhunte@gmail.com" class="custom-email-link">rhiafhunte@gmail.com</a></strong></h1>
-                    </div>
-                </div>
-                <div class="col-12 text-center mt-3"> <!-- Full width on mobile and margin top -->
-                    <ul class="social-icons d-inline-block"> <!-- Centering the icons -->
-                        <li class="d-inline-block"><a href="https://github.com/RhiaFHunte" target="_blank"><i class="ri-github-fill"></i></a></li>
-                        <li class="d-inline-block"><a href="https://www.linkedin.com/in/rhiahunte/" target="_blank"><i class="ri-linkedin-box-fill"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    <div class="container">
+    <div class="container-fluid border-top-footer">
         <div class="row">
-            <div class="col-12 text-center">
-                <p>© 2024. Built by Rhia Hamilton.</p>
+            <!-- Second column: Email Address -->
+            <!-- Normal order on larger screens, first on small screens -->
+            <div class="col-md-4 col-12 text-center order-sm-3">
+                <p class="footer-description">
+                    <strong><a href="mailto:rhiafhunte@gmail.com" class="custom-email-link">rhiafhunte@gmail.com</a></strong>
+                </p>
+            </div>
+
+            <!-- Third column: Social Links with only icons as links -->
+            <!-- Normal order on larger screens, second on small screens -->
+            <div class="col-md-4 col-12 text-center order-sm-2">
+                <a href="https://github.com/RhiaFHunte" target="_blank" class="footer-description" aria-label="">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/rhiahunte/" target="_blank" class="footer-description" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+
+            <!-- First column: Copyright Notice -->
+            <!-- Normal order on larger screens, last on small screens -->
+            <div class="col-md-4 col-12 text-center order-sm-1">
+                <p class="footer-description">© 2024. Built by Rhia Hamilton.</p>
             </div>
         </div>
     </div>
