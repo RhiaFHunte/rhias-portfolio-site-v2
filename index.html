@@ -17,27 +17,139 @@
 <body>
     
 <!-- BASIC MOBILE STYLING -->
-<style>
-    .order-1 {
-        -webkit-box-ordinal-group: 3;  /* Older webkit browsers */
-        -ms-flex-order: 2;
-        order: 2;
-    }
+<style> 
+/* Base Styles */
+.navbar-toggler-icon {
+    color: transparent; 
+}
 
-    .order-2 {
-        -webkit-box-ordinal-group: 2;  /* Older webkit browsers */
-        -ms-flex-order: 1;
-        order: 1;
-    }
-    .navbar-toggler-icon {
-        color: transparent; 
-    }
-    
-    .navbar-light .navbar-toggler {
+.navbar-light .navbar-toggler {
     border-color: none;
+}
+
+/* Ordering Flex Items */
+.order-1 {
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2; 
+    order: 2;
+}
+
+.order-2 {
+    -webkit-box-ordinal-group: 2; 
+    -ms-flex-order: 1;
+    order: 1;
+}
+
+/* Projects Carousel */
+#projects h1{
+    padding-top: 80px;  /* Adds 50px of padding to the top of the carousel */
+}
+
+.section_titles {
+    padding-left: 11.5%;
+}
+
+.cards-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 0 10%;
+}
+
+.carousel-inner {
+    padding: 1rem;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: #393838d3;
+    width: 5vh;
+    height: 5vh;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+.carousel-control-prev {
+    left: 10%;
+}
+.carousel-control-next {
+    right: 10%; 
+}
+
+
+
+/* Card Styles */
+.card {
+    width: 400px;
+    height: 620px;
+    overflow: hidden;
+    margin: 0 0.5em;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.2);
+    border: none;
+    border-radius: 30px;
+}
+
+/* Base styles for images within cards */
+.card img {
+    display: block;
+    margin: auto;
+    max-width: calc(100% - 30px); 
+    height: auto;
+    padding-top: 30px;  
+    box-sizing: border-box;
+    border-radius: 15px;  /* Applying rounded corners directly here */
+}
+
+/* Specific styles for images at the top of the card within carousels */
+.carousel .card .card-img-top {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 15px;  /* Ensure this is consistently applied */
+}
+
+/* Additional styles for card bodies */
+.card-body {
+    padding: 15px 35px 0;  /* Simplified to apply uniform padding */
+}
+
+/* Text styling within the card */
+.card-text {
+   font-size: 12px;
+}
+
+
+/* Button Styles */
+.btn-primary {
+    background-color: rgba(255, 255, 255, 0.655);
+    border-color: #333 !important;
+    border: 1.5px solid #333;
+    color: #333;
+    font-size: 12px;
+    border-radius: 100px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover{
+    background-color: #333;
+    border-color: #333 !important;
+    border: 1.5px solid #333;
+    color: white;
+}
+
+/* Responsive Image Styles */
+@media (min-width: 768px) {
+    .card img {
+        max-width: 100%;
     }
+}
 
 </style>
+
 
 <!-- MAIN NAV -->
 <section id="nav-menu">
@@ -102,7 +214,7 @@
                         <!-- Icons Above the profile image -->
                         <!-- Icons Above the profile image -->
                         <div style="position: absolute; top: -60px; right: 0; transform: translateX(-50%); display: flex; justify-content: space-between; width: 100px;">
-                            <i class="fas fa-code code" style="color: #272635a7; font-size: 80px; position: relative; left: -250px; top: 20px;"></i>
+                            <i class="fas fa-code code" style="color: #272635a7; font-size: 70px; position: relative; left: -250px; top: 20px;"></i>
 
 
                             <i class="fab fa-bootstrap bootstrap" style="color: #272635d7; font-size: 60px; position: relative; right: 30px"></i>
@@ -113,20 +225,15 @@
                         </div>
                         <!-- Icons Below the profile image -->
                         <div style="position: absolute; bottom: -60px; right: 0; transform: translateX(-50%);">
-                            <i class="fab fa-js-square js" style="color: #272635d7; font-size: 66px; position: relative; left: -180px; top: -50px;"></i>
-                            <i class="fab fa-github github" style="color: #272635a7; font-size: 66px; position: relative; left: 30px; bottom: 35px;"></i>
+                            <i class="fab fa-js-square js" style="color: #272635d7; font-size: 60px; position: relative; left: -190px; top: -50px;"></i>
+                            <i class="fab fa-github github" style="color: #272635a7; font-size: 60px; position: relative; left: 30px; bottom: 35px;"></i>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-</section>
-
-
-
-
- 
+</section> 
  
  <!-- TYPING ANIMATION -->
  <script>
@@ -141,7 +248,6 @@
     };
     var typed = new Typed("#typed", options);
  </script>
- 
 
 <!-- ABOUT ME INTRODUCTION -->
 <section id="about">
@@ -191,22 +297,88 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-arrow-down bounce" viewBox="0 0 16 16">
         <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1"/>
     </svg>
+   
 </div>
-</div>
-
 
 <!-- PROJECTS SECTION -->
-
-<section id="projects" style="padding-top: 80px;">
-   <br>
-   <div class="container project-carousel-wrapper">
-      <h1 class="title"><strong>Projects</strong></h1>
-      <br>
+<br>
+<section id="projects">
+    <h1 class="section_titles"> <strong>Projects</strong></h1>
+      <div id="carouselProjectControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="cards-wrapper">
+              <div class="card bg-light">
+                <img src="Assets/resized/Rounded/rh-character-counter-round.png" class="card-img-top rounded" class="rounded" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Real-Time Character Counter</h5>
+                  <p class="card-text">The Dynamic Character Counter is a web application offers real-time character counting functionality for text input fields, with a visually appealing design featuring gradient backgrounds and box shadow effects. Notably, it includes a reset button which triggers a JavaScript function that sets the value of the input field to an empty string, effectively clearing any text entered by the user.</p>
+                  <a href="Assets/resized/Rounded/rh-weather-app-square-round.png" target="_blank" class="btn btn-primary">View Project</a>
+                </div>
+              </div>
+              <div class="card bg-light d-none d-md-block">
+                <img src="Assets/resized/Rounded/ecomsite-square-rounded.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">API Weather App</h5>
+                  <p class="card-text">Used a live API to extract and display real-time weather data, including temperature, description, humidity, and wind speed with a 5-day forecast feature. Coded a dynamic manipulation of icons and gradient backgrounds based on weather conditions to user interaction.</p>
+                  <a href="https://rhiafh-weather-app.netlify.app/" target="_blank" class="btn btn-primary">View Project</a>
+                </div>
+              </div>
+              <div class="card bg-light d-none d-md-block">
+                <img src="Assets/resized/Rounded/Projectplaceholder-round.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">E-Commerce Landing Page 1.0</h5>
+                  <p class="card-text">Built as part of SheCodes coursework submission, this project combines a passion for interior design with online retail expertise. The website showcases a modern, minimalist design, featuring a section to display blog posts and an interactive 'Sign up' JavaScript function. Intended to be a space where design meets functionality. Desktop only. Built using JavaScript, HTML5 & CSS3.</p>
+                  <a href="https://www.shecodes.io/cohorts/1599/projects/2037888" target="_blank" class="btn btn-primary">View Project</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="cards-wrapper">
+              <div class="card bg-light">
+                <img src="Assets/resized/Rounded/Projectplaceholder-round.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">In Progress</h5>
+                  <p class="card-text">Watch this space!</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+              <div class="card bg-light d-none d-md-block">
+                <img src="Assets/resized/Rounded/Projectplaceholder-round.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">In Progress</h5>
+                  <p class="card-text">Watch this space!</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+              <div class="card bg-light d-none d-md-block">
+                <img src="Assets/resized/Rounded/Projectplaceholder-round-v2.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">In Progress</h5>
+                    <p class="card-text">Watch this space!</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <a class="carousel-control-prev" href="#carouselProjectControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only"></span>
+        </a>
+        <a class="carousel-control-next" href="#carouselProjectControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span the="sr-only"></span>
+        </a>
+      </div>
+    
+ <!-- 
                    <div class="row" style="margin: 10px">
-                       <!-- Project Card 1 -->
                        <div class="col-md-4">
                         <div class="project-card">
-                               <div class="card-body d-flex justify-content-center"> <!-- Center image horizontally -->
+                               <div class="card-body d-flex justify-content-center"> 
                                    <img src="Assets/rh-character-counter.png" class="card-img-top" alt="Project 1">
                                </div>
                                <div class="card-body">
@@ -217,10 +389,10 @@
                                </div>
                            </div>
                        </div>
-                       <!-- Project Card 2 -->
+         
                        <div class="col-md-4">
                         <div class="project-card">
-                               <div class="card-body d-flex justify-content-center"> <!-- Center image horizontally -->
+                               <div class="card-body d-flex justify-content-center"> 
                                    <img src="Assets/rh-weather-app-square.png" class="card-img-top" alt="Project 2">
                                </div>
                                <div class="card-body">
@@ -232,10 +404,10 @@
                                </div>
                            </div>
                        </div>
-                       <!-- Project Card 3 -->
+
                        <div class="col-md-4">
                            <div class="project-card">
-                               <div class="card-body d-flex justify-content-center"> <!-- Center image horizontally -->
+                               <div class="card-body d-flex justify-content-center"> 
                                    <img src="Assets/ecomsite-square.png" class="card-img-top" alt="Project 3">
                                </div>
                                <div class="card-body">
@@ -248,23 +420,20 @@
                            </div>
                        </div>
                    </div>
-         
-
-
        </div>
    </div>
 </section>
+-->
 
 <br>
-
-
 <!-- CETRIIFCATES SETCION-->
 <section id="certificates">
-
-   <br>
+    <h1 class="section_titles"><strong>Certifications</strong></h1>  
+    <p class="section_titles">
+        A few of my recent achievements. More to come! Coding is a continuous journey after all.
+    </p>
+    <br>
    <div class="container">
-      <h1 class="title"> <strong>Certifications</strong> </h1>
-      <br>
       <div class="row">
          <div class="col-md-4">
             <div class="certificate">
@@ -296,8 +465,8 @@
 <br>
 <br>
 <br>
-<!-- FOOTER SECTION -->
 
+<!-- FOOTER SECTION -->
 <footer>
     <section id="contact">
     <div class="container-fluid border-top-footer">

@@ -7,7 +7,6 @@
    --text-light: #7AA1C6;
    --extra-light: #fff8f9;
 }
-
 body {
    margin: 0;
    padding: 0;
@@ -16,10 +15,11 @@ body {
    color: #393838;
 }
 
-#projects #certificates h1.title {
-   position: fixed;
-   right: 50%; /* Adjust the percentage as needed */
- }
+h1 {
+
+
+}
+
 
 
 #home {
@@ -28,8 +28,8 @@ body {
   background: radial-gradient(circle at right center, #fc739c8d 20%, #f8c177cc 100%, #f8c177cc 100%);
 
 } 
-/* RESPONSIVE */
 
+/* RESPONSIVE STYLING */
 /* Adjust h1 width for mobile view */
 @media (max-width: 600px) {
 
@@ -53,40 +53,38 @@ body {
 }
 
 #nav-menu nav {
-   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.046); /* Add subtle shadow */
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.046); 
 }
 
 .navbar-light .navbar-toggler {
    color: rgba(0, 0, 0, 0.5);
    z-index: 1030;
 }
-/* General styles for the navbar */
+
 .dynamic-color-navbar {
-   transition: background-color 0.8s ease; /* Smooth transition for background color */
+   transition: background-color 0.8s ease;
 }
 
 .dynamic-color-navbar.scrolled {
-   background-color: rgba(39, 38, 53, 0.104); /* Updated to use rgba directly */
+   background-color: rgba(39, 38, 53, 0.104); 
 }
 
-/* Styling for navbar links to ensure they are clickable and spaced appropriately */
 .navbar-nav {
    display: flex;
    flex-direction: column;
    align-items: center;
    text-align: center;
    padding-top: 30%;
-   width: 100%; /* Ensures the navbar stretches across the width */
+   width: 100%;
 }
 
 .navbar-nav .nav-item {
    margin: 10px 0;
-   width: 100%; /* Full width links for easier clicking on mobile */
+   width: 100%; 
 }
 
-/* Ensure navbar toggler visibility and function */
 .navbar-toggler .navbar-toggler-icon {
-   z-index: 1030; /* Ensures the toggler is visible above other elements */
+   z-index: 1030; /* to ensure the toggler above other elements */
 }
 
 .navbar-toggler:not(.collapsed) .navbar-toggler-icon {
@@ -97,19 +95,11 @@ body {
 
 
 /* PROFILE SECTION */
-
 .profile-image {
    max-width: 75%;
    margin-left: 50px;
    text-align: center; 
 }
-
-
-
-/* PROFILE ICONS */
-
-
-/* ______________________________________________________________________________________ */
 
 .profile__title {
    height: auto;
@@ -125,10 +115,7 @@ body {
    line-height: 1.5;
 }
 
-
-
 /* ABOUT SECTION */
-
 .about__details__container {
    margin: 0 0 0 10%; 
    margin-right: 0; 
@@ -140,17 +127,22 @@ body {
   margin-right: 0; 
 }
 
-
-/* PROJECT SECTION */
+/* PROJECT SECTION 
 .col-md-4 {
    padding-left: 10px;
    padding-right: 10px;
    margin-bottom: 20px;
 }
+*/
 
 /* CERTIFICATES */
 #certificates img {
    margin-bottom: 10%;
+}
+
+#certificates .container {
+   padding-left: 45px;
+   padding-right: 45px;
 }
 
 /* CONTACT ME */
@@ -167,42 +159,34 @@ body {
 }
 }
 
-
 /* NAVIVATION SECTION */
-
 #nav-menu nav {
    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.046);
 
 }
-
 .navbar-light .navbar-toggler {
    color: rgba(0, 0, 0, .5);
 }
-
 .dynamic-color-navbar {
    transition: background-color 0.8s ease; 
 }
-
 .dynamic-color-navbar.scrolled {
-   background-color: rgba(39, 38, 53, 0.104); /* Updated to use rgba directly */
+   background-color: rgba(39, 38, 53, 0.104); 
   /*  background-color: rgba(223, 159, 247, 0.080); */
 
 }
-
-
 .navbar-nav .nav-link {
    color: #333; 
    font-size: 18px; 
    margin-right: 20px; 
 
 }
-
-
 .navbar-brand {
    color: #333!important; 
    font-size: 36px; 
    font-weight: 600;
    z-index: 1030;
+   padding: 0PX;
 }
 
 
@@ -213,7 +197,6 @@ body {
    margin-bottom: 0; /* Ensure no margin at the bottom */
    z-index: 1; /* Ensure profile section is above the nav section */
 }
-
 
 .profile-image {
    margin-top: -30px; /* Adjust the margin to move the image upwards */
@@ -227,11 +210,9 @@ body {
 
 }
 
-
 .profile__title {
    margin-bottom: 28px;
 }
-
 
 .contact__me, .portfolio {
 background-color: #333;
@@ -249,7 +230,6 @@ cursor: pointer; /* Change cursor to pointer on hover */
 .portfolio:hover {
    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
    }
-
 
 .contact__me {
    margin-right: 12px; 
@@ -288,14 +268,11 @@ body #about {
    padding: 150px 0px; 
    box-shadow: inset 0px 10px 30px -10px rgba(0,0,0,0.2);
 }
-
-
 .about__details__container {
    margin-right: 20%; 
 }
 
 /* TECH STACK SECTION */
-
 .details__container{
    margin-right: 20%; 
 
@@ -309,7 +286,6 @@ body #about {
    margin-bottom: 5px;
    cursor:default;
 }
-
 .tech__stack .each_tech {
    display: inline-block;
    background-color: #333;
@@ -321,8 +297,7 @@ body #about {
 }
 
 
-
-/* PROJECTS SECTION */
+/* PROJECTS SECTION 
 #projects {
    padding-left: 40px; 
    padding-right: 40px; 
@@ -359,7 +334,7 @@ body #about {
 }
 
 .card-body {
-   flex-grow: 1; /* Allow card body to grow and take remaining space */
+   flex-grow: 1; 
   padding-top: 2px;
 }
 
@@ -375,6 +350,7 @@ body #about {
    border-radius: 30px; 
    margin: 10px;
 }
+
 
 .project-button {
    background-color: rgba(255, 255, 255, 0.655);
@@ -394,17 +370,10 @@ body #about {
    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
 
 }
-
-
-
+*/
 
 /* CERTI SECTION */
 
-#certificates {
-   padding-left: 40px; 
-   padding-right: 40px;
-   padding-bottom: 10px; 
-}
 .certificate img {
    max-width: 100%;
    height: auto;
@@ -415,7 +384,6 @@ body #about {
 
 /* FOOTER SECTION */
 
-/* Base styling for the footer */
 footer {
    background-color: #f5f5f5;
    box-shadow: inset 0 10px 30px -10px rgba(0, 0, 0, 0.08);
@@ -423,7 +391,6 @@ footer {
    overflow-x: hidden;
 }
 
-/* Styling for the container inside the footer */
 footer .container {
    max-width: 100%;
    margin: 0 auto;
@@ -438,7 +405,6 @@ footer .row {
    font-size: 18px;
 }
 
-/* Link styling within the footer descriptions */
 .footer-description a {
    margin: 0 15px;
    color: #393838;
@@ -451,43 +417,39 @@ a:hover {
 
 .custom-email-link {
    font-size: 22px;
-   position: relative; /* Establishes a positioning context for pseudo-elements */
-   text-decoration: none; /* Removes the default underline */
-   color: inherit; /* Ensures the link color matches its surroundings or is explicitly set */
-   display: inline-block; /* Ensures the pseudo-element aligns correctly under the text */
+   position: relative;
+   text-decoration: none; 
+   color: inherit; 
+   display: inline-block; 
 }
 
 .custom-email-link::after {
    content: '';
    display: block;
-   width: 0; /* Start with no width */
-   height: 2px; /* Underline thickness */
-   background: currentColor; /* Uses the text color for the underline */
-   transition: width 0.3s ease, background-color 0.3s ease; /* Smooth transition for the width and color */
+   width: 0; /* Start underline from left to right*/
+   height: 2px; 
+   background: currentColor; 
+   transition: width 0.3s ease, background-color 0.3s ease; 
    position: absolute;
    left: 0;
-   bottom: -2px; /* Position just below the text */
+   bottom: -2px; 
 }
 
 .custom-email-link:hover::after,
 .custom-email-link:focus::after {
-    width: 100%; /* Expand the underline to full width on hover/focus */
+    width: 100%; 
 }
 
-
-
-/* Icon styling in the footer descriptions */
 .footer-description i {
-   font-size: 36px; /* Larger size for icons */
-   color: #393838; /* Default icon color */
+   font-size: 36px; 
+   color: #393838; 
    margin: 10px;
-   transition: color 0.3s ease; /* Smooth color transition for icons */
+   transition: color 0.3s ease; 
 }
 
-/* Icon color changes to #555 on hover */
 .footer-description i:hover,
 .footer-description a:focus i {
-   color: #555; /* Darker color for better visibility on hover/focus */
-   transform: scale(1.1); /* Optional: Makes the icon slightly larger on hover */
+   color: #555; 
+   transform: scale(1.1); 
    text-decoration: none;
 }
