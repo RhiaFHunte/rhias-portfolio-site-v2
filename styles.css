@@ -15,10 +15,7 @@ body {
    color: #393838;
 }
 
-h1 {
 
-
-}
 
 
 
@@ -134,6 +131,8 @@ h1 {
    margin-bottom: 20px;
 }
 */
+
+
 
 /* CERTIFICATES */
 #certificates img {
@@ -297,46 +296,13 @@ body #about {
 }
 
 
-/* PROJECTS SECTION 
-#projects {
-   padding-left: 40px; 
-   padding-right: 40px; 
-   padding-top: 6%;
+/* PROJECTS SECTION */
 
-}
 
-.project-carousel-wrapper {
-   padding-left: 8px; 
-   padding-right: 8px; 
-   border-radius: 20px; 
-   margin-bottom: 20px;
-}
 
-.project-container {
-   display: flex;
-   flex-wrap: nowrap; 
-   overflow-x: auto; 
-   scroll-snap-type: x mandatory;
-}
 
-.project-card {
-   flex: 0px 0px auto;
-   background-color: #f5f5f5; 
-   border-radius: 30px; 
-   padding: 10px; 
-   margin-bottom: 20px; 
-   display: flex; 
-   flex-direction: column; 
-   justify-content: space-between;
-   align-items: center; 
-   border: #393838;
-   box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
-}
 
-.card-body {
-   flex-grow: 1; 
-  padding-top: 2px;
-}
+
 
 .card-text {
    font-size: 11px;
@@ -345,32 +311,15 @@ body #about {
 
 
 .card-img-top {
-   width: 100%; 
-   height: auto;
-   border-radius: 30px; 
-   margin: 10px;
+   width: 70%;      /* Controls the width of the image as a percentage of its container */
+   height: auto;    /* Keeps the image's aspect ratio intact */
+   border-radius: 30px; /* Rounds the corners of the image */
+   margin: 15px auto 10px; /* Top and bottom margins set specifically, left and right margins set to auto */
+   display: block; /* Ensures the image is treated as a block-level element, which is necessary for margins to work */
 }
 
 
-.project-button {
-   background-color: rgba(255, 255, 255, 0.655);
-   border-color:#333 ;
-   border: 1.5px solid #333; 
-   color: #333;
-   font-size: 11px;
-   border-radius: 100px;
-   padding: 10px 20px; 
-   cursor: pointer; 
-   transition: background-color 0.3s ease; 
-}
 
-.project-button:hover {
-   color: #fff;
-   background-color: #555; 
-   box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
-
-}
-*/
 
 /* CERTI SECTION */
 

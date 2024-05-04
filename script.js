@@ -54,4 +54,6 @@ const logo = document.querySelector('.bi-arrow-down');
 logo.style.animation = 'bounce 1s infinite';
 
 
+// ARROW ANNIMATION
 
+  
