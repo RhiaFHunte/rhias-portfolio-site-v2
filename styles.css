@@ -16,9 +16,6 @@ body {
 }
 
 
-
-
-
 #home {
   /* background: linear-gradient(106.5deg, rgba(255, 215, 185, 0.91) 23%, rgba(223, 159, 247, 0.8) 93%);*/
   background: radial-gradient(circle at 5.7% 50%, #f8c177cc  29.5%, #ffceeccf 90.5%);  
@@ -190,11 +187,17 @@ body {
 
 /* PROFILE SECTION */
 
-#profile{
-   padding: 20px;
-   margin-bottom: 0; /* Ensure no margin at the bottom */
-   z-index: 1; /* Ensure profile section is above the nav section */
-}
+#profile {
+   display: flex;             /* Enable Flexbox */
+   flex-direction: column;    /* Stack children vertically */
+   align-items: center;       /* Center children horizontally */
+   justify-content: center;   /* Center children vertically */
+   height: 100vh;             /* Set height to fill the viewport vertically */
+   margin-bottom: 0;
+   z-index: 1;
+   transform: translateY(-45px); /* Move upwards by 20px */
+
+ }
 
 .profile-image {
    margin-top: -30px; /* Adjust the margin to move the image upwards */
@@ -222,10 +225,12 @@ cursor: pointer; /* Change cursor to pointer on hover */
 }
 
 .contact__me:hover {
+   background-color: #080808e6;
    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
    }
 
 .portfolio:hover {
+   background-color: #080808e6;
    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
    }
 
@@ -263,7 +268,7 @@ nav {
 /* ABOUT SECTION */
 body #about {
    background-color: #FAFAFA;
-   padding: 150px 0px; 
+   padding: 100px 0px; 
    box-shadow: inset 0px 10px 30px -10px rgba(0,0,0,0.2);
 }
 .about__details__container {
@@ -294,14 +299,11 @@ body #about {
    word-wrap: break-word; 
 }
 
-
 /* PROJECTS SECTION */
 
-
-
-
-
-
+#projects {
+   scroll-margin-top: 70px;  /* Adjust this value based on the height of your fixed header or nav bar */
+}
 
 .card-text {
    font-size: 11px;
@@ -316,8 +318,6 @@ body #about {
    margin: 15px auto 10px; /* Top and bottom margins set specifically, left and right margins set to auto */
    display: block; /* Ensures the image is treated as a block-level element, which is necessary for margins to work */
 }
-
-
 
 
 /* CERTI SECTION */
