@@ -302,7 +302,7 @@ body #about {
 /* PROJECTS SECTION */
 
 #projects {
-   scroll-margin-top: 70px;  /* Adjust this value based on the height of your fixed header or nav bar */
+   scroll-margin-top: 75px;  
 }
 
 .card-text {
