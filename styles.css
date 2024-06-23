@@ -91,7 +91,7 @@ body {
 /* PROFILE SECTION */
 
 #profile {
-   padding-top: 100px;
+   padding-top: 90px;
 }
 
 
@@ -115,7 +115,7 @@ body {
 }
 
 .profile__subtitle, .profile__title,  .description {
-   margin-left: 4px;
+   margin-left: 5px;
 }
 
 
