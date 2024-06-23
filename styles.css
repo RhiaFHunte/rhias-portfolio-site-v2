@@ -89,6 +89,12 @@ body {
 
 
 /* PROFILE SECTION */
+
+#profile {
+   padding-top: 100px;
+}
+
+
 .profile-image {
    max-width: 75%;
    text-align: center; 
@@ -107,6 +113,13 @@ body {
    margin: 0; 
    line-height: 1.5;
 }
+
+.profile__subtitle, .profile__title,  .description {
+   margin-left: 4px;
+}
+
+
+
 
 /* ABOUT SECTION */
 .about__details__container {
