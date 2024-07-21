@@ -245,6 +245,9 @@ cursor: pointer; /* Change cursor to pointer on hover */
    margin-right: 10px;
 }
 
+.margin-r-20px {
+   margin-right: 10px;
+}
 
 nav {
    position: fixed;
